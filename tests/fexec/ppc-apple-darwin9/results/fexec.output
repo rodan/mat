@@ -3,3 +3,6 @@
 * execute detected opcodes via mmap obeying NX 0xbffffa68       [ok]
 * execute detected opcodes via mmap not obeying NX 0xbffffa68   [ok]
 * execute detected opcodes without mmap, also not obeying NX 0xbffffa68        [ok]
+
+peter@mac ~/mat/tests/fexec/ppc-apple-darwin9/results $ uname -a
+Darwin mac.lan 9.8.0 Darwin Kernel Version 9.8.0: Wed Jul 15 16:57:01 PDT 2009; root:xnu-1228.15.4~1/RELEASE_PPC Power Macintosh
