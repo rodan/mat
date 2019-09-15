@@ -1,0 +1,5 @@
+* execute internal function from 0x21a8         [ok]
+* execute stored opcodes via mmap obeying NX 0x308c     [ok]
+* execute detected opcodes via mmap obeying NX 0xbffffa68       [ok]
+* execute detected opcodes via mmap not obeying NX 0xbffffa68   [ok]
+* execute detected opcodes without mmap, also not obeying NX 0xbffffa68        [ok]
