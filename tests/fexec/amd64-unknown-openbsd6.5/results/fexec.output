@@ -1,0 +1,10 @@
+peter@openbsd ~/mat/tests/fexec/amd64-openbsd $ ./build/fexec 
+* execute internal function from 0x16d2e9b340   [ok]
+* execute stored opcodes via mmap obeying NX 0x16d2e9d000       [ok]
+* execute detected opcodes via mmap obeying NX 0x7f7ffffd775c   [ok]
+Segmentation fault (core dumped)
+
+
+peter@openbsd ~/mat/tests/fexec/amd64-openbsd $ uname -a
+OpenBSD openbsd.subdimension.ro 6.5 GENERIC#3 amd64
+

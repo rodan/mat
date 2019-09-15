@@ -1,0 +1,81 @@
+_DYNAMIC c 5050 0
+_GLOBAL_OFFSET_TABLE_ d 5178 0
+_Jv_RegisterClasses W 
+__CTOR_LIST__ c 5030 0
+__DTOR_LIST__ c 5040 0
+__EH_FRAME_BEGIN__ c 1968 0
+__JCR_LIST__ c 5028 0
+___start t 2020 129
+__csu_do_fini_array b 6050 1
+__do_fini t 2290 b0
+__do_fini.finalized b 6054 1
+__do_init t 2190 f7
+__do_init.initialized b 6008 1
+__do_init.object b 6010 40
+__dso_handle b 6000 8
+__errno U 
+__fini T 32e0 0
+__fini_array_end t 2000 0
+__fini_array_start t 2000 0
+__guard_local r 5008 8
+__init t 32d0 0
+__init_array_end t 2000 0
+__init_array_start t 2000 0
+__llvm_retpoline_r11 t 2150 15
+__preinit_array_end t 2000 0
+__preinit_array_start t 2000 0
+__register_frame_info W 2170 20
+__retguard_1205 r 5000 8
+__retguard_1471 r 5018 8
+__retguard_1773 r 5020 8
+__retguard_2473 r 5010 8
+__sF U 
+__stack_smash_handler U 
+__start T 2000 0
+_csu_finish U 
+_end B 6068 0
+_exit U 
+_start T 2000 0
+abort U 
+atexit U 
+cmdLineErr T 3179 151
+crt0.c F 0 0
+crtbegin.c F 0 0
+crtend.c F 0 0
+ename d 4040 308
+errExit T 2bf8 10d
+errExitEN T 2e12 10b
+errMsg T 2aba 13e
+err_exit T 2d05 10d
+error_functions.c F 0 0
+exec_opcode T 234c 141
+exec_opcode_WX T 248d 11a
+exec_opcode_no_mmap T 25a7 1f
+exit U 
+f_int T 2340 c
+f_opcode D 4000 27
+fatal T 2f1d 10b
+fflush U 
+fputs U 
+fwrite U 
+getenv U 
+main T 25c6 30f
+main.c F 0 0
+memcmp U 
+memcpy U 
+memset U 
+mmap U 
+mprotect U 
+munmap U 
+outputError t 2924 196
+pagesize.3404 b 6058 8
+pagesize.3440 b 6060 8
+printf U 
+puts U 
+snprintf U 
+strerror U 
+sysconf U 
+terminate t 28d8 4c
+usageErr T 3028 151
+vfprintf U 
+vsnprintf U 

@@ -1,0 +1,1685 @@
+
+build/fexec:     file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000002000 <__start>:
+    2000:	48 89 d1             	mov    %rdx,%rcx
+    2003:	48 8b 3c 24          	mov    (%rsp),%rdi
+    2007:	48 8d 54 fc 10       	lea    0x10(%rsp,%rdi,8),%rdx
+    200c:	48 8d 74 24 08       	lea    0x8(%rsp),%rsi
+    2011:	48 83 ec 08          	sub    $0x8,%rsp
+    2015:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    2019:	48 83 c4 08          	add    $0x8,%rsp
+    201d:	eb 01                	jmp    2020 <___start>
+    201f:	cc                   	int3   
+
+0000000000002020 <___start>:
+    2020:	55                   	push   %rbp
+    2021:	48 89 e5             	mov    %rsp,%rbp
+    2024:	41 57                	push   %r15
+    2026:	41 56                	push   %r14
+    2028:	41 55                	push   %r13
+    202a:	41 54                	push   %r12
+    202c:	53                   	push   %rbx
+    202d:	48 83 ec 18          	sub    $0x18,%rsp
+    2031:	49 89 d7             	mov    %rdx,%r15
+    2034:	41 89 fe             	mov    %edi,%r14d
+    2037:	48 89 4d c8          	mov    %rcx,0xffffffffffffffc8(%rbp)
+    203b:	48 85 c9             	test   %rcx,%rcx
+    203e:	0f 85 d3 00 00 00    	jne    2117 <___start+0xf7>
+    2044:	48 8d 1d b5 ff ff ff 	lea    -75(%rip),%rbx        # 2000 <__start>
+    204b:	48 8d 05 ae ff ff ff 	lea    -82(%rip),%rax        # 2000 <__start>
+    2052:	48 29 d8             	sub    %rbx,%rax
+    2055:	48 89 c1             	mov    %rax,%rcx
+    2058:	48 c1 f9 3f          	sar    $0x3f,%rcx
+    205c:	48 c1 e9 3d          	shr    $0x3d,%rcx
+    2060:	48 01 c1             	add    %rax,%rcx
+    2063:	48 c1 f9 03          	sar    $0x3,%rcx
+    2067:	74 34                	je     209d <___start+0x7d>
+    2069:	45 31 e4             	xor    %r12d,%r12d
+    206c:	48 89 4d d0          	mov    %rcx,0xffffffffffffffd0(%rbp)
+    2070:	4c 8b 1b             	mov    (%rbx),%r11
+    2073:	31 c9                	xor    %ecx,%ecx
+    2075:	44 89 f7             	mov    %r14d,%edi
+    2078:	49 89 f5             	mov    %rsi,%r13
+    207b:	4c 89 fa             	mov    %r15,%rdx
+    207e:	e8 cd 00 00 00       	callq  2150 <__llvm_retpoline_r11>
+    2083:	4c 89 ee             	mov    %r13,%rsi
+    2086:	48 8b 4d d0          	mov    0xffffffffffffffd0(%rbp),%rcx
+    208a:	49 83 c4 01          	add    $0x1,%r12
+    208e:	48 87 d8             	xchg   %rbx,%rax
+    2091:	48 83 c0 08          	add    $0x8,%rax
+    2095:	48 87 d8             	xchg   %rbx,%rax
+    2098:	49 39 cc             	cmp    %rcx,%r12
+    209b:	72 d3                	jb     2070 <___start+0x50>
+    209d:	48 8d 1d 5c ff ff ff 	lea    -164(%rip),%rbx        # 2000 <__start>
+    20a4:	48 8d 05 55 ff ff ff 	lea    -171(%rip),%rax        # 2000 <__start>
+    20ab:	48 29 d8             	sub    %rbx,%rax
+    20ae:	48 89 c1             	mov    %rax,%rcx
+    20b1:	48 c1 f9 3f          	sar    $0x3f,%rcx
+    20b5:	48 c1 e9 3d          	shr    $0x3d,%rcx
+    20b9:	48 01 c1             	add    %rax,%rcx
+    20bc:	48 c1 f9 03          	sar    $0x3,%rcx
+    20c0:	48 89 4d d0          	mov    %rcx,0xffffffffffffffd0(%rbp)
+    20c4:	4d 89 fd             	mov    %r15,%r13
+    20c7:	45 89 f7             	mov    %r14d,%r15d
+    20ca:	49 89 f4             	mov    %rsi,%r12
+    20cd:	74 38                	je     2107 <___start+0xe7>
+    20cf:	45 31 f6             	xor    %r14d,%r14d
+    20d2:	eb 0c                	jmp    20e0 <___start+0xc0>
+    20d4:	cc                   	int3   
+    20d5:	cc                   	int3   
+    20d6:	cc                   	int3   
+    20d7:	cc                   	int3   
+    20d8:	cc                   	int3   
+    20d9:	cc                   	int3   
+    20da:	cc                   	int3   
+    20db:	cc                   	int3   
+    20dc:	cc                   	int3   
+    20dd:	cc                   	int3   
+    20de:	cc                   	int3   
+    20df:	cc                   	int3   
+    20e0:	4c 8b 1b             	mov    (%rbx),%r11
+    20e3:	31 c9                	xor    %ecx,%ecx
+    20e5:	44 89 ff             	mov    %r15d,%edi
+    20e8:	4c 89 e6             	mov    %r12,%rsi
+    20eb:	4c 89 ea             	mov    %r13,%rdx
+    20ee:	e8 5d 00 00 00       	callq  2150 <__llvm_retpoline_r11>
+    20f3:	49 83 c6 01          	add    $0x1,%r14
+    20f7:	48 87 d8             	xchg   %rbx,%rax
+    20fa:	48 83 c0 08          	add    $0x8,%rax
+    20fe:	48 87 d8             	xchg   %rbx,%rax
+    2101:	4c 3b 75 d0          	cmp    0xffffffffffffffd0(%rbp),%r14
+    2105:	72 d9                	jb     20e0 <___start+0xc0>
+    2107:	c6 05 42 3f 00 00 01 	movb   $0x1,16194(%rip)        # 6050 <__csu_do_fini_array>
+    210e:	4c 89 e6             	mov    %r12,%rsi
+    2111:	45 89 fe             	mov    %r15d,%r14d
+    2114:	4d 89 ef             	mov    %r13,%r15
+    2117:	44 89 f3             	mov    %r14d,%ebx
+    211a:	48 89 f7             	mov    %rsi,%rdi
+    211d:	49 89 f6             	mov    %rsi,%r14
+    2120:	4c 89 fe             	mov    %r15,%rsi
+    2123:	48 8b 55 c8          	mov    0xffffffffffffffc8(%rbp),%rdx
+    2127:	e8 d4 11 00 00       	callq  3300 <_csu_finish@plt>
+    212c:	49 89 c4             	mov    %rax,%r12
+    212f:	e8 9c 11 00 00       	callq  32d0 <__init>
+    2134:	49 8b 14 24          	mov    (%r12),%rdx
+    2138:	89 df                	mov    %ebx,%edi
+    213a:	4c 89 f6             	mov    %r14,%rsi
+    213d:	e8 84 04 00 00       	callq  25c6 <main>
+    2142:	89 c7                	mov    %eax,%edi
+    2144:	e8 c7 11 00 00       	callq  3310 <exit@plt>
+    2149:	cc                   	int3   
+    214a:	cc                   	int3   
+    214b:	cc                   	int3   
+    214c:	cc                   	int3   
+    214d:	cc                   	int3   
+    214e:	cc                   	int3   
+    214f:	cc                   	int3   
+
+0000000000002150 <__llvm_retpoline_r11>:
+    2150:	e8 0b 00 00 00       	callq  2160 <__llvm_retpoline_r11+0x10>
+    2155:	f3 90                	pause  
+    2157:	0f ae e8             	lfence %eax
+    215a:	eb f9                	jmp    2155 <__llvm_retpoline_r11+0x5>
+    215c:	cc                   	int3   
+    215d:	cc                   	int3   
+    215e:	cc                   	int3   
+    215f:	cc                   	int3   
+    2160:	4c 89 1c 24          	mov    %r11,(%rsp)
+    2164:	c3                   	retq   
+    2165:	cc                   	int3   
+    2166:	cc                   	int3   
+    2167:	cc                   	int3   
+    2168:	cc                   	int3   
+    2169:	cc                   	int3   
+    216a:	cc                   	int3   
+    216b:	cc                   	int3   
+    216c:	cc                   	int3   
+    216d:	cc                   	int3   
+    216e:	cc                   	int3   
+    216f:	cc                   	int3   
+
+0000000000002170 <__register_frame_info>:
+    2170:	4c 8b 1d 99 2e 00 00 	mov    11929(%rip),%r11        # 5010 <__retguard_2473>
+    2177:	4c 33 1c 24          	xor    (%rsp),%r11
+    217b:	55                   	push   %rbp
+    217c:	48 89 e5             	mov    %rsp,%rbp
+    217f:	5d                   	pop    %rbp
+    2180:	4c 33 1c 24          	xor    (%rsp),%r11
+    2184:	4c 3b 1d 85 2e 00 00 	cmp    11909(%rip),%r11        # 5010 <__retguard_2473>
+    218b:	74 02                	je     218f <__register_frame_info+0x1f>
+    218d:	cc                   	int3   
+    218e:	cc                   	int3   
+    218f:	c3                   	retq   
+
+0000000000002190 <__do_init>:
+    2190:	4c 8b 1d 81 2e 00 00 	mov    11905(%rip),%r11        # 5018 <__retguard_1471>
+    2197:	4c 33 1c 24          	xor    (%rsp),%r11
+    219b:	80 3d 66 3e 00 00 00 	cmpb   $0x0,15974(%rip)        # 6008 <__do_init.initialized>
+    21a2:	74 1c                	je     21c0 <__do_init+0x30>
+    21a4:	4c 33 1c 24          	xor    (%rsp),%r11
+    21a8:	4c 3b 1d 69 2e 00 00 	cmp    11881(%rip),%r11        # 5018 <__retguard_1471>
+    21af:	74 0e                	je     21bf <__do_init+0x2f>
+    21b1:	cc                   	int3   
+    21b2:	cc                   	int3   
+    21b3:	cc                   	int3   
+    21b4:	cc                   	int3   
+    21b5:	cc                   	int3   
+    21b6:	cc                   	int3   
+    21b7:	cc                   	int3   
+    21b8:	cc                   	int3   
+    21b9:	cc                   	int3   
+    21ba:	cc                   	int3   
+    21bb:	cc                   	int3   
+    21bc:	cc                   	int3   
+    21bd:	cc                   	int3   
+    21be:	cc                   	int3   
+    21bf:	c3                   	retq   
+    21c0:	55                   	push   %rbp
+    21c1:	48 89 e5             	mov    %rsp,%rbp
+    21c4:	41 53                	push   %r11
+    21c6:	41 57                	push   %r15
+    21c8:	41 56                	push   %r14
+    21ca:	41 54                	push   %r12
+    21cc:	c6 05 35 3e 00 00 01 	movb   $0x1,15925(%rip)        # 6008 <__do_init.initialized>
+    21d3:	48 8d 3d 8e f7 ff ff 	lea    -2162(%rip),%rdi        # 1968 <__EH_FRAME_BEGIN__>
+    21da:	48 8d 35 2f 3e 00 00 	lea    15919(%rip),%rsi        # 6010 <__do_init.object>
+    21e1:	e8 8a ff ff ff       	callq  2170 <__register_frame_info>
+    21e6:	48 83 3d 3a 2e 00 00 	cmpq   $0x0,11834(%rip)        # 5028 <__JCR_LIST__>
+    21ed:	00 
+    21ee:	74 16                	je     2206 <__do_init+0x76>
+    21f0:	48 83 3d 68 2f 00 00 	cmpq   $0x0,12136(%rip)        # 5160 <_DYNAMIC+0x110>
+    21f7:	00 
+    21f8:	74 0c                	je     2206 <__do_init+0x76>
+    21fa:	48 8d 3d 27 2e 00 00 	lea    11815(%rip),%rdi        # 5028 <__JCR_LIST__>
+    2201:	e8 1a 11 00 00       	callq  3320 <_Jv_RegisterClasses@plt>
+    2206:	4c 8b 35 23 2e 00 00 	mov    11811(%rip),%r14        # 5030 <__CTOR_LIST__>
+    220d:	49 83 fe ff          	cmp    $0xffffffffffffffff,%r14
+    2211:	75 29                	jne    223c <__do_init+0xac>
+    2213:	49 c7 c6 ff ff ff ff 	mov    $0xffffffffffffffff,%r14
+    221a:	48 8d 05 0f 2e 00 00 	lea    11791(%rip),%rax        # 5030 <__CTOR_LIST__>
+    2221:	eb 0d                	jmp    2230 <__do_init+0xa0>
+    2223:	cc                   	int3   
+    2224:	cc                   	int3   
+    2225:	cc                   	int3   
+    2226:	cc                   	int3   
+    2227:	cc                   	int3   
+    2228:	cc                   	int3   
+    2229:	cc                   	int3   
+    222a:	cc                   	int3   
+    222b:	cc                   	int3   
+    222c:	cc                   	int3   
+    222d:	cc                   	int3   
+    222e:	cc                   	int3   
+    222f:	cc                   	int3   
+    2230:	4a 83 7c f0 10 00    	cmpq   $0x0,0x10(%rax,%r14,8)
+    2236:	4d 8d 76 01          	lea    0x1(%r14),%r14
+    223a:	75 f4                	jne    2230 <__do_init+0xa0>
+    223c:	4d 85 f6             	test   %r14,%r14
+    223f:	74 31                	je     2272 <__do_init+0xe2>
+    2241:	48 8d 05 e8 2d 00 00 	lea    11752(%rip),%rax        # 5030 <__CTOR_LIST__>
+    2248:	4e 8d 3c f0          	lea    (%rax,%r14,8),%r15
+    224c:	49 f7 de             	neg    %r14
+    224f:	45 31 e4             	xor    %r12d,%r12d
+    2252:	eb 0c                	jmp    2260 <__do_init+0xd0>
+    2254:	cc                   	int3   
+    2255:	cc                   	int3   
+    2256:	cc                   	int3   
+    2257:	cc                   	int3   
+    2258:	cc                   	int3   
+    2259:	cc                   	int3   
+    225a:	cc                   	int3   
+    225b:	cc                   	int3   
+    225c:	cc                   	int3   
+    225d:	cc                   	int3   
+    225e:	cc                   	int3   
+    225f:	cc                   	int3   
+    2260:	4f 8b 1c e7          	mov    (%r15,%r12,8),%r11
+    2264:	e8 e7 fe ff ff       	callq  2150 <__llvm_retpoline_r11>
+    2269:	49 83 c4 ff          	add    $0xffffffffffffffff,%r12
+    226d:	4d 39 e6             	cmp    %r12,%r14
+    2270:	75 ee                	jne    2260 <__do_init+0xd0>
+    2272:	48 8b 3d ef 2e 00 00 	mov    12015(%rip),%rdi        # 5168 <_DYNAMIC+0x118>
+    2279:	41 5c                	pop    %r12
+    227b:	41 5e                	pop    %r14
+    227d:	41 5f                	pop    %r15
+    227f:	41 5b                	pop    %r11
+    2281:	5d                   	pop    %rbp
+    2282:	e9 a9 10 00 00       	jmpq   3330 <atexit@plt>
+    2287:	cc                   	int3   
+    2288:	cc                   	int3   
+    2289:	cc                   	int3   
+    228a:	cc                   	int3   
+    228b:	cc                   	int3   
+    228c:	cc                   	int3   
+    228d:	cc                   	int3   
+    228e:	cc                   	int3   
+    228f:	cc                   	int3   
+
+0000000000002290 <__do_fini>:
+    2290:	4c 8b 1d 89 2d 00 00 	mov    11657(%rip),%r11        # 5020 <__retguard_1773>
+    2297:	4c 33 1c 24          	xor    (%rsp),%r11
+    229b:	55                   	push   %rbp
+    229c:	48 89 e5             	mov    %rsp,%rbp
+    229f:	41 53                	push   %r11
+    22a1:	41 57                	push   %r15
+    22a3:	41 56                	push   %r14
+    22a5:	50                   	push   %rax
+    22a6:	80 3d a7 3d 00 00 00 	cmpb   $0x0,15783(%rip)        # 6054 <__do_fini.finalized>
+    22ad:	75 71                	jne    2320 <__do_fini+0x90>
+    22af:	c6 05 9e 3d 00 00 01 	movb   $0x1,15774(%rip)        # 6054 <__do_fini.finalized>
+    22b6:	4c 8b 1d 8b 2d 00 00 	mov    11659(%rip),%r11        # 5048 <__DTOR_LIST__+0x8>
+    22bd:	4d 85 db             	test   %r11,%r11
+    22c0:	74 1f                	je     22e1 <__do_fini+0x51>
+    22c2:	4c 8d 35 87 2d 00 00 	lea    11655(%rip),%r14        # 5050 <_DYNAMIC>
+    22c9:	eb 05                	jmp    22d0 <__do_fini+0x40>
+    22cb:	cc                   	int3   
+    22cc:	cc                   	int3   
+    22cd:	cc                   	int3   
+    22ce:	cc                   	int3   
+    22cf:	cc                   	int3   
+    22d0:	e8 7b fe ff ff       	callq  2150 <__llvm_retpoline_r11>
+    22d5:	4d 8b 1e             	mov    (%r14),%r11
+    22d8:	49 83 c6 08          	add    $0x8,%r14
+    22dc:	4d 85 db             	test   %r11,%r11
+    22df:	75 ef                	jne    22d0 <__do_fini+0x40>
+    22e1:	80 3d 68 3d 00 00 00 	cmpb   $0x0,15720(%rip)        # 6050 <__csu_do_fini_array>
+    22e8:	74 36                	je     2320 <__do_fini+0x90>
+    22ea:	4c 8d 35 0f fd ff ff 	lea    -753(%rip),%r14        # 2000 <__start>
+    22f1:	48 8d 05 08 fd ff ff 	lea    -760(%rip),%rax        # 2000 <__start>
+    22f8:	4c 29 f0             	sub    %r14,%rax
+    22fb:	49 89 c7             	mov    %rax,%r15
+    22fe:	49 c1 ff 3f          	sar    $0x3f,%r15
+    2302:	49 c1 ef 3d          	shr    $0x3d,%r15
+    2306:	49 01 c7             	add    %rax,%r15
+    2309:	49 c1 ff 03          	sar    $0x3,%r15
+    230d:	74 11                	je     2320 <__do_fini+0x90>
+    230f:	90                   	nop    
+    2310:	4f 8b 5c fe f8       	mov    0xfffffffffffffff8(%r14,%r15,8),%r11
+    2315:	e8 36 fe ff ff       	callq  2150 <__llvm_retpoline_r11>
+    231a:	49 83 c7 ff          	add    $0xffffffffffffffff,%r15
+    231e:	75 f0                	jne    2310 <__do_fini+0x80>
+    2320:	48 83 c4 08          	add    $0x8,%rsp
+    2324:	41 5e                	pop    %r14
+    2326:	41 5f                	pop    %r15
+    2328:	41 5b                	pop    %r11
+    232a:	5d                   	pop    %rbp
+    232b:	4c 33 1c 24          	xor    (%rsp),%r11
+    232f:	4c 3b 1d ea 2c 00 00 	cmp    11498(%rip),%r11        # 5020 <__retguard_1773>
+    2336:	74 07                	je     233f <__do_fini+0xaf>
+    2338:	cc                   	int3   
+    2339:	cc                   	int3   
+    233a:	cc                   	int3   
+    233b:	cc                   	int3   
+    233c:	cc                   	int3   
+    233d:	cc                   	int3   
+    233e:	cc                   	int3   
+    233f:	c3                   	retq   
+
+0000000000002340 <f_int>:
+#define OPCODE_LEN 39
+uint8_t f_opcode[39] = {0x55, 0x89, 0xe5, 0x8d, 0xa4, 0x24, 0xd8, 0xef, 0xff, 0xff, 0x83, 0x0c, 0x24, 0x00, 0x8d, 0xa4, 0x24, 0x10, 0x10, 0x00, 0x00, 0x65, 0xa1, 0x14, 0x00, 0x00, 0x00, 0x89, 0x45, 0xf4, 0x31, 0xc0, 0x90, 0xb8, 0xee, 0xff, 0xff, 0xff, 0x8b};
+
+uint8_t f_int(void)
+{
+    2340:	55                   	push   %rbp
+    2341:	48 89 e5             	mov    %rsp,%rbp
+    __asm("nop");
+    2344:	90                   	nop    
+    return 0xee;
+    2345:	b8 ee 00 00 00       	mov    $0xee,%eax
+}
+    234a:	c9                   	leaveq 
+    234b:	c3                   	retq   
+
+000000000000234c <exec_opcode>:
+
+// function that executes an array of opcodes
+// based on https://stackoverflow.com/questions/37122186/c-put-x86-instructions-into-array-and-execute-them
+uint8_t exec_opcode(const uint8_t *code, size_t codelen)
+{
+    234c:	55                   	push   %rbp
+    234d:	48 89 e5             	mov    %rsp,%rbp
+    2350:	48 83 ec 40          	sub    $0x40,%rsp
+    2354:	48 89 7d d8          	mov    %rdi,0xffffffffffffffd8(%rbp)
+    2358:	48 89 75 d0          	mov    %rsi,0xffffffffffffffd0(%rbp)
+    uint8_t ret;
+    // in order to manipulate memory protection, we must work with
+    // whole pages allocated directly from the operating system.
+    static size_t pagesize;
+    if (!pagesize) {
+    235c:	48 8b 05 f5 3c 00 00 	mov    15605(%rip),%rax        # 6058 <pagesize.3404>
+    2363:	48 85 c0             	test   %rax,%rax
+    2366:	75 2f                	jne    2397 <exec_opcode+0x4b>
+        pagesize = sysconf(_SC_PAGESIZE);
+    2368:	bf 1c 00 00 00       	mov    $0x1c,%edi
+    236d:	e8 ce 0f 00 00       	callq  3340 <sysconf@plt>
+    2372:	48 89 05 df 3c 00 00 	mov    %rax,15583(%rip)        # 6058 <pagesize.3404>
+        if (pagesize == (size_t)-1) {
+    2379:	48 8b 05 d8 3c 00 00 	mov    15576(%rip),%rax        # 6058 <pagesize.3404>
+    2380:	48 83 f8 ff          	cmp    $0xffffffffffffffff,%rax
+    2384:	75 11                	jne    2397 <exec_opcode+0x4b>
+            errExit("getpagesize");
+    2386:	48 8d 3d 9b ef ff ff 	lea    -4197(%rip),%rdi        # 1328 <__EH_FRAME_BEGIN__-0x640>
+    238d:	b8 00 00 00 00       	mov    $0x0,%eax
+    2392:	e8 61 08 00 00       	callq  2bf8 <errExit>
+        }
+    }
+
+    // allocate at least enough space for the code + 1 byte
+    // (so that there will be at least one INT3 - see below),
+    // rounded up to a multiple of the system page size.
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+                               / pagesize) * pagesize;
+    2397:	48 8b 05 ba 3c 00 00 	mov    15546(%rip),%rax        # 6058 <pagesize.3404>
+    239e:	48 89 c2             	mov    %rax,%rdx
+    23a1:	48 03 55 d0          	add    0xffffffffffffffd0(%rbp),%rdx
+    23a5:	48 8b 05 ac 3c 00 00 	mov    15532(%rip),%rax        # 6058 <pagesize.3404>
+    23ac:	48 89 45 c8          	mov    %rax,0xffffffffffffffc8(%rbp)
+    23b0:	48 89 d0             	mov    %rdx,%rax
+    23b3:	ba 00 00 00 00       	mov    $0x0,%edx
+    23b8:	48 f7 75 c8          	divq   0xffffffffffffffc8(%rbp)
+    23bc:	48 89 45 c8          	mov    %rax,0xffffffffffffffc8(%rbp)
+    23c0:	48 8b 55 c8          	mov    0xffffffffffffffc8(%rbp),%rdx
+    23c4:	48 8b 05 8d 3c 00 00 	mov    15501(%rip),%rax        # 6058 <pagesize.3404>
+    23cb:	48 0f af c2          	imul   %rdx,%rax
+    23cf:	48 89 45 e8          	mov    %rax,0xffffffffffffffe8(%rbp)
+
+    void *executable_area = mmap(0, rounded_codesize,
+                                 PROT_READ|PROT_WRITE,
+                                 MAP_PRIVATE|MAP_ANONYMOUS,
+                                 -1, 0);
+    23d3:	48 8b 75 e8          	mov    0xffffffffffffffe8(%rbp),%rsi
+    23d7:	41 b9 00 00 00 00    	mov    $0x0,%r9d
+    23dd:	41 b8 ff ff ff ff    	mov    $0xffffffff,%r8d
+    23e3:	b9 02 10 00 00       	mov    $0x1002,%ecx
+    23e8:	ba 03 00 00 00       	mov    $0x3,%edx
+    23ed:	bf 00 00 00 00       	mov    $0x0,%edi
+    23f2:	e8 59 0f 00 00       	callq  3350 <mmap@plt>
+    23f7:	48 89 45 e0          	mov    %rax,0xffffffffffffffe0(%rbp)
+    if (!executable_area) {
+    23fb:	48 83 7d e0 00       	cmpq   $0x0,0xffffffffffffffe0(%rbp)
+    2400:	75 11                	jne    2413 <exec_opcode+0xc7>
+        errExit("mmap");
+    2402:	48 8d 3d 2b ef ff ff 	lea    -4309(%rip),%rdi        # 1334 <__EH_FRAME_BEGIN__-0x634>
+    2409:	b8 00 00 00 00       	mov    $0x0,%eax
+    240e:	e8 e5 07 00 00       	callq  2bf8 <errExit>
+    }
+
+    // at this point, executable_area points to memory that is writable but
+    // *not* executable.  load the code into it.
+    memcpy(executable_area, code, codelen);
+    2413:	48 8b 55 d0          	mov    0xffffffffffffffd0(%rbp),%rdx
+    2417:	48 8b 75 d8          	mov    0xffffffffffffffd8(%rbp),%rsi
+    241b:	48 8b 7d e0          	mov    0xffffffffffffffe0(%rbp),%rdi
+    241f:	e8 3c 0f 00 00       	callq  3360 <memcpy@plt>
+
+    // fill the space at the end with INT3 instructions, to guarantee
+    // a prompt crash if the generated code runs off the end.
+    // must change this if generating code for non-x86.
+    memset(executable_area + codelen, 0xCC, rounded_codesize - codelen);
+    2424:	48 8b 55 d0          	mov    0xffffffffffffffd0(%rbp),%rdx
+    2428:	48 8b 45 e8          	mov    0xffffffffffffffe8(%rbp),%rax
+    242c:	48 89 c1             	mov    %rax,%rcx
+    242f:	48 29 d1             	sub    %rdx,%rcx
+    2432:	48 89 ca             	mov    %rcx,%rdx
+    2435:	48 8b 45 d0          	mov    0xffffffffffffffd0(%rbp),%rax
+    2439:	48 89 c7             	mov    %rax,%rdi
+    243c:	48 03 7d e0          	add    0xffffffffffffffe0(%rbp),%rdi
+    2440:	be cc 00 00 00       	mov    $0xcc,%esi
+    2445:	e8 26 0f 00 00       	callq  3370 <memset@plt>
+
+    // make executable_area actually executable (and unwritable)
+    if (mprotect(executable_area, rounded_codesize, PROT_READ|PROT_EXEC)) {
+    244a:	48 8b 75 e8          	mov    0xffffffffffffffe8(%rbp),%rsi
+    244e:	48 8b 7d e0          	mov    0xffffffffffffffe0(%rbp),%rdi
+    2452:	ba 05 00 00 00       	mov    $0x5,%edx
+    2457:	e8 24 0f 00 00       	callq  3380 <mprotect@plt>
+    245c:	85 c0                	test   %eax,%eax
+    245e:	74 11                	je     2471 <exec_opcode+0x125>
+        errExit("mprotect");
+    2460:	48 8d 3d d2 ee ff ff 	lea    -4398(%rip),%rdi        # 1339 <__EH_FRAME_BEGIN__-0x62f>
+    2467:	b8 00 00 00 00       	mov    $0x0,%eax
+    246c:	e8 87 07 00 00       	callq  2bf8 <errExit>
+    }
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) executable_area)();
+    2471:	48 8b 45 e0          	mov    0xffffffffffffffe0(%rbp),%rax
+    2475:	ff d0                	callq  *%rax
+    2477:	88 45 f7             	mov    %al,0xfffffffffffffff7(%rbp)
+
+    munmap(executable_area, rounded_codesize);
+    247a:	48 8b 75 e8          	mov    0xffffffffffffffe8(%rbp),%rsi
+    247e:	48 8b 7d e0          	mov    0xffffffffffffffe0(%rbp),%rdi
+    2482:	e8 09 0f 00 00       	callq  3390 <munmap@plt>
+    return ret;
+    2487:	0f b6 45 f7          	movzbl 0xfffffffffffffff7(%rbp),%eax
+}
+    248b:	c9                   	leaveq 
+    248c:	c3                   	retq   
+
+000000000000248d <exec_opcode_WX>:
+
+
+// same as above, but asume writable memory can be executed
+uint8_t exec_opcode_WX(const uint8_t *code, size_t codelen)
+{
+    248d:	55                   	push   %rbp
+    248e:	48 89 e5             	mov    %rsp,%rbp
+    2491:	48 83 ec 40          	sub    $0x40,%rsp
+    2495:	48 89 7d d8          	mov    %rdi,0xffffffffffffffd8(%rbp)
+    2499:	48 89 75 d0          	mov    %rsi,0xffffffffffffffd0(%rbp)
+    uint8_t ret;
+    // in order to manipulate memory protection, we must work with
+    // whole pages allocated directly from the operating system.
+    static size_t pagesize;
+    if (!pagesize) {
+    249d:	48 8b 05 bc 3b 00 00 	mov    15292(%rip),%rax        # 6060 <pagesize.3440>
+    24a4:	48 85 c0             	test   %rax,%rax
+    24a7:	75 2f                	jne    24d8 <exec_opcode_WX+0x4b>
+        pagesize = sysconf(_SC_PAGESIZE);
+    24a9:	bf 1c 00 00 00       	mov    $0x1c,%edi
+    24ae:	e8 8d 0e 00 00       	callq  3340 <sysconf@plt>
+    24b3:	48 89 05 a6 3b 00 00 	mov    %rax,15270(%rip)        # 6060 <pagesize.3440>
+        if (pagesize == (size_t)-1) {
+    24ba:	48 8b 05 9f 3b 00 00 	mov    15263(%rip),%rax        # 6060 <pagesize.3440>
+    24c1:	48 83 f8 ff          	cmp    $0xffffffffffffffff,%rax
+    24c5:	75 11                	jne    24d8 <exec_opcode_WX+0x4b>
+            errExit("getpagesize");
+    24c7:	48 8d 3d 5a ee ff ff 	lea    -4518(%rip),%rdi        # 1328 <__EH_FRAME_BEGIN__-0x640>
+    24ce:	b8 00 00 00 00       	mov    $0x0,%eax
+    24d3:	e8 20 07 00 00       	callq  2bf8 <errExit>
+        }
+    }
+
+    // allocate at least enough space for the code + 1 byte
+    // (so that there will be at least one INT3 - see below),
+    // rounded up to a multiple of the system page size.
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+                               / pagesize) * pagesize;
+    24d8:	48 8b 05 81 3b 00 00 	mov    15233(%rip),%rax        # 6060 <pagesize.3440>
+    24df:	48 89 c2             	mov    %rax,%rdx
+    24e2:	48 03 55 d0          	add    0xffffffffffffffd0(%rbp),%rdx
+    24e6:	48 8b 05 73 3b 00 00 	mov    15219(%rip),%rax        # 6060 <pagesize.3440>
+    24ed:	48 89 45 c8          	mov    %rax,0xffffffffffffffc8(%rbp)
+    24f1:	48 89 d0             	mov    %rdx,%rax
+    24f4:	ba 00 00 00 00       	mov    $0x0,%edx
+    24f9:	48 f7 75 c8          	divq   0xffffffffffffffc8(%rbp)
+    24fd:	48 89 45 c8          	mov    %rax,0xffffffffffffffc8(%rbp)
+    2501:	48 8b 55 c8          	mov    0xffffffffffffffc8(%rbp),%rdx
+    2505:	48 8b 05 54 3b 00 00 	mov    15188(%rip),%rax        # 6060 <pagesize.3440>
+    250c:	48 0f af c2          	imul   %rdx,%rax
+    2510:	48 89 45 e8          	mov    %rax,0xffffffffffffffe8(%rbp)
+
+    void *executable_area = mmap(0, rounded_codesize,
+                                 PROT_READ|PROT_WRITE|PROT_EXEC,
+                                 MAP_PRIVATE|MAP_ANONYMOUS,
+                                 -1, 0);
+    2514:	48 8b 75 e8          	mov    0xffffffffffffffe8(%rbp),%rsi
+    2518:	41 b9 00 00 00 00    	mov    $0x0,%r9d
+    251e:	41 b8 ff ff ff ff    	mov    $0xffffffff,%r8d
+    2524:	b9 02 10 00 00       	mov    $0x1002,%ecx
+    2529:	ba 07 00 00 00       	mov    $0x7,%edx
+    252e:	bf 00 00 00 00       	mov    $0x0,%edi
+    2533:	e8 18 0e 00 00       	callq  3350 <mmap@plt>
+    2538:	48 89 45 e0          	mov    %rax,0xffffffffffffffe0(%rbp)
+    if (!executable_area) {
+    253c:	48 83 7d e0 00       	cmpq   $0x0,0xffffffffffffffe0(%rbp)
+    2541:	75 11                	jne    2554 <exec_opcode_WX+0xc7>
+        errExit("mmap");
+    2543:	48 8d 3d ea ed ff ff 	lea    -4630(%rip),%rdi        # 1334 <__EH_FRAME_BEGIN__-0x634>
+    254a:	b8 00 00 00 00       	mov    $0x0,%eax
+    254f:	e8 a4 06 00 00       	callq  2bf8 <errExit>
+    }
+
+    // at this point, executable_area points to memory that is writable but
+    // *not* executable.  load the code into it.
+    memcpy(executable_area, code, codelen);
+    2554:	48 8b 55 d0          	mov    0xffffffffffffffd0(%rbp),%rdx
+    2558:	48 8b 75 d8          	mov    0xffffffffffffffd8(%rbp),%rsi
+    255c:	48 8b 7d e0          	mov    0xffffffffffffffe0(%rbp),%rdi
+    2560:	e8 fb 0d 00 00       	callq  3360 <memcpy@plt>
+
+    // fill the space at the end with INT3 instructions, to guarantee
+    // a prompt crash if the generated code runs off the end.
+    // must change this if generating code for non-x86.
+    memset(executable_area + codelen, 0xCC, rounded_codesize - codelen);
+    2565:	48 8b 55 d0          	mov    0xffffffffffffffd0(%rbp),%rdx
+    2569:	48 8b 45 e8          	mov    0xffffffffffffffe8(%rbp),%rax
+    256d:	48 89 c1             	mov    %rax,%rcx
+    2570:	48 29 d1             	sub    %rdx,%rcx
+    2573:	48 89 ca             	mov    %rcx,%rdx
+    2576:	48 8b 45 d0          	mov    0xffffffffffffffd0(%rbp),%rax
+    257a:	48 89 c7             	mov    %rax,%rdi
+    257d:	48 03 7d e0          	add    0xffffffffffffffe0(%rbp),%rdi
+    2581:	be cc 00 00 00       	mov    $0xcc,%esi
+    2586:	e8 e5 0d 00 00       	callq  3370 <memset@plt>
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) executable_area)();
+    258b:	48 8b 45 e0          	mov    0xffffffffffffffe0(%rbp),%rax
+    258f:	ff d0                	callq  *%rax
+    2591:	88 45 f7             	mov    %al,0xfffffffffffffff7(%rbp)
+
+    munmap(executable_area, rounded_codesize);
+    2594:	48 8b 75 e8          	mov    0xffffffffffffffe8(%rbp),%rsi
+    2598:	48 8b 7d e0          	mov    0xffffffffffffffe0(%rbp),%rdi
+    259c:	e8 ef 0d 00 00       	callq  3390 <munmap@plt>
+    return ret;
+    25a1:	0f b6 45 f7          	movzbl 0xfffffffffffffff7(%rbp),%eax
+}
+    25a5:	c9                   	leaveq 
+    25a6:	c3                   	retq   
+
+00000000000025a7 <exec_opcode_no_mmap>:
+
+// same as above, but asume writable memory can be executed and no mmap is needed
+uint8_t exec_opcode_no_mmap(const uint8_t *code, size_t codelen)
+{
+    25a7:	55                   	push   %rbp
+    25a8:	48 89 e5             	mov    %rsp,%rbp
+    25ab:	48 83 ec 20          	sub    $0x20,%rsp
+    25af:	48 89 7d e8          	mov    %rdi,0xffffffffffffffe8(%rbp)
+    25b3:	48 89 75 e0          	mov    %rsi,0xffffffffffffffe0(%rbp)
+    uint8_t ret;
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) code)();
+    25b7:	48 8b 45 e8          	mov    0xffffffffffffffe8(%rbp),%rax
+    25bb:	ff d0                	callq  *%rax
+    25bd:	88 45 f7             	mov    %al,0xfffffffffffffff7(%rbp)
+    return ret;
+    25c0:	0f b6 45 f7          	movzbl 0xfffffffffffffff7(%rbp),%eax
+}
+    25c4:	c9                   	leaveq 
+    25c5:	c3                   	retq   
+
+00000000000025c6 <main>:
+
+int main()
+{
+    25c6:	55                   	push   %rbp
+    25c7:	48 89 e5             	mov    %rsp,%rbp
+    25ca:	48 83 ec 50          	sub    $0x50,%rsp
+    25ce:	48 8b 05 33 2a 00 00 	mov    10803(%rip),%rax        # 5008 <__guard_local>
+    25d5:	48 89 45 f8          	mov    %rax,0xfffffffffffffff8(%rbp)
+    25d9:	31 c0                	xor    %eax,%eax
+    uint8_t i;
+    uint8_t *ap;
+    uint8_t current_opcode[OPCODE_LEN];
+    uint8_t ret;
+
+    ap = (uint8_t *)&f_int;
+    25db:	48 8d 05 5e fd ff ff 	lea    -674(%rip),%rax        # 2340 <f_int>
+    25e2:	48 89 45 c0          	mov    %rax,0xffffffffffffffc0(%rbp)
+
+    memcpy(current_opcode, ap, OPCODE_LEN);
+    25e6:	48 8b 75 c0          	mov    0xffffffffffffffc0(%rbp),%rsi
+    25ea:	48 8d 7d d0          	lea    0xffffffffffffffd0(%rbp),%rdi
+    25ee:	ba 27 00 00 00       	mov    $0x27,%edx
+    25f3:	e8 68 0d 00 00       	callq  3360 <memcpy@plt>
+    if (memcmp(current_opcode, f_opcode, OPCODE_LEN) != 0) {
+    25f8:	48 8d 7d d0          	lea    0xffffffffffffffd0(%rbp),%rdi
+    25fc:	ba 27 00 00 00       	mov    $0x27,%edx
+    2601:	48 8d 35 f8 19 00 00 	lea    6648(%rip),%rsi        # 4000 <f_opcode>
+    2608:	e8 93 0d 00 00       	callq  33a0 <memcmp@plt>
+    260d:	85 c0                	test   %eax,%eax
+    260f:	0f 84 15 01 00 00    	je     272a <main+0x164>
+        printf(" [!!] opcodes should be updated\r\n");
+    2615:	48 8d 3d 2c ed ff ff 	lea    -4820(%rip),%rdi        # 1348 <__EH_FRAME_BEGIN__-0x620>
+    261c:	e8 8f 0d 00 00       	callq  33b0 <puts@plt>
+        printf("0x%p ", f_int);
+    2621:	48 8d 35 18 fd ff ff 	lea    -744(%rip),%rsi        # 2340 <f_int>
+    2628:	48 8d 3d 3a ed ff ff 	lea    -4806(%rip),%rdi        # 1369 <__EH_FRAME_BEGIN__-0x5ff>
+    262f:	b8 00 00 00 00       	mov    $0x0,%eax
+    2634:	e8 87 0d 00 00       	callq  33c0 <printf@plt>
+        for (i=0;i<8;i++) {
+    2639:	c6 45 cf 00          	movb   $0x0,0xffffffffffffffcf(%rbp)
+    263d:	eb 72                	jmp    26b1 <main+0xeb>
+            printf("%02x%02x%02x%02x ", (uint8_t)(*(ap+4*i)), (uint8_t)(*(ap+4*i+1)), (uint8_t)*((ap+4*i+2)), (uint8_t)(*(ap+4*i+3)));
+    263f:	0f b6 45 cf          	movzbl 0xffffffffffffffcf(%rbp),%eax
+    2643:	c1 e0 02             	shl    $0x2,%eax
+    2646:	48 98                	cltq   
+    2648:	48 03 45 c0          	add    0xffffffffffffffc0(%rbp),%rax
+    264c:	48 83 c0 03          	add    $0x3,%rax
+    2650:	0f b6 00             	movzbl (%rax),%eax
+    2653:	0f b6 c8             	movzbl %al,%ecx
+    2656:	0f b6 45 cf          	movzbl 0xffffffffffffffcf(%rbp),%eax
+    265a:	c1 e0 02             	shl    $0x2,%eax
+    265d:	48 98                	cltq   
+    265f:	48 03 45 c0          	add    0xffffffffffffffc0(%rbp),%rax
+    2663:	48 83 c0 02          	add    $0x2,%rax
+    2667:	0f b6 00             	movzbl (%rax),%eax
+    266a:	0f b6 f8             	movzbl %al,%edi
+    266d:	0f b6 45 cf          	movzbl 0xffffffffffffffcf(%rbp),%eax
+    2671:	c1 e0 02             	shl    $0x2,%eax
+    2674:	48 98                	cltq   
+    2676:	48 03 45 c0          	add    0xffffffffffffffc0(%rbp),%rax
+    267a:	48 83 c0 01          	add    $0x1,%rax
+    267e:	0f b6 00             	movzbl (%rax),%eax
+    2681:	0f b6 d0             	movzbl %al,%edx
+    2684:	0f b6 45 cf          	movzbl 0xffffffffffffffcf(%rbp),%eax
+    2688:	c1 e0 02             	shl    $0x2,%eax
+    268b:	48 98                	cltq   
+    268d:	48 03 45 c0          	add    0xffffffffffffffc0(%rbp),%rax
+    2691:	0f b6 00             	movzbl (%rax),%eax
+    2694:	0f b6 f0             	movzbl %al,%esi
+    2697:	41 89 c8             	mov    %ecx,%r8d
+    269a:	89 f9                	mov    %edi,%ecx
+    269c:	48 8d 3d cc ec ff ff 	lea    -4916(%rip),%rdi        # 136f <__EH_FRAME_BEGIN__-0x5f9>
+    26a3:	b8 00 00 00 00       	mov    $0x0,%eax
+    26a8:	e8 13 0d 00 00       	callq  33c0 <printf@plt>
+    26ad:	80 45 cf 01          	addb   $0x1,0xffffffffffffffcf(%rbp)
+    26b1:	80 7d cf 07          	cmpb   $0x7,0xffffffffffffffcf(%rbp)
+    26b5:	76 88                	jbe    263f <main+0x79>
+        }
+        printf("\r\nuint8_t f_opcode[%d] = {", OPCODE_LEN);
+    26b7:	be 27 00 00 00       	mov    $0x27,%esi
+    26bc:	48 8d 3d be ec ff ff 	lea    -4930(%rip),%rdi        # 1381 <__EH_FRAME_BEGIN__-0x5e7>
+    26c3:	b8 00 00 00 00       	mov    $0x0,%eax
+    26c8:	e8 f3 0c 00 00       	callq  33c0 <printf@plt>
+        for (i=0; i<OPCODE_LEN; i++) {
+    26cd:	c6 45 cf 00          	movb   $0x0,0xffffffffffffffcf(%rbp)
+    26d1:	eb 45                	jmp    2718 <main+0x152>
+            printf("0x%02x%s", (uint8_t)(*(ap+i)), i < (OPCODE_LEN-1) ? ", ":"");
+    26d3:	80 7d cf 25          	cmpb   $0x25,0xffffffffffffffcf(%rbp)
+    26d7:	77 0d                	ja     26e6 <main+0x120>
+    26d9:	48 8d 15 bc ec ff ff 	lea    -4932(%rip),%rdx        # 139c <__EH_FRAME_BEGIN__-0x5cc>
+    26e0:	48 89 55 b8          	mov    %rdx,0xffffffffffffffb8(%rbp)
+    26e4:	eb 0b                	jmp    26f1 <main+0x12b>
+    26e6:	48 8d 05 b2 ec ff ff 	lea    -4942(%rip),%rax        # 139f <__EH_FRAME_BEGIN__-0x5c9>
+    26ed:	48 89 45 b8          	mov    %rax,0xffffffffffffffb8(%rbp)
+    26f1:	0f b6 45 cf          	movzbl 0xffffffffffffffcf(%rbp),%eax
+    26f5:	48 03 45 c0          	add    0xffffffffffffffc0(%rbp),%rax
+    26f9:	0f b6 00             	movzbl (%rax),%eax
+    26fc:	0f b6 f0             	movzbl %al,%esi
+    26ff:	48 8b 55 b8          	mov    0xffffffffffffffb8(%rbp),%rdx
+    2703:	48 8d 3d 96 ec ff ff 	lea    -4970(%rip),%rdi        # 13a0 <__EH_FRAME_BEGIN__-0x5c8>
+    270a:	b8 00 00 00 00       	mov    $0x0,%eax
+    270f:	e8 ac 0c 00 00       	callq  33c0 <printf@plt>
+    2714:	80 45 cf 01          	addb   $0x1,0xffffffffffffffcf(%rbp)
+    2718:	80 7d cf 26          	cmpb   $0x26,0xffffffffffffffcf(%rbp)
+    271c:	76 b5                	jbe    26d3 <main+0x10d>
+        }
+
+        printf("};\r\n");
+    271e:	48 8d 3d 84 ec ff ff 	lea    -4988(%rip),%rdi        # 13a9 <__EH_FRAME_BEGIN__-0x5bf>
+    2725:	e8 86 0c 00 00       	callq  33b0 <puts@plt>
+    }
+
+#ifdef SCENARIO1
+    printf("* execute internal function from %p", &f_int);
+    272a:	48 8d 35 0f fc ff ff 	lea    -1009(%rip),%rsi        # 2340 <f_int>
+    2731:	48 8d 3d 78 ec ff ff 	lea    -5000(%rip),%rdi        # 13b0 <__EH_FRAME_BEGIN__-0x5b8>
+    2738:	b8 00 00 00 00       	mov    $0x0,%eax
+    273d:	e8 7e 0c 00 00       	callq  33c0 <printf@plt>
+    ret = f_int();
+    2742:	e8 f9 fb ff ff       	callq  2340 <f_int>
+    2747:	88 45 ce             	mov    %al,0xffffffffffffffce(%rbp)
+    if (ret == 0xee) {
+    274a:	80 7d ce ee          	cmpb   $0xee,0xffffffffffffffce(%rbp)
+    274e:	75 0e                	jne    275e <main+0x198>
+        printf(" \t[ok]\r\n");
+    2750:	48 8d 3d 7d ec ff ff 	lea    -4995(%rip),%rdi        # 13d4 <__EH_FRAME_BEGIN__-0x594>
+    2757:	e8 54 0c 00 00       	callq  33b0 <puts@plt>
+    275c:	eb 15                	jmp    2773 <main+0x1ad>
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    275e:	0f b6 75 ce          	movzbl 0xffffffffffffffce(%rbp),%esi
+    2762:	48 8d 3d 73 ec ff ff 	lea    -5005(%rip),%rdi        # 13dc <__EH_FRAME_BEGIN__-0x58c>
+    2769:	b8 00 00 00 00       	mov    $0x0,%eax
+    276e:	e8 4d 0c 00 00       	callq  33c0 <printf@plt>
+    }
+#endif
+
+#ifdef SCENARIO2
+    printf("* execute stored opcodes via mmap obeying NX %p", &f_opcode);
+    2773:	48 8d 35 86 18 00 00 	lea    6278(%rip),%rsi        # 4000 <f_opcode>
+    277a:	48 8d 3d 6f ec ff ff 	lea    -5009(%rip),%rdi        # 13f0 <__EH_FRAME_BEGIN__-0x578>
+    2781:	b8 00 00 00 00       	mov    $0x0,%eax
+    2786:	e8 35 0c 00 00       	callq  33c0 <printf@plt>
+    ret = exec_opcode(f_opcode, sizeof(f_opcode));
+    278b:	be 27 00 00 00       	mov    $0x27,%esi
+    2790:	48 8d 3d 69 18 00 00 	lea    6249(%rip),%rdi        # 4000 <f_opcode>
+    2797:	e8 b0 fb ff ff       	callq  234c <exec_opcode>
+    279c:	88 45 ce             	mov    %al,0xffffffffffffffce(%rbp)
+    if (ret == 0xee) {
+    279f:	80 7d ce ee          	cmpb   $0xee,0xffffffffffffffce(%rbp)
+    27a3:	75 0e                	jne    27b3 <main+0x1ed>
+        printf(" \t[ok]\r\n");
+    27a5:	48 8d 3d 28 ec ff ff 	lea    -5080(%rip),%rdi        # 13d4 <__EH_FRAME_BEGIN__-0x594>
+    27ac:	e8 ff 0b 00 00       	callq  33b0 <puts@plt>
+    27b1:	eb 15                	jmp    27c8 <main+0x202>
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    27b3:	0f b6 75 ce          	movzbl 0xffffffffffffffce(%rbp),%esi
+    27b7:	48 8d 3d 1e ec ff ff 	lea    -5090(%rip),%rdi        # 13dc <__EH_FRAME_BEGIN__-0x58c>
+    27be:	b8 00 00 00 00       	mov    $0x0,%eax
+    27c3:	e8 f8 0b 00 00       	callq  33c0 <printf@plt>
+    }
+#endif
+
+#ifdef SCENARIO3
+    printf("* execute detected opcodes via mmap obeying NX %p", &current_opcode);
+    27c8:	48 8d 75 d0          	lea    0xffffffffffffffd0(%rbp),%rsi
+    27cc:	48 8d 3d 4d ec ff ff 	lea    -5043(%rip),%rdi        # 1420 <__EH_FRAME_BEGIN__-0x548>
+    27d3:	b8 00 00 00 00       	mov    $0x0,%eax
+    27d8:	e8 e3 0b 00 00       	callq  33c0 <printf@plt>
+    ret = exec_opcode(current_opcode, sizeof(f_opcode));
+    27dd:	48 8d 7d d0          	lea    0xffffffffffffffd0(%rbp),%rdi
+    27e1:	be 27 00 00 00       	mov    $0x27,%esi
+    27e6:	e8 61 fb ff ff       	callq  234c <exec_opcode>
+    27eb:	88 45 ce             	mov    %al,0xffffffffffffffce(%rbp)
+    if (ret == 0xee) {
+    27ee:	80 7d ce ee          	cmpb   $0xee,0xffffffffffffffce(%rbp)
+    27f2:	75 0e                	jne    2802 <main+0x23c>
+        printf(" \t[ok]\r\n");
+    27f4:	48 8d 3d d9 eb ff ff 	lea    -5159(%rip),%rdi        # 13d4 <__EH_FRAME_BEGIN__-0x594>
+    27fb:	e8 b0 0b 00 00       	callq  33b0 <puts@plt>
+    2800:	eb 15                	jmp    2817 <main+0x251>
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2802:	0f b6 75 ce          	movzbl 0xffffffffffffffce(%rbp),%esi
+    2806:	48 8d 3d cf eb ff ff 	lea    -5169(%rip),%rdi        # 13dc <__EH_FRAME_BEGIN__-0x58c>
+    280d:	b8 00 00 00 00       	mov    $0x0,%eax
+    2812:	e8 a9 0b 00 00       	callq  33c0 <printf@plt>
+    }
+#endif
+
+#ifdef SCENARIO4
+    printf("* execute detected opcodes via mmap not obeying NX %p", &current_opcode);
+    2817:	48 8d 75 d0          	lea    0xffffffffffffffd0(%rbp),%rsi
+    281b:	48 8d 3d 36 ec ff ff 	lea    -5066(%rip),%rdi        # 1458 <__EH_FRAME_BEGIN__-0x510>
+    2822:	b8 00 00 00 00       	mov    $0x0,%eax
+    2827:	e8 94 0b 00 00       	callq  33c0 <printf@plt>
+    ret = exec_opcode_WX(current_opcode, sizeof(f_opcode));
+    282c:	48 8d 7d d0          	lea    0xffffffffffffffd0(%rbp),%rdi
+    2830:	be 27 00 00 00       	mov    $0x27,%esi
+    2835:	e8 53 fc ff ff       	callq  248d <exec_opcode_WX>
+    283a:	88 45 ce             	mov    %al,0xffffffffffffffce(%rbp)
+    if (ret == 0xee) {
+    283d:	80 7d ce ee          	cmpb   $0xee,0xffffffffffffffce(%rbp)
+    2841:	75 0e                	jne    2851 <main+0x28b>
+        printf(" \t[ok]\r\n");
+    2843:	48 8d 3d 8a eb ff ff 	lea    -5238(%rip),%rdi        # 13d4 <__EH_FRAME_BEGIN__-0x594>
+    284a:	e8 61 0b 00 00       	callq  33b0 <puts@plt>
+    284f:	eb 15                	jmp    2866 <main+0x2a0>
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2851:	0f b6 75 ce          	movzbl 0xffffffffffffffce(%rbp),%esi
+    2855:	48 8d 3d 80 eb ff ff 	lea    -5248(%rip),%rdi        # 13dc <__EH_FRAME_BEGIN__-0x58c>
+    285c:	b8 00 00 00 00       	mov    $0x0,%eax
+    2861:	e8 5a 0b 00 00       	callq  33c0 <printf@plt>
+    }
+#endif
+
+#ifdef SCENARIO5
+    printf("* execute detected opcodes without mmap, also not obeying NX %p", &current_opcode);
+    2866:	48 8d 75 d0          	lea    0xffffffffffffffd0(%rbp),%rsi
+    286a:	48 8d 3d 1f ec ff ff 	lea    -5089(%rip),%rdi        # 1490 <__EH_FRAME_BEGIN__-0x4d8>
+    2871:	b8 00 00 00 00       	mov    $0x0,%eax
+    2876:	e8 45 0b 00 00       	callq  33c0 <printf@plt>
+    ret = exec_opcode_no_mmap(current_opcode, sizeof(f_opcode));
+    287b:	48 8d 7d d0          	lea    0xffffffffffffffd0(%rbp),%rdi
+    287f:	be 27 00 00 00       	mov    $0x27,%esi
+    2884:	e8 1e fd ff ff       	callq  25a7 <exec_opcode_no_mmap>
+    2889:	88 45 ce             	mov    %al,0xffffffffffffffce(%rbp)
+    if (ret == 0xee) {
+    288c:	80 7d ce ee          	cmpb   $0xee,0xffffffffffffffce(%rbp)
+    2890:	75 0e                	jne    28a0 <main+0x2da>
+        printf(" \t[ok]\r\n");
+    2892:	48 8d 3d 3b eb ff ff 	lea    -5317(%rip),%rdi        # 13d4 <__EH_FRAME_BEGIN__-0x594>
+    2899:	e8 12 0b 00 00       	callq  33b0 <puts@plt>
+    289e:	eb 15                	jmp    28b5 <main+0x2ef>
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    28a0:	0f b6 75 ce          	movzbl 0xffffffffffffffce(%rbp),%esi
+    28a4:	48 8d 3d 31 eb ff ff 	lea    -5327(%rip),%rdi        # 13dc <__EH_FRAME_BEGIN__-0x58c>
+    28ab:	b8 00 00 00 00       	mov    $0x0,%eax
+    28b0:	e8 0b 0b 00 00       	callq  33c0 <printf@plt>
+    }
+#endif
+
+	return EXIT_SUCCESS;
+    28b5:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+    28ba:	48 8b 55 f8          	mov    0xfffffffffffffff8(%rbp),%rdx
+    28be:	48 33 15 43 27 00 00 	xor    10051(%rip),%rdx        # 5008 <__guard_local>
+    28c5:	74 0c                	je     28d3 <main+0x30d>
+    28c7:	48 8d 3d 02 ec ff ff 	lea    -5118(%rip),%rdi        # 14d0 <__EH_FRAME_BEGIN__-0x498>
+    28ce:	e8 fd 0a 00 00       	callq  33d0 <__stack_smash_handler@plt>
+    28d3:	c9                   	leaveq 
+    28d4:	c3                   	retq   
+    28d5:	cc                   	int3   
+    28d6:	cc                   	int3   
+    28d7:	cc                   	int3   
+
+00000000000028d8 <terminate>:
+__attribute__ ((__noreturn__))  /* if we call this function as last */
+#endif                          /* statement in a non-void function */
+static void
+terminate(Boolean useExit3)
+{
+    28d8:	55                   	push   %rbp
+    28d9:	48 89 e5             	mov    %rsp,%rbp
+    28dc:	48 83 ec 20          	sub    $0x20,%rsp
+    28e0:	89 7d ec             	mov    %edi,0xffffffffffffffec(%rbp)
+    char *s;
+
+    /* Dump core if EF_DUMPCORE environment variable is defined and
+       is a nonempty string; otherwise call exit(3) or _exit(2),
+       depending on the value of 'useExit3'. */
+
+    s = getenv("EF_DUMPCORE");
+    28e3:	48 8d 3d 4a ef ff ff 	lea    -4278(%rip),%rdi        # 1834 <__EH_FRAME_BEGIN__-0x134>
+    28ea:	e8 f1 0a 00 00       	callq  33e0 <getenv@plt>
+    28ef:	48 89 45 f0          	mov    %rax,0xfffffffffffffff0(%rbp)
+
+    if (s != NULL && *s != '\0')
+    28f3:	48 83 7d f0 00       	cmpq   $0x0,0xfffffffffffffff0(%rbp)
+    28f8:	74 10                	je     290a <terminate+0x32>
+    28fa:	48 8b 45 f0          	mov    0xfffffffffffffff0(%rbp),%rax
+    28fe:	0f b6 00             	movzbl (%rax),%eax
+    2901:	84 c0                	test   %al,%al
+    2903:	74 05                	je     290a <terminate+0x32>
+        abort();
+    2905:	e8 e6 0a 00 00       	callq  33f0 <abort@plt>
+    else if (useExit3)
+    290a:	83 7d ec 00          	cmpl   $0x0,0xffffffffffffffec(%rbp)
+    290e:	74 0a                	je     291a <terminate+0x42>
+        exit(EXIT_FAILURE);
+    2910:	bf 01 00 00 00       	mov    $0x1,%edi
+    2915:	e8 f6 09 00 00       	callq  3310 <exit@plt>
+    else
+        _exit(EXIT_FAILURE);
+    291a:	bf 01 00 00 00       	mov    $0x1,%edi
+    291f:	e8 dc 0a 00 00       	callq  3400 <_exit@plt>
+
+0000000000002924 <outputError>:
+}
+
+/* Diagnose 'errno' error by:
+
+      * outputting a string containing the error name (if available
+        in 'ename' array) corresponding to the value in 'err', along
+        with the corresponding error message from strerror(), and
+
+      * outputting the caller-supplied error message specified in
+        'format' and 'ap'. */
+
+static void
+outputError(Boolean useErr, int err, Boolean flushStdout,
+        const char *format, va_list ap)
+{
+    2924:	55                   	push   %rbp
+    2925:	48 89 e5             	mov    %rsp,%rbp
+    2928:	48 81 ec 30 06 00 00 	sub    $0x630,%rsp
+    292f:	89 bd fc f9 ff ff    	mov    %edi,0xfffffffffffff9fc(%rbp)
+    2935:	89 b5 f8 f9 ff ff    	mov    %esi,0xfffffffffffff9f8(%rbp)
+    293b:	89 95 f4 f9 ff ff    	mov    %edx,0xfffffffffffff9f4(%rbp)
+    2941:	48 89 8d e8 f9 ff ff 	mov    %rcx,0xfffffffffffff9e8(%rbp)
+    2948:	4c 89 85 e0 f9 ff ff 	mov    %r8,0xfffffffffffff9e0(%rbp)
+    294f:	48 8b 05 b2 26 00 00 	mov    9906(%rip),%rax        # 5008 <__guard_local>
+    2956:	48 89 45 f8          	mov    %rax,0xfffffffffffffff8(%rbp)
+    295a:	31 c0                	xor    %eax,%eax
+#define BUF_SIZE 500
+    char buf[BUF_SIZE], userMsg[BUF_SIZE], errText[BUF_SIZE];
+
+    vsnprintf(userMsg, BUF_SIZE, format, ap);
+    295c:	48 8b 8d e0 f9 ff ff 	mov    0xfffffffffffff9e0(%rbp),%rcx
+    2963:	48 8b 95 e8 f9 ff ff 	mov    0xfffffffffffff9e8(%rbp),%rdx
+    296a:	48 8d bd 00 fc ff ff 	lea    0xfffffffffffffc00(%rbp),%rdi
+    2971:	be f4 01 00 00       	mov    $0x1f4,%esi
+    2976:	e8 95 0a 00 00       	callq  3410 <vsnprintf@plt>
+
+    if (useErr)
+    297b:	83 bd fc f9 ff ff 00 	cmpl   $0x0,0xfffffffffffff9fc(%rbp)
+    2982:	0f 84 83 00 00 00    	je     2a0b <outputError+0xe7>
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+    2988:	8b bd f8 f9 ff ff    	mov    0xfffffffffffff9f8(%rbp),%edi
+    298e:	e8 8d 0a 00 00       	callq  3420 <strerror@plt>
+    2993:	48 89 85 d0 f9 ff ff 	mov    %rax,0xfffffffffffff9d0(%rbp)
+    299a:	83 bd f8 f9 ff ff 00 	cmpl   $0x0,0xfffffffffffff9f8(%rbp)
+    29a1:	7e 2d                	jle    29d0 <outputError+0xac>
+    29a3:	83 bd f8 f9 ff ff 5f 	cmpl   $0x5f,0xfffffffffffff9f8(%rbp)
+    29aa:	7f 24                	jg     29d0 <outputError+0xac>
+    29ac:	8b 85 f8 f9 ff ff    	mov    0xfffffffffffff9f8(%rbp),%eax
+    29b2:	48 98                	cltq   
+    29b4:	48 8d 14 c5 00 00 00 	lea    0x0(,%rax,8),%rdx
+    29bb:	00 
+    29bc:	48 8d 05 7d 16 00 00 	lea    5757(%rip),%rax        # 4040 <ename>
+    29c3:	48 8b 14 02          	mov    (%rdx,%rax,1),%rdx
+    29c7:	48 89 95 d8 f9 ff ff 	mov    %rdx,0xfffffffffffff9d8(%rbp)
+    29ce:	eb 0e                	jmp    29de <outputError+0xba>
+    29d0:	48 8d 05 69 ee ff ff 	lea    -4503(%rip),%rax        # 1840 <__EH_FRAME_BEGIN__-0x128>
+    29d7:	48 89 85 d8 f9 ff ff 	mov    %rax,0xfffffffffffff9d8(%rbp)
+    29de:	48 8d bd 00 fa ff ff 	lea    0xfffffffffffffa00(%rbp),%rdi
+    29e5:	4c 8b 85 d0 f9 ff ff 	mov    0xfffffffffffff9d0(%rbp),%r8
+    29ec:	48 8b 8d d8 f9 ff ff 	mov    0xfffffffffffff9d8(%rbp),%rcx
+    29f3:	48 8d 15 50 ee ff ff 	lea    -4528(%rip),%rdx        # 184a <__EH_FRAME_BEGIN__-0x11e>
+    29fa:	be f4 01 00 00       	mov    $0x1f4,%esi
+    29ff:	b8 00 00 00 00       	mov    $0x0,%eax
+    2a04:	e8 27 0a 00 00       	callq  3430 <snprintf@plt>
+    2a09:	eb 1d                	jmp    2a28 <outputError+0x104>
+                (err > 0 && err <= MAX_ENAME) ?
+                ename[err] : "?UNKNOWN?", strerror(err));
+    else
+        snprintf(errText, BUF_SIZE, ":");
+    2a0b:	48 8d bd 00 fa ff ff 	lea    0xfffffffffffffa00(%rbp),%rdi
+    2a12:	48 8d 15 3a ee ff ff 	lea    -4550(%rip),%rdx        # 1853 <__EH_FRAME_BEGIN__-0x115>
+    2a19:	be f4 01 00 00       	mov    $0x1f4,%esi
+    2a1e:	b8 00 00 00 00       	mov    $0x0,%eax
+    2a23:	e8 08 0a 00 00       	callq  3430 <snprintf@plt>
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-truncation"
+    snprintf(buf, BUF_SIZE, "ERROR%s %s\n", errText, userMsg);
+    2a28:	48 8d 85 00 fc ff ff 	lea    0xfffffffffffffc00(%rbp),%rax
+    2a2f:	48 8d 8d 00 fa ff ff 	lea    0xfffffffffffffa00(%rbp),%rcx
+    2a36:	48 8d bd 00 fe ff ff 	lea    0xfffffffffffffe00(%rbp),%rdi
+    2a3d:	49 89 c0             	mov    %rax,%r8
+    2a40:	48 8d 15 0e ee ff ff 	lea    -4594(%rip),%rdx        # 1855 <__EH_FRAME_BEGIN__-0x113>
+    2a47:	be f4 01 00 00       	mov    $0x1f4,%esi
+    2a4c:	b8 00 00 00 00       	mov    $0x0,%eax
+    2a51:	e8 da 09 00 00       	callq  3430 <snprintf@plt>
+#pragma GCC diagnostic pop
+
+    if (flushStdout)
+    2a56:	83 bd f4 f9 ff ff 00 	cmpl   $0x0,0xfffffffffffff9f4(%rbp)
+    2a5d:	74 13                	je     2a72 <outputError+0x14e>
+        fflush(stdout);       /* Flush any pending stdout */
+    2a5f:	48 8b 05 0a 27 00 00 	mov    9994(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    2a66:	48 8d b8 98 00 00 00 	lea    0x98(%rax),%rdi
+    2a6d:	e8 ce 09 00 00       	callq  3440 <fflush@plt>
+    fputs(buf, stderr);
+    2a72:	48 8b 05 f7 26 00 00 	mov    9975(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    2a79:	48 8d b0 30 01 00 00 	lea    0x130(%rax),%rsi
+    2a80:	48 8d bd 00 fe ff ff 	lea    0xfffffffffffffe00(%rbp),%rdi
+    2a87:	e8 c4 09 00 00       	callq  3450 <fputs@plt>
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    2a8c:	48 8b 05 dd 26 00 00 	mov    9949(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    2a93:	48 8d b8 30 01 00 00 	lea    0x130(%rax),%rdi
+    2a9a:	e8 a1 09 00 00       	callq  3440 <fflush@plt>
+}
+    2a9f:	48 8b 45 f8          	mov    0xfffffffffffffff8(%rbp),%rax
+    2aa3:	48 33 05 5e 25 00 00 	xor    9566(%rip),%rax        # 5008 <__guard_local>
+    2aaa:	74 0c                	je     2ab8 <outputError+0x194>
+    2aac:	48 8d 3d ae ed ff ff 	lea    -4690(%rip),%rdi        # 1861 <__EH_FRAME_BEGIN__-0x107>
+    2ab3:	e8 18 09 00 00       	callq  33d0 <__stack_smash_handler@plt>
+    2ab8:	c9                   	leaveq 
+    2ab9:	c3                   	retq   
+
+0000000000002aba <errMsg>:
+
+/* Display error message including 'errno' diagnostic, and
+   return to caller */
+
+void
+errMsg(const char *format, ...)
+{
+    2aba:	55                   	push   %rbp
+    2abb:	48 89 e5             	mov    %rsp,%rbp
+    2abe:	48 81 ec f0 00 00 00 	sub    $0xf0,%rsp
+    2ac5:	48 89 b5 58 ff ff ff 	mov    %rsi,0xffffffffffffff58(%rbp)
+    2acc:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    2ad3:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    2ada:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    2ae1:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    2ae8:	0f b6 c0             	movzbl %al,%eax
+    2aeb:	48 89 85 10 ff ff ff 	mov    %rax,0xffffffffffffff10(%rbp)
+    2af2:	48 8b 95 10 ff ff ff 	mov    0xffffffffffffff10(%rbp),%rdx
+    2af9:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    2b00:	00 
+    2b01:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 2b43 <errMsg+0x89>
+    2b08:	48 89 95 10 ff ff ff 	mov    %rdx,0xffffffffffffff10(%rbp)
+    2b0f:	48 29 85 10 ff ff ff 	sub    %rax,0xffffffffffffff10(%rbp)
+    2b16:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    2b1a:	48 8b 95 10 ff ff ff 	mov    0xffffffffffffff10(%rbp),%rdx
+    2b21:	ff e2                	jmpq   *%rdx
+    2b23:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    2b27:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    2b2b:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    2b2f:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    2b33:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    2b37:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    2b3b:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    2b3f:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    2b43:	48 89 bd 18 ff ff ff 	mov    %rdi,0xffffffffffffff18(%rbp)
+    2b4a:	48 8b 05 b7 24 00 00 	mov    9399(%rip),%rax        # 5008 <__guard_local>
+    2b51:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    2b58:	31 c0                	xor    %eax,%eax
+    va_list argList;
+    int savedErrno;
+
+    savedErrno = errno;       /* In case we change it here */
+    2b5a:	e8 01 09 00 00       	callq  3460 <__errno@plt>
+    2b5f:	8b 00                	mov    (%rax),%eax
+    2b61:	89 85 44 ff ff ff    	mov    %eax,0xffffffffffffff44(%rbp)
+
+    va_start(argList, format);
+    2b67:	48 8d 85 20 ff ff ff 	lea    0xffffffffffffff20(%rbp),%rax
+    2b6e:	c7 00 08 00 00 00    	movl   $0x8,(%rax)
+    2b74:	48 8d 85 20 ff ff ff 	lea    0xffffffffffffff20(%rbp),%rax
+    2b7b:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    2b82:	48 8d 85 20 ff ff ff 	lea    0xffffffffffffff20(%rbp),%rax
+    2b89:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    2b8d:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    2b91:	48 8d 85 20 ff ff ff 	lea    0xffffffffffffff20(%rbp),%rax
+    2b98:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    2b9f:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    outputError(TRUE, errno, TRUE, format, argList);
+    2ba3:	e8 b8 08 00 00       	callq  3460 <__errno@plt>
+    2ba8:	8b 30                	mov    (%rax),%esi
+    2baa:	48 8d 85 20 ff ff ff 	lea    0xffffffffffffff20(%rbp),%rax
+    2bb1:	48 8b 8d 18 ff ff ff 	mov    0xffffffffffffff18(%rbp),%rcx
+    2bb8:	49 89 c0             	mov    %rax,%r8
+    2bbb:	ba 01 00 00 00       	mov    $0x1,%edx
+    2bc0:	bf 01 00 00 00       	mov    $0x1,%edi
+    2bc5:	e8 5a fd ff ff       	callq  2924 <outputError>
+    va_end(argList);
+
+    errno = savedErrno;
+    2bca:	e8 91 08 00 00       	callq  3460 <__errno@plt>
+    2bcf:	48 89 c2             	mov    %rax,%rdx
+    2bd2:	8b 85 44 ff ff ff    	mov    0xffffffffffffff44(%rbp),%eax
+    2bd8:	89 02                	mov    %eax,(%rdx)
+}
+    2bda:	48 8b 85 48 ff ff ff 	mov    0xffffffffffffff48(%rbp),%rax
+    2be1:	48 33 05 20 24 00 00 	xor    9248(%rip),%rax        # 5008 <__guard_local>
+    2be8:	74 0c                	je     2bf6 <errMsg+0x13c>
+    2bea:	48 8d 3d 7c ec ff ff 	lea    -4996(%rip),%rdi        # 186d <__EH_FRAME_BEGIN__-0xfb>
+    2bf1:	e8 da 07 00 00       	callq  33d0 <__stack_smash_handler@plt>
+    2bf6:	c9                   	leaveq 
+    2bf7:	c3                   	retq   
+
+0000000000002bf8 <errExit>:
+
+/* Display error message including 'errno' diagnostic, and
+   terminate the process */
+
+void
+errExit(const char *format, ...)
+{
+    2bf8:	55                   	push   %rbp
+    2bf9:	48 89 e5             	mov    %rsp,%rbp
+    2bfc:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+    2c03:	48 89 b5 58 ff ff ff 	mov    %rsi,0xffffffffffffff58(%rbp)
+    2c0a:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    2c11:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    2c18:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    2c1f:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    2c26:	0f b6 c0             	movzbl %al,%eax
+    2c29:	48 89 85 20 ff ff ff 	mov    %rax,0xffffffffffffff20(%rbp)
+    2c30:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    2c37:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    2c3e:	00 
+    2c3f:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 2c81 <errExit+0x89>
+    2c46:	48 89 95 20 ff ff ff 	mov    %rdx,0xffffffffffffff20(%rbp)
+    2c4d:	48 29 85 20 ff ff ff 	sub    %rax,0xffffffffffffff20(%rbp)
+    2c54:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    2c58:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    2c5f:	ff e2                	jmpq   *%rdx
+    2c61:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    2c65:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    2c69:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    2c6d:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    2c71:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    2c75:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    2c79:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    2c7d:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    2c81:	48 89 bd 28 ff ff ff 	mov    %rdi,0xffffffffffffff28(%rbp)
+    2c88:	48 8b 05 79 23 00 00 	mov    9081(%rip),%rax        # 5008 <__guard_local>
+    2c8f:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    2c96:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    2c98:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2c9f:	c7 00 08 00 00 00    	movl   $0x8,(%rax)
+    2ca5:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2cac:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    2cb3:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2cba:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    2cbe:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    2cc2:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2cc9:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    2cd0:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    outputError(TRUE, errno, TRUE, format, argList);
+    2cd4:	e8 87 07 00 00       	callq  3460 <__errno@plt>
+    2cd9:	8b 30                	mov    (%rax),%esi
+    2cdb:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2ce2:	48 8b 8d 28 ff ff ff 	mov    0xffffffffffffff28(%rbp),%rcx
+    2ce9:	49 89 c0             	mov    %rax,%r8
+    2cec:	ba 01 00 00 00       	mov    $0x1,%edx
+    2cf1:	bf 01 00 00 00       	mov    $0x1,%edi
+    2cf6:	e8 29 fc ff ff       	callq  2924 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    2cfb:	bf 01 00 00 00       	mov    $0x1,%edi
+    2d00:	e8 d3 fb ff ff       	callq  28d8 <terminate>
+
+0000000000002d05 <err_exit>:
+}
+
+/* Display error message including 'errno' diagnostic, and
+   terminate the process by calling _exit().
+
+   The relationship between this function and errExit() is analogous
+   to that between _exit(2) and exit(3): unlike errExit(), this
+   function does not flush stdout and calls _exit(2) to terminate the
+   process (rather than exit(3), which would cause exit handlers to be
+   invoked).
+
+   These differences make this function especially useful in a library
+   function that creates a child process that must then terminate
+   because of an error: the child must terminate without flushing
+   stdio buffers that were partially filled by the caller and without
+   invoking exit handlers that were established by the caller. */
+
+void
+err_exit(const char *format, ...)
+{
+    2d05:	55                   	push   %rbp
+    2d06:	48 89 e5             	mov    %rsp,%rbp
+    2d09:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+    2d10:	48 89 b5 58 ff ff ff 	mov    %rsi,0xffffffffffffff58(%rbp)
+    2d17:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    2d1e:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    2d25:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    2d2c:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    2d33:	0f b6 c0             	movzbl %al,%eax
+    2d36:	48 89 85 20 ff ff ff 	mov    %rax,0xffffffffffffff20(%rbp)
+    2d3d:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    2d44:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    2d4b:	00 
+    2d4c:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 2d8e <err_exit+0x89>
+    2d53:	48 89 95 20 ff ff ff 	mov    %rdx,0xffffffffffffff20(%rbp)
+    2d5a:	48 29 85 20 ff ff ff 	sub    %rax,0xffffffffffffff20(%rbp)
+    2d61:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    2d65:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    2d6c:	ff e2                	jmpq   *%rdx
+    2d6e:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    2d72:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    2d76:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    2d7a:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    2d7e:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    2d82:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    2d86:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    2d8a:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    2d8e:	48 89 bd 28 ff ff ff 	mov    %rdi,0xffffffffffffff28(%rbp)
+    2d95:	48 8b 05 6c 22 00 00 	mov    8812(%rip),%rax        # 5008 <__guard_local>
+    2d9c:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    2da3:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    2da5:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2dac:	c7 00 08 00 00 00    	movl   $0x8,(%rax)
+    2db2:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2db9:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    2dc0:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2dc7:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    2dcb:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    2dcf:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2dd6:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    2ddd:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    outputError(TRUE, errno, FALSE, format, argList);
+    2de1:	e8 7a 06 00 00       	callq  3460 <__errno@plt>
+    2de6:	8b 30                	mov    (%rax),%esi
+    2de8:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2def:	48 8b 8d 28 ff ff ff 	mov    0xffffffffffffff28(%rbp),%rcx
+    2df6:	49 89 c0             	mov    %rax,%r8
+    2df9:	ba 00 00 00 00       	mov    $0x0,%edx
+    2dfe:	bf 01 00 00 00       	mov    $0x1,%edi
+    2e03:	e8 1c fb ff ff       	callq  2924 <outputError>
+    va_end(argList);
+
+    terminate(FALSE);
+    2e08:	bf 00 00 00 00       	mov    $0x0,%edi
+    2e0d:	e8 c6 fa ff ff       	callq  28d8 <terminate>
+
+0000000000002e12 <errExitEN>:
+}
+
+/* The following function does the same as errExit(), but expects
+   the error number in 'errnum' */
+
+void
+errExitEN(int errnum, const char *format, ...)
+{
+    2e12:	55                   	push   %rbp
+    2e13:	48 89 e5             	mov    %rsp,%rbp
+    2e16:	48 81 ec f0 00 00 00 	sub    $0xf0,%rsp
+    2e1d:	89 bd 2c ff ff ff    	mov    %edi,0xffffffffffffff2c(%rbp)
+    2e23:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    2e2a:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    2e31:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    2e38:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    2e3f:	0f b6 c0             	movzbl %al,%eax
+    2e42:	48 89 85 18 ff ff ff 	mov    %rax,0xffffffffffffff18(%rbp)
+    2e49:	48 8b 95 18 ff ff ff 	mov    0xffffffffffffff18(%rbp),%rdx
+    2e50:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    2e57:	00 
+    2e58:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 2e9a <errExitEN+0x88>
+    2e5f:	48 89 95 18 ff ff ff 	mov    %rdx,0xffffffffffffff18(%rbp)
+    2e66:	48 29 85 18 ff ff ff 	sub    %rax,0xffffffffffffff18(%rbp)
+    2e6d:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    2e71:	48 8b 95 18 ff ff ff 	mov    0xffffffffffffff18(%rbp),%rdx
+    2e78:	ff e2                	jmpq   *%rdx
+    2e7a:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    2e7e:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    2e82:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    2e86:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    2e8a:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    2e8e:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    2e92:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    2e96:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    2e9a:	48 89 b5 20 ff ff ff 	mov    %rsi,0xffffffffffffff20(%rbp)
+    2ea1:	48 8b 05 60 21 00 00 	mov    8544(%rip),%rax        # 5008 <__guard_local>
+    2ea8:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    2eaf:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    2eb1:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2eb8:	c7 00 10 00 00 00    	movl   $0x10,(%rax)
+    2ebe:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2ec5:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    2ecc:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2ed3:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    2ed7:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    2edb:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2ee2:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    2ee9:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    outputError(TRUE, errnum, TRUE, format, argList);
+    2eed:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2ef4:	48 8b 8d 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rcx
+    2efb:	8b b5 2c ff ff ff    	mov    0xffffffffffffff2c(%rbp),%esi
+    2f01:	49 89 c0             	mov    %rax,%r8
+    2f04:	ba 01 00 00 00       	mov    $0x1,%edx
+    2f09:	bf 01 00 00 00       	mov    $0x1,%edi
+    2f0e:	e8 11 fa ff ff       	callq  2924 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    2f13:	bf 01 00 00 00       	mov    $0x1,%edi
+    2f18:	e8 bb f9 ff ff       	callq  28d8 <terminate>
+
+0000000000002f1d <fatal>:
+}
+
+/* Print an error message (without an 'errno' diagnostic) */
+
+void
+fatal(const char *format, ...)
+{
+    2f1d:	55                   	push   %rbp
+    2f1e:	48 89 e5             	mov    %rsp,%rbp
+    2f21:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+    2f28:	48 89 b5 58 ff ff ff 	mov    %rsi,0xffffffffffffff58(%rbp)
+    2f2f:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    2f36:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    2f3d:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    2f44:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    2f4b:	0f b6 c0             	movzbl %al,%eax
+    2f4e:	48 89 85 20 ff ff ff 	mov    %rax,0xffffffffffffff20(%rbp)
+    2f55:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    2f5c:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    2f63:	00 
+    2f64:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 2fa6 <fatal+0x89>
+    2f6b:	48 89 95 20 ff ff ff 	mov    %rdx,0xffffffffffffff20(%rbp)
+    2f72:	48 29 85 20 ff ff ff 	sub    %rax,0xffffffffffffff20(%rbp)
+    2f79:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    2f7d:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    2f84:	ff e2                	jmpq   *%rdx
+    2f86:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    2f8a:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    2f8e:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    2f92:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    2f96:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    2f9a:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    2f9e:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    2fa2:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    2fa6:	48 89 bd 28 ff ff ff 	mov    %rdi,0xffffffffffffff28(%rbp)
+    2fad:	48 8b 05 54 20 00 00 	mov    8276(%rip),%rax        # 5008 <__guard_local>
+    2fb4:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    2fbb:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    2fbd:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2fc4:	c7 00 08 00 00 00    	movl   $0x8,(%rax)
+    2fca:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2fd1:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    2fd8:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2fdf:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    2fe3:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    2fe7:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    2fee:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    2ff5:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    outputError(FALSE, 0, TRUE, format, argList);
+    2ff9:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3000:	48 8b 8d 28 ff ff ff 	mov    0xffffffffffffff28(%rbp),%rcx
+    3007:	49 89 c0             	mov    %rax,%r8
+    300a:	ba 01 00 00 00       	mov    $0x1,%edx
+    300f:	be 00 00 00 00       	mov    $0x0,%esi
+    3014:	bf 00 00 00 00       	mov    $0x0,%edi
+    3019:	e8 06 f9 ff ff       	callq  2924 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    301e:	bf 01 00 00 00       	mov    $0x1,%edi
+    3023:	e8 b0 f8 ff ff       	callq  28d8 <terminate>
+
+0000000000003028 <usageErr>:
+}
+
+/* Print a command usage error message and terminate the process */
+
+void
+usageErr(const char *format, ...)
+{
+    3028:	55                   	push   %rbp
+    3029:	48 89 e5             	mov    %rsp,%rbp
+    302c:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+    3033:	48 89 b5 58 ff ff ff 	mov    %rsi,0xffffffffffffff58(%rbp)
+    303a:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    3041:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    3048:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    304f:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    3056:	0f b6 c0             	movzbl %al,%eax
+    3059:	48 89 85 20 ff ff ff 	mov    %rax,0xffffffffffffff20(%rbp)
+    3060:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    3067:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    306e:	00 
+    306f:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 30b1 <usageErr+0x89>
+    3076:	48 89 95 20 ff ff ff 	mov    %rdx,0xffffffffffffff20(%rbp)
+    307d:	48 29 85 20 ff ff ff 	sub    %rax,0xffffffffffffff20(%rbp)
+    3084:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    3088:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    308f:	ff e2                	jmpq   *%rdx
+    3091:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    3095:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    3099:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    309d:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    30a1:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    30a5:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    30a9:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    30ad:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    30b1:	48 89 bd 28 ff ff ff 	mov    %rdi,0xffffffffffffff28(%rbp)
+    30b8:	48 8b 05 49 1f 00 00 	mov    8009(%rip),%rax        # 5008 <__guard_local>
+    30bf:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    30c6:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    fflush(stdout);           /* Flush any pending stdout */
+    30c8:	48 8b 05 a1 20 00 00 	mov    8353(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    30cf:	48 8d b8 98 00 00 00 	lea    0x98(%rax),%rdi
+    30d6:	e8 65 03 00 00       	callq  3440 <fflush@plt>
+
+    fprintf(stderr, "Usage: ");
+    30db:	48 8b 05 8e 20 00 00 	mov    8334(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    30e2:	48 8d 88 30 01 00 00 	lea    0x130(%rax),%rcx
+    30e9:	ba 07 00 00 00       	mov    $0x7,%edx
+    30ee:	be 01 00 00 00       	mov    $0x1,%esi
+    30f3:	48 8d 3d 9b e7 ff ff 	lea    -6245(%rip),%rdi        # 1895 <__EH_FRAME_BEGIN__-0xd3>
+    30fa:	e8 71 03 00 00       	callq  3470 <fwrite@plt>
+    va_start(argList, format);
+    30ff:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3106:	c7 00 08 00 00 00    	movl   $0x8,(%rax)
+    310c:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3113:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    311a:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3121:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    3125:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    3129:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3130:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    3137:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    vfprintf(stderr, format, argList);
+    313b:	48 8b 05 2e 20 00 00 	mov    8238(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    3142:	48 8d b8 30 01 00 00 	lea    0x130(%rax),%rdi
+    3149:	48 8d 95 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rdx
+    3150:	48 8b b5 28 ff ff ff 	mov    0xffffffffffffff28(%rbp),%rsi
+    3157:	e8 24 03 00 00       	callq  3480 <vfprintf@plt>
+    va_end(argList);
+
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    315c:	48 8b 05 0d 20 00 00 	mov    8205(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    3163:	48 8d b8 30 01 00 00 	lea    0x130(%rax),%rdi
+    316a:	e8 d1 02 00 00       	callq  3440 <fflush@plt>
+    exit(EXIT_FAILURE);
+    316f:	bf 01 00 00 00       	mov    $0x1,%edi
+    3174:	e8 97 01 00 00       	callq  3310 <exit@plt>
+
+0000000000003179 <cmdLineErr>:
+}
+
+/* Diagnose an error in command-line arguments and
+   terminate the process */
+
+void
+cmdLineErr(const char *format, ...)
+{
+    3179:	55                   	push   %rbp
+    317a:	48 89 e5             	mov    %rsp,%rbp
+    317d:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+    3184:	48 89 b5 58 ff ff ff 	mov    %rsi,0xffffffffffffff58(%rbp)
+    318b:	48 89 95 60 ff ff ff 	mov    %rdx,0xffffffffffffff60(%rbp)
+    3192:	48 89 8d 68 ff ff ff 	mov    %rcx,0xffffffffffffff68(%rbp)
+    3199:	4c 89 85 70 ff ff ff 	mov    %r8,0xffffffffffffff70(%rbp)
+    31a0:	4c 89 8d 78 ff ff ff 	mov    %r9,0xffffffffffffff78(%rbp)
+    31a7:	0f b6 c0             	movzbl %al,%eax
+    31aa:	48 89 85 20 ff ff ff 	mov    %rax,0xffffffffffffff20(%rbp)
+    31b1:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    31b8:	48 8d 04 95 00 00 00 	lea    0x0(,%rdx,4),%rax
+    31bf:	00 
+    31c0:	48 8d 15 3b 00 00 00 	lea    59(%rip),%rdx        # 3202 <cmdLineErr+0x89>
+    31c7:	48 89 95 20 ff ff ff 	mov    %rdx,0xffffffffffffff20(%rbp)
+    31ce:	48 29 85 20 ff ff ff 	sub    %rax,0xffffffffffffff20(%rbp)
+    31d5:	48 8d 45 ff          	lea    0xffffffffffffffff(%rbp),%rax
+    31d9:	48 8b 95 20 ff ff ff 	mov    0xffffffffffffff20(%rbp),%rdx
+    31e0:	ff e2                	jmpq   *%rdx
+    31e2:	0f 29 78 f1          	movaps %xmm7,0xfffffffffffffff1(%rax)
+    31e6:	0f 29 70 e1          	movaps %xmm6,0xffffffffffffffe1(%rax)
+    31ea:	0f 29 68 d1          	movaps %xmm5,0xffffffffffffffd1(%rax)
+    31ee:	0f 29 60 c1          	movaps %xmm4,0xffffffffffffffc1(%rax)
+    31f2:	0f 29 58 b1          	movaps %xmm3,0xffffffffffffffb1(%rax)
+    31f6:	0f 29 50 a1          	movaps %xmm2,0xffffffffffffffa1(%rax)
+    31fa:	0f 29 48 91          	movaps %xmm1,0xffffffffffffff91(%rax)
+    31fe:	0f 29 40 81          	movaps %xmm0,0xffffffffffffff81(%rax)
+    3202:	48 89 bd 28 ff ff ff 	mov    %rdi,0xffffffffffffff28(%rbp)
+    3209:	48 8b 05 f8 1d 00 00 	mov    7672(%rip),%rax        # 5008 <__guard_local>
+    3210:	48 89 85 48 ff ff ff 	mov    %rax,0xffffffffffffff48(%rbp)
+    3217:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    fflush(stdout);           /* Flush any pending stdout */
+    3219:	48 8b 05 50 1f 00 00 	mov    8016(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    3220:	48 8d b8 98 00 00 00 	lea    0x98(%rax),%rdi
+    3227:	e8 14 02 00 00       	callq  3440 <fflush@plt>
+
+    fprintf(stderr, "Command-line usage error: ");
+    322c:	48 8b 05 3d 1f 00 00 	mov    7997(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    3233:	48 8d 88 30 01 00 00 	lea    0x130(%rax),%rcx
+    323a:	ba 1a 00 00 00       	mov    $0x1a,%edx
+    323f:	be 01 00 00 00       	mov    $0x1,%esi
+    3244:	48 8d 3d 5b e6 ff ff 	lea    -6565(%rip),%rdi        # 18a6 <__EH_FRAME_BEGIN__-0xc2>
+    324b:	e8 20 02 00 00       	callq  3470 <fwrite@plt>
+    va_start(argList, format);
+    3250:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3257:	c7 00 08 00 00 00    	movl   $0x8,(%rax)
+    325d:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3264:	c7 40 04 30 00 00 00 	movl   $0x30,0x4(%rax)
+    326b:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3272:	48 8d 55 10          	lea    0x10(%rbp),%rdx
+    3276:	48 89 50 08          	mov    %rdx,0x8(%rax)
+    327a:	48 8d 85 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rax
+    3281:	48 8d 95 50 ff ff ff 	lea    0xffffffffffffff50(%rbp),%rdx
+    3288:	48 89 50 10          	mov    %rdx,0x10(%rax)
+    vfprintf(stderr, format, argList);
+    328c:	48 8b 05 dd 1e 00 00 	mov    7901(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    3293:	48 8d b8 30 01 00 00 	lea    0x130(%rax),%rdi
+    329a:	48 8d 95 30 ff ff ff 	lea    0xffffffffffffff30(%rbp),%rdx
+    32a1:	48 8b b5 28 ff ff ff 	mov    0xffffffffffffff28(%rbp),%rsi
+    32a8:	e8 d3 01 00 00       	callq  3480 <vfprintf@plt>
+    va_end(argList);
+
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    32ad:	48 8b 05 bc 1e 00 00 	mov    7868(%rip),%rax        # 5170 <_DYNAMIC+0x120>
+    32b4:	48 8d b8 30 01 00 00 	lea    0x130(%rax),%rdi
+    32bb:	e8 80 01 00 00       	callq  3440 <fflush@plt>
+    exit(EXIT_FAILURE);
+    32c0:	bf 01 00 00 00       	mov    $0x1,%edi
+    32c5:	e8 46 00 00 00       	callq  3310 <exit@plt>
+    32ca:	cc                   	int3   
+    32cb:	cc                   	int3   
+Disassembly of section .init:
+
+00000000000032d0 <__init>:
+    32d0:	48 83 ec 08          	sub    $0x8,%rsp
+    32d4:	e8 b7 ee ff ff       	callq  2190 <__do_init>
+    32d9:	48 83 c4 08          	add    $0x8,%rsp
+    32dd:	c3                   	retq   
+Disassembly of section .fini:
+
+00000000000032e0 <__fini>:
+    32e0:	48 83 ec 08          	sub    $0x8,%rsp
+    32e4:	e8 a7 ef ff ff       	callq  2290 <__do_fini>
+    32e9:	48 83 c4 08          	add    $0x8,%rsp
+    32ed:	c3                   	retq   
+Disassembly of section .plt:
+
+00000000000032f0 <_csu_finish@plt-0x10>:
+    32f0:	ff 35 8a 1e 00 00    	pushq  7818(%rip)        # 5180 <_GLOBAL_OFFSET_TABLE_+0x8>
+    32f6:	ff 25 8c 1e 00 00    	jmpq   *7820(%rip)        # 5188 <_GLOBAL_OFFSET_TABLE_+0x10>
+    32fc:	0f 1f                	(bad)  
+    32fe:	40 00 ff             	add    %dil,%dil
+
+0000000000003300 <_csu_finish@plt>:
+    3300:	ff 25 8a 1e 00 00    	jmpq   *7818(%rip)        # 5190 <_GLOBAL_OFFSET_TABLE_+0x18>
+    3306:	68 00 00 00 00       	pushq  $0x0
+    330b:	e9 e0 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003310 <exit@plt>:
+    3310:	ff 25 82 1e 00 00    	jmpq   *7810(%rip)        # 5198 <_GLOBAL_OFFSET_TABLE_+0x20>
+    3316:	68 01 00 00 00       	pushq  $0x1
+    331b:	e9 d0 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003320 <_Jv_RegisterClasses@plt>:
+    3320:	ff 25 7a 1e 00 00    	jmpq   *7802(%rip)        # 51a0 <_GLOBAL_OFFSET_TABLE_+0x28>
+    3326:	68 02 00 00 00       	pushq  $0x2
+    332b:	e9 c0 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003330 <atexit@plt>:
+    3330:	ff 25 72 1e 00 00    	jmpq   *7794(%rip)        # 51a8 <_GLOBAL_OFFSET_TABLE_+0x30>
+    3336:	68 03 00 00 00       	pushq  $0x3
+    333b:	e9 b0 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003340 <sysconf@plt>:
+    3340:	ff 25 6a 1e 00 00    	jmpq   *7786(%rip)        # 51b0 <_GLOBAL_OFFSET_TABLE_+0x38>
+    3346:	68 04 00 00 00       	pushq  $0x4
+    334b:	e9 a0 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003350 <mmap@plt>:
+    3350:	ff 25 62 1e 00 00    	jmpq   *7778(%rip)        # 51b8 <_GLOBAL_OFFSET_TABLE_+0x40>
+    3356:	68 05 00 00 00       	pushq  $0x5
+    335b:	e9 90 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003360 <memcpy@plt>:
+    3360:	ff 25 5a 1e 00 00    	jmpq   *7770(%rip)        # 51c0 <_GLOBAL_OFFSET_TABLE_+0x48>
+    3366:	68 06 00 00 00       	pushq  $0x6
+    336b:	e9 80 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003370 <memset@plt>:
+    3370:	ff 25 52 1e 00 00    	jmpq   *7762(%rip)        # 51c8 <_GLOBAL_OFFSET_TABLE_+0x50>
+    3376:	68 07 00 00 00       	pushq  $0x7
+    337b:	e9 70 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003380 <mprotect@plt>:
+    3380:	ff 25 4a 1e 00 00    	jmpq   *7754(%rip)        # 51d0 <_GLOBAL_OFFSET_TABLE_+0x58>
+    3386:	68 08 00 00 00       	pushq  $0x8
+    338b:	e9 60 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003390 <munmap@plt>:
+    3390:	ff 25 42 1e 00 00    	jmpq   *7746(%rip)        # 51d8 <_GLOBAL_OFFSET_TABLE_+0x60>
+    3396:	68 09 00 00 00       	pushq  $0x9
+    339b:	e9 50 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+00000000000033a0 <memcmp@plt>:
+    33a0:	ff 25 3a 1e 00 00    	jmpq   *7738(%rip)        # 51e0 <_GLOBAL_OFFSET_TABLE_+0x68>
+    33a6:	68 0a 00 00 00       	pushq  $0xa
+    33ab:	e9 40 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+00000000000033b0 <puts@plt>:
+    33b0:	ff 25 32 1e 00 00    	jmpq   *7730(%rip)        # 51e8 <_GLOBAL_OFFSET_TABLE_+0x70>
+    33b6:	68 0b 00 00 00       	pushq  $0xb
+    33bb:	e9 30 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+00000000000033c0 <printf@plt>:
+    33c0:	ff 25 2a 1e 00 00    	jmpq   *7722(%rip)        # 51f0 <_GLOBAL_OFFSET_TABLE_+0x78>
+    33c6:	68 0c 00 00 00       	pushq  $0xc
+    33cb:	e9 20 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+00000000000033d0 <__stack_smash_handler@plt>:
+    33d0:	ff 25 22 1e 00 00    	jmpq   *7714(%rip)        # 51f8 <_GLOBAL_OFFSET_TABLE_+0x80>
+    33d6:	68 0d 00 00 00       	pushq  $0xd
+    33db:	e9 10 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+00000000000033e0 <getenv@plt>:
+    33e0:	ff 25 1a 1e 00 00    	jmpq   *7706(%rip)        # 5200 <_GLOBAL_OFFSET_TABLE_+0x88>
+    33e6:	68 0e 00 00 00       	pushq  $0xe
+    33eb:	e9 00 ff ff ff       	jmpq   32f0 <__fini+0x10>
+
+00000000000033f0 <abort@plt>:
+    33f0:	ff 25 12 1e 00 00    	jmpq   *7698(%rip)        # 5208 <_GLOBAL_OFFSET_TABLE_+0x90>
+    33f6:	68 0f 00 00 00       	pushq  $0xf
+    33fb:	e9 f0 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003400 <_exit@plt>:
+    3400:	ff 25 0a 1e 00 00    	jmpq   *7690(%rip)        # 5210 <_GLOBAL_OFFSET_TABLE_+0x98>
+    3406:	68 10 00 00 00       	pushq  $0x10
+    340b:	e9 e0 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003410 <vsnprintf@plt>:
+    3410:	ff 25 02 1e 00 00    	jmpq   *7682(%rip)        # 5218 <_GLOBAL_OFFSET_TABLE_+0xa0>
+    3416:	68 11 00 00 00       	pushq  $0x11
+    341b:	e9 d0 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003420 <strerror@plt>:
+    3420:	ff 25 fa 1d 00 00    	jmpq   *7674(%rip)        # 5220 <_GLOBAL_OFFSET_TABLE_+0xa8>
+    3426:	68 12 00 00 00       	pushq  $0x12
+    342b:	e9 c0 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003430 <snprintf@plt>:
+    3430:	ff 25 f2 1d 00 00    	jmpq   *7666(%rip)        # 5228 <_GLOBAL_OFFSET_TABLE_+0xb0>
+    3436:	68 13 00 00 00       	pushq  $0x13
+    343b:	e9 b0 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003440 <fflush@plt>:
+    3440:	ff 25 ea 1d 00 00    	jmpq   *7658(%rip)        # 5230 <_GLOBAL_OFFSET_TABLE_+0xb8>
+    3446:	68 14 00 00 00       	pushq  $0x14
+    344b:	e9 a0 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003450 <fputs@plt>:
+    3450:	ff 25 e2 1d 00 00    	jmpq   *7650(%rip)        # 5238 <_GLOBAL_OFFSET_TABLE_+0xc0>
+    3456:	68 15 00 00 00       	pushq  $0x15
+    345b:	e9 90 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003460 <__errno@plt>:
+    3460:	ff 25 da 1d 00 00    	jmpq   *7642(%rip)        # 5240 <_GLOBAL_OFFSET_TABLE_+0xc8>
+    3466:	68 16 00 00 00       	pushq  $0x16
+    346b:	e9 80 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003470 <fwrite@plt>:
+    3470:	ff 25 d2 1d 00 00    	jmpq   *7634(%rip)        # 5248 <_GLOBAL_OFFSET_TABLE_+0xd0>
+    3476:	68 17 00 00 00       	pushq  $0x17
+    347b:	e9 70 fe ff ff       	jmpq   32f0 <__fini+0x10>
+
+0000000000003480 <vfprintf@plt>:
+    3480:	ff 25 ca 1d 00 00    	jmpq   *7626(%rip)        # 5250 <_GLOBAL_OFFSET_TABLE_+0xd8>
+    3486:	68 18 00 00 00       	pushq  $0x18
+    348b:	e9 60 fe ff ff       	jmpq   32f0 <__fini+0x10>

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 build=$((`grep BUILD version.h | sed 's|.*BUILD\s\([0-9]\{1,9\}\).*|\1|'`+1))
 sed  -i "s|^.*BUILD.*$|#define BUILD ${build}|" version.h
