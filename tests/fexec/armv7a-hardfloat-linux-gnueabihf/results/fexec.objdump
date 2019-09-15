@@ -1,0 +1,1470 @@
+
+./build/fexec:     file format elf32-littlearm
+
+
+Disassembly of section .init:
+
+00000b28 <_init>:
+ b28:	e92d4008 	push	{r3, lr}
+ b2c:	eb000069 	bl	cd8 <call_weak_fn>
+ b30:	e8bd8008 	pop	{r3, pc}
+
+Disassembly of section .plt:
+
+00000b34 <.plt>:
+ b34:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+ b38:	e59fe004 	ldr	lr, [pc, #4]	; b44 <.plt+0x10>
+ b3c:	e08fe00e 	add	lr, pc, lr
+ b40:	e5bef008 	ldr	pc, [lr, #8]!
+ b44:	000124bc 	.word	0x000124bc
+
+00000b48 <raise@plt>:
+ b48:	e28fc600 	add	ip, pc, #0, 12
+ b4c:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b50:	e5bcf4bc 	ldr	pc, [ip, #1212]!	; 0x4bc
+
+00000b54 <__cxa_finalize@plt>:
+ b54:	e28fc600 	add	ip, pc, #0, 12
+ b58:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b5c:	e5bcf4b4 	ldr	pc, [ip, #1204]!	; 0x4b4
+
+00000b60 <fflush@plt>:
+ b60:	e28fc600 	add	ip, pc, #0, 12
+ b64:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b68:	e5bcf4ac 	ldr	pc, [ip, #1196]!	; 0x4ac
+
+00000b6c <mprotect@plt>:
+ b6c:	e28fc600 	add	ip, pc, #0, 12
+ b70:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b74:	e5bcf4a4 	ldr	pc, [ip, #1188]!	; 0x4a4
+
+00000b78 <_exit@plt>:
+ b78:	e28fc600 	add	ip, pc, #0, 12
+ b7c:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b80:	e5bcf49c 	ldr	pc, [ip, #1180]!	; 0x49c
+
+00000b84 <__vsnprintf_chk@plt>:
+ b84:	e28fc600 	add	ip, pc, #0, 12
+ b88:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b8c:	e5bcf494 	ldr	pc, [ip, #1172]!	; 0x494
+
+00000b90 <memcpy@plt>:
+ b90:	e28fc600 	add	ip, pc, #0, 12
+ b94:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ b98:	e5bcf48c 	ldr	pc, [ip, #1164]!	; 0x48c
+
+00000b9c <memcmp@plt>:
+ b9c:	e28fc600 	add	ip, pc, #0, 12
+ ba0:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ ba4:	e5bcf484 	ldr	pc, [ip, #1156]!	; 0x484
+
+00000ba8 <__stack_chk_fail@plt>:
+ ba8:	e28fc600 	add	ip, pc, #0, 12
+ bac:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ bb0:	e5bcf47c 	ldr	pc, [ip, #1148]!	; 0x47c
+
+00000bb4 <sysconf@plt>:
+ bb4:	e28fc600 	add	ip, pc, #0, 12
+ bb8:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ bbc:	e5bcf474 	ldr	pc, [ip, #1140]!	; 0x474
+
+00000bc0 <fwrite@plt>:
+ bc0:	e28fc600 	add	ip, pc, #0, 12
+ bc4:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ bc8:	e5bcf46c 	ldr	pc, [ip, #1132]!	; 0x46c
+
+00000bcc <getenv@plt>:
+ bcc:	e28fc600 	add	ip, pc, #0, 12
+ bd0:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ bd4:	e5bcf464 	ldr	pc, [ip, #1124]!	; 0x464
+
+00000bd8 <puts@plt>:
+ bd8:	e28fc600 	add	ip, pc, #0, 12
+ bdc:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ be0:	e5bcf45c 	ldr	pc, [ip, #1116]!	; 0x45c
+
+00000be4 <__libc_start_main@plt>:
+ be4:	e28fc600 	add	ip, pc, #0, 12
+ be8:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ bec:	e5bcf454 	ldr	pc, [ip, #1108]!	; 0x454
+
+00000bf0 <strerror@plt>:
+ bf0:	e28fc600 	add	ip, pc, #0, 12
+ bf4:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ bf8:	e5bcf44c 	ldr	pc, [ip, #1100]!	; 0x44c
+
+00000bfc <__vfprintf_chk@plt>:
+ bfc:	e28fc600 	add	ip, pc, #0, 12
+ c00:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c04:	e5bcf444 	ldr	pc, [ip, #1092]!	; 0x444
+
+00000c08 <__gmon_start__@plt>:
+ c08:	e28fc600 	add	ip, pc, #0, 12
+ c0c:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c10:	e5bcf43c 	ldr	pc, [ip, #1084]!	; 0x43c
+
+00000c14 <exit@plt>:
+ c14:	e28fc600 	add	ip, pc, #0, 12
+ c18:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c1c:	e5bcf434 	ldr	pc, [ip, #1076]!	; 0x434
+
+00000c20 <mmap@plt>:
+ c20:	e28fc600 	add	ip, pc, #0, 12
+ c24:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c28:	e5bcf42c 	ldr	pc, [ip, #1068]!	; 0x42c
+
+00000c2c <__errno_location@plt>:
+ c2c:	e28fc600 	add	ip, pc, #0, 12
+ c30:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c34:	e5bcf424 	ldr	pc, [ip, #1060]!	; 0x424
+
+00000c38 <memset@plt>:
+ c38:	e28fc600 	add	ip, pc, #0, 12
+ c3c:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c40:	e5bcf41c 	ldr	pc, [ip, #1052]!	; 0x41c
+
+00000c44 <__printf_chk@plt>:
+ c44:	e28fc600 	add	ip, pc, #0, 12
+ c48:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c4c:	e5bcf414 	ldr	pc, [ip, #1044]!	; 0x414
+
+00000c50 <munmap@plt>:
+ c50:	e28fc600 	add	ip, pc, #0, 12
+ c54:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c58:	e5bcf40c 	ldr	pc, [ip, #1036]!	; 0x40c
+
+00000c5c <fputs@plt>:
+ c5c:	e28fc600 	add	ip, pc, #0, 12
+ c60:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c64:	e5bcf404 	ldr	pc, [ip, #1028]!	; 0x404
+
+00000c68 <abort@plt>:
+ c68:	e28fc600 	add	ip, pc, #0, 12
+ c6c:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c70:	e5bcf3fc 	ldr	pc, [ip, #1020]!	; 0x3fc
+
+00000c74 <__snprintf_chk@plt>:
+ c74:	e28fc600 	add	ip, pc, #0, 12
+ c78:	e28cca12 	add	ip, ip, #73728	; 0x12000
+ c7c:	e5bcf3f4 	ldr	pc, [ip, #1012]!	; 0x3f4
+
+Disassembly of section .text:
+
+00000c80 <_start>:
+     c80:	e3a0b000 	mov	fp, #0
+     c84:	e3a0e000 	mov	lr, #0
+     c88:	e49d1004 	pop	{r1}		; (ldr r1, [sp], #4)
+     c8c:	e1a0200d 	mov	r2, sp
+     c90:	e52d2004 	push	{r2}		; (str r2, [sp, #-4]!)
+     c94:	e52d0004 	push	{r0}		; (str r0, [sp, #-4]!)
+     c98:	e59fa028 	ldr	sl, [pc, #40]	; cc8 <_start+0x48>
+     c9c:	e28f3024 	add	r3, pc, #36	; 0x24
+     ca0:	e08aa003 	add	sl, sl, r3
+     ca4:	e59fc020 	ldr	ip, [pc, #32]	; ccc <_start+0x4c>
+     ca8:	e79ac00c 	ldr	ip, [sl, ip]
+     cac:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
+     cb0:	e59f3018 	ldr	r3, [pc, #24]	; cd0 <_start+0x50>
+     cb4:	e79a3003 	ldr	r3, [sl, r3]
+     cb8:	e59f0014 	ldr	r0, [pc, #20]	; cd4 <_start+0x54>
+     cbc:	e79a0000 	ldr	r0, [sl, r0]
+     cc0:	ebffffc7 	bl	be4 <__libc_start_main@plt>
+     cc4:	ebffffe7 	bl	c68 <abort@plt>
+     cc8:	00012338 	.word	0x00012338
+     ccc:	00000074 	.word	0x00000074
+     cd0:	0000008c 	.word	0x0000008c
+     cd4:	00000094 	.word	0x00000094
+
+00000cd8 <call_weak_fn>:
+     cd8:	e59f3014 	ldr	r3, [pc, #20]	; cf4 <call_weak_fn+0x1c>
+     cdc:	e59f2014 	ldr	r2, [pc, #20]	; cf8 <call_weak_fn+0x20>
+     ce0:	e08f3003 	add	r3, pc, r3
+     ce4:	e7932002 	ldr	r2, [r3, r2]
+     ce8:	e3520000 	cmp	r2, #0
+     cec:	012fff1e 	bxeq	lr
+     cf0:	eaffffc4 	b	c08 <__gmon_start__@plt>
+     cf4:	00012318 	.word	0x00012318
+     cf8:	00000088 	.word	0x00000088
+
+00000cfc <deregister_tm_clones>:
+     cfc:	e59f002c 	ldr	r0, [pc, #44]	; d30 <deregister_tm_clones+0x34>
+     d00:	e59f302c 	ldr	r3, [pc, #44]	; d34 <deregister_tm_clones+0x38>
+     d04:	e08f0000 	add	r0, pc, r0
+     d08:	e59f2028 	ldr	r2, [pc, #40]	; d38 <deregister_tm_clones+0x3c>
+     d0c:	e08f3003 	add	r3, pc, r3
+     d10:	e1530000 	cmp	r3, r0
+     d14:	e08f2002 	add	r2, pc, r2
+     d18:	012fff1e 	bxeq	lr
+     d1c:	e59f3018 	ldr	r3, [pc, #24]	; d3c <deregister_tm_clones+0x40>
+     d20:	e7923003 	ldr	r3, [r2, r3]
+     d24:	e3530000 	cmp	r3, #0
+     d28:	012fff1e 	bxeq	lr
+     d2c:	e12fff13 	bx	r3
+     d30:	000123a4 	.word	0x000123a4
+     d34:	0001239c 	.word	0x0001239c
+     d38:	000122e4 	.word	0x000122e4
+     d3c:	0000007c 	.word	0x0000007c
+
+00000d40 <register_tm_clones>:
+     d40:	e59f0038 	ldr	r0, [pc, #56]	; d80 <register_tm_clones+0x40>
+     d44:	e59f3038 	ldr	r3, [pc, #56]	; d84 <register_tm_clones+0x44>
+     d48:	e08f0000 	add	r0, pc, r0
+     d4c:	e59f2034 	ldr	r2, [pc, #52]	; d88 <register_tm_clones+0x48>
+     d50:	e08f3003 	add	r3, pc, r3
+     d54:	e0431000 	sub	r1, r3, r0
+     d58:	e08f2002 	add	r2, pc, r2
+     d5c:	e1a01141 	asr	r1, r1, #2
+     d60:	e0811fa1 	add	r1, r1, r1, lsr #31
+     d64:	e1b010c1 	asrs	r1, r1, #1
+     d68:	012fff1e 	bxeq	lr
+     d6c:	e59f3018 	ldr	r3, [pc, #24]	; d8c <register_tm_clones+0x4c>
+     d70:	e7923003 	ldr	r3, [r2, r3]
+     d74:	e3530000 	cmp	r3, #0
+     d78:	012fff1e 	bxeq	lr
+     d7c:	e12fff13 	bx	r3
+     d80:	00012360 	.word	0x00012360
+     d84:	00012358 	.word	0x00012358
+     d88:	000122a0 	.word	0x000122a0
+     d8c:	00000098 	.word	0x00000098
+
+00000d90 <__do_global_dtors_aux>:
+     d90:	e59f304c 	ldr	r3, [pc, #76]	; de4 <__do_global_dtors_aux+0x54>
+     d94:	e59f204c 	ldr	r2, [pc, #76]	; de8 <__do_global_dtors_aux+0x58>
+     d98:	e08f3003 	add	r3, pc, r3
+     d9c:	e08f2002 	add	r2, pc, r2
+     da0:	e5d33000 	ldrb	r3, [r3]
+     da4:	e3530000 	cmp	r3, #0
+     da8:	112fff1e 	bxne	lr
+     dac:	e59f3038 	ldr	r3, [pc, #56]	; dec <__do_global_dtors_aux+0x5c>
+     db0:	e92d4010 	push	{r4, lr}
+     db4:	e7923003 	ldr	r3, [r2, r3]
+     db8:	e3530000 	cmp	r3, #0
+     dbc:	0a000002 	beq	dcc <__do_global_dtors_aux+0x3c>
+     dc0:	e59f3028 	ldr	r3, [pc, #40]	; df0 <__do_global_dtors_aux+0x60>
+     dc4:	e79f0003 	ldr	r0, [pc, r3]
+     dc8:	ebffff61 	bl	b54 <__cxa_finalize@plt>
+     dcc:	ebffffca 	bl	cfc <deregister_tm_clones>
+     dd0:	e59f301c 	ldr	r3, [pc, #28]	; df4 <__do_global_dtors_aux+0x64>
+     dd4:	e3a02001 	mov	r2, #1
+     dd8:	e08f3003 	add	r3, pc, r3
+     ddc:	e5c32000 	strb	r2, [r3]
+     de0:	e8bd8010 	pop	{r4, pc}
+     de4:	00012310 	.word	0x00012310
+     de8:	0001225c 	.word	0x0001225c
+     dec:	00000078 	.word	0x00000078
+     df0:	000122d4 	.word	0x000122d4
+     df4:	000122d0 	.word	0x000122d0
+
+00000df8 <frame_dummy>:
+     df8:	eaffffd0 	b	d40 <register_tm_clones>
+
+00000dfc <terminate>:
+#ifdef __GNUC__                 /* Prevent 'gcc -Wall' complaining  */
+__attribute__ ((__noreturn__))  /* if we call this function as last */
+#endif                          /* statement in a non-void function */
+static void
+terminate(Boolean useExit3)
+{
+     dfc:	e92d4010 	push	{r4, lr}
+     e00:	e1a04000 	mov	r4, r0
+
+    /* Dump core if EF_DUMPCORE environment variable is defined and
+       is a nonempty string; otherwise call exit(3) or _exit(2),
+       depending on the value of 'useExit3'. */
+
+    s = getenv("EF_DUMPCORE");
+     e04:	e59f0034 	ldr	r0, [pc, #52]	; e40 <terminate+0x44>
+     e08:	e08f0000 	add	r0, pc, r0
+     e0c:	ebffff6e 	bl	bcc <getenv@plt>
+
+    if (s != NULL && *s != '\0')
+     e10:	e3500000 	cmp	r0, #0
+     e14:	0a000002 	beq	e24 <terminate+0x28>
+     e18:	e5d03000 	ldrb	r3, [r0]
+     e1c:	e3530000 	cmp	r3, #0
+     e20:	1a000003 	bne	e34 <terminate+0x38>
+        abort();
+    else if (useExit3)
+     e24:	e3540000 	cmp	r4, #0
+     e28:	0a000002 	beq	e38 <terminate+0x3c>
+        exit(EXIT_FAILURE);
+     e2c:	e3a00001 	mov	r0, #1
+     e30:	ebffff77 	bl	c14 <exit@plt>
+        abort();
+     e34:	ebffff8b 	bl	c68 <abort@plt>
+    else
+        _exit(EXIT_FAILURE);
+     e38:	e3a00001 	mov	r0, #1
+     e3c:	ebffff4d 	bl	b78 <_exit@plt>
+     e40:	00000cd0 	.word	0x00000cd0
+
+00000e44 <outputError>:
+        'format' and 'ap'. */
+
+static void
+outputError(Boolean useErr, int err, Boolean flushStdout,
+        const char *format, va_list ap)
+{
+     e44:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+     e48:	e24dde5f 	sub	sp, sp, #1520	; 0x5f0
+     e4c:	e24dd004 	sub	sp, sp, #4
+     e50:	e1a07000 	mov	r7, r0
+     e54:	e1a05001 	mov	r5, r1
+     e58:	e1a06002 	mov	r6, r2
+     e5c:	e59f412c 	ldr	r4, [pc, #300]	; f90 <outputError+0x14c>
+     e60:	e08f4004 	add	r4, pc, r4
+     e64:	e59f2128 	ldr	r2, [pc, #296]	; f94 <outputError+0x150>
+     e68:	e7942002 	ldr	r2, [r4, r2]
+     e6c:	e5922000 	ldr	r2, [r2]
+     e70:	e58d25ec 	str	r2, [sp, #1516]	; 0x5ec
+
+__fortify_function int
+__NTH (vsnprintf (char *__restrict __s, size_t __n,
+		  const char *__restrict __fmt, __gnuc_va_list __ap))
+{
+  return __builtin___vsnprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+     e74:	e59d2608 	ldr	r2, [sp, #1544]	; 0x608
+     e78:	e58d2004 	str	r2, [sp, #4]
+     e7c:	e58d3000 	str	r3, [sp]
+     e80:	e3a03f7d 	mov	r3, #500	; 0x1f4
+     e84:	e3a02001 	mov	r2, #1
+     e88:	e1a01003 	mov	r1, r3
+     e8c:	e28d0f81 	add	r0, sp, #516	; 0x204
+     e90:	ebffff3b 	bl	b84 <__vsnprintf_chk@plt>
+#define BUF_SIZE 500
+    char buf[BUF_SIZE], userMsg[BUF_SIZE], errText[BUF_SIZE];
+
+    vsnprintf(userMsg, BUF_SIZE, format, ap);
+
+    if (useErr)
+     e94:	e3570000 	cmp	r7, #0
+     e98:	0a000032 	beq	f68 <outputError+0x124>
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+                (err > 0 && err <= MAX_ENAME) ?
+     e9c:	e2453001 	sub	r3, r5, #1
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+     ea0:	e3530084 	cmp	r3, #132	; 0x84
+     ea4:	8a00002c 	bhi	f5c <outputError+0x118>
+     ea8:	e59f30e8 	ldr	r3, [pc, #232]	; f98 <outputError+0x154>
+     eac:	e08f3003 	add	r3, pc, r3
+     eb0:	e7937105 	ldr	r7, [r3, r5, lsl #2]
+     eb4:	e1a00005 	mov	r0, r5
+     eb8:	ebffff4c 	bl	bf0 <strerror@plt>
+  return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+     ebc:	e58d0008 	str	r0, [sp, #8]
+     ec0:	e58d7004 	str	r7, [sp, #4]
+     ec4:	e59f30d0 	ldr	r3, [pc, #208]	; f9c <outputError+0x158>
+     ec8:	e08f3003 	add	r3, pc, r3
+     ecc:	e58d3000 	str	r3, [sp]
+     ed0:	e3a03f7d 	mov	r3, #500	; 0x1f4
+     ed4:	e3a02001 	mov	r2, #1
+     ed8:	e1a01003 	mov	r1, r3
+     edc:	e28d0ffe 	add	r0, sp, #1016	; 0x3f8
+     ee0:	ebffff63 	bl	c74 <__snprintf_chk@plt>
+     ee4:	e28d3f81 	add	r3, sp, #516	; 0x204
+     ee8:	e58d3008 	str	r3, [sp, #8]
+     eec:	e28d3ffe 	add	r3, sp, #1016	; 0x3f8
+     ef0:	e58d3004 	str	r3, [sp, #4]
+     ef4:	e59f30a4 	ldr	r3, [pc, #164]	; fa0 <outputError+0x15c>
+     ef8:	e08f3003 	add	r3, pc, r3
+     efc:	e58d3000 	str	r3, [sp]
+     f00:	e3a03f7d 	mov	r3, #500	; 0x1f4
+     f04:	e3a02001 	mov	r2, #1
+     f08:	e1a01003 	mov	r1, r3
+     f0c:	e28d0010 	add	r0, sp, #16
+     f10:	ebffff57 	bl	c74 <__snprintf_chk@plt>
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-truncation"
+    snprintf(buf, BUF_SIZE, "ERROR%s %s\n", errText, userMsg);
+#pragma GCC diagnostic pop
+
+    if (flushStdout)
+     f14:	e3560000 	cmp	r6, #0
+     f18:	1a000016 	bne	f78 <outputError+0x134>
+        fflush(stdout);       /* Flush any pending stdout */
+    fputs(buf, stderr);
+     f1c:	e59f3080 	ldr	r3, [pc, #128]	; fa4 <outputError+0x160>
+     f20:	e7945003 	ldr	r5, [r4, r3]
+     f24:	e5951000 	ldr	r1, [r5]
+     f28:	e28d0010 	add	r0, sp, #16
+     f2c:	ebffff4a 	bl	c5c <fputs@plt>
+    fflush(stderr);           /* In case stderr is not line-buffered */
+     f30:	e5950000 	ldr	r0, [r5]
+     f34:	ebffff09 	bl	b60 <fflush@plt>
+}
+     f38:	e59f3054 	ldr	r3, [pc, #84]	; f94 <outputError+0x150>
+     f3c:	e7943003 	ldr	r3, [r4, r3]
+     f40:	e59d25ec 	ldr	r2, [sp, #1516]	; 0x5ec
+     f44:	e5933000 	ldr	r3, [r3]
+     f48:	e1520003 	cmp	r2, r3
+     f4c:	1a00000e 	bne	f8c <outputError+0x148>
+     f50:	e28dde5f 	add	sp, sp, #1520	; 0x5f0
+     f54:	e28dd004 	add	sp, sp, #4
+     f58:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+     f5c:	e59f7044 	ldr	r7, [pc, #68]	; fa8 <outputError+0x164>
+     f60:	e08f7007 	add	r7, pc, r7
+     f64:	eaffffd2 	b	eb4 <outputError+0x70>
+     f68:	e3a0203a 	mov	r2, #58	; 0x3a
+     f6c:	e28d3ffe 	add	r3, sp, #1016	; 0x3f8
+     f70:	e1c320b0 	strh	r2, [r3]
+     f74:	eaffffda 	b	ee4 <outputError+0xa0>
+        fflush(stdout);       /* Flush any pending stdout */
+     f78:	e59f302c 	ldr	r3, [pc, #44]	; fac <outputError+0x168>
+     f7c:	e7943003 	ldr	r3, [r4, r3]
+     f80:	e5930000 	ldr	r0, [r3]
+     f84:	ebfffef5 	bl	b60 <fflush@plt>
+     f88:	eaffffe3 	b	f1c <outputError+0xd8>
+}
+     f8c:	ebffff05 	bl	ba8 <__stack_chk_fail@plt>
+     f90:	00012198 	.word	0x00012198
+     f94:	00000080 	.word	0x00000080
+     f98:	00011e3c 	.word	0x00011e3c
+     f9c:	00000c28 	.word	0x00000c28
+     fa0:	00000c04 	.word	0x00000c04
+     fa4:	00000084 	.word	0x00000084
+     fa8:	00000b84 	.word	0x00000b84
+     fac:	00000090 	.word	0x00000090
+
+00000fb0 <errMsg>:
+/* Display error message including 'errno' diagnostic, and
+   return to caller */
+
+void
+errMsg(const char *format, ...)
+{
+     fb0:	e92d000f 	push	{r0, r1, r2, r3}
+     fb4:	e92d4070 	push	{r4, r5, r6, lr}
+     fb8:	e24dd010 	sub	sp, sp, #16
+     fbc:	e59f3064 	ldr	r3, [pc, #100]	; 1028 <errMsg+0x78>
+     fc0:	e08f3003 	add	r3, pc, r3
+     fc4:	e59f2060 	ldr	r2, [pc, #96]	; 102c <errMsg+0x7c>
+     fc8:	e7935002 	ldr	r5, [r3, r2]
+     fcc:	e5953000 	ldr	r3, [r5]
+     fd0:	e58d300c 	str	r3, [sp, #12]
+    va_list argList;
+    int savedErrno;
+
+    savedErrno = errno;       /* In case we change it here */
+     fd4:	ebffff14 	bl	c2c <__errno_location@plt>
+     fd8:	e1a04000 	mov	r4, r0
+     fdc:	e5906000 	ldr	r6, [r0]
+
+    va_start(argList, format);
+     fe0:	e28d3024 	add	r3, sp, #36	; 0x24
+     fe4:	e58d3008 	str	r3, [sp, #8]
+    outputError(TRUE, errno, TRUE, format, argList);
+     fe8:	e5901000 	ldr	r1, [r0]
+     fec:	e58d3000 	str	r3, [sp]
+     ff0:	e59d3020 	ldr	r3, [sp, #32]
+     ff4:	e3a02001 	mov	r2, #1
+     ff8:	e1a00002 	mov	r0, r2
+     ffc:	ebffff90 	bl	e44 <outputError>
+    va_end(argList);
+
+    errno = savedErrno;
+    1000:	e5846000 	str	r6, [r4]
+}
+    1004:	e59d200c 	ldr	r2, [sp, #12]
+    1008:	e5953000 	ldr	r3, [r5]
+    100c:	e1520003 	cmp	r2, r3
+    1010:	1a000003 	bne	1024 <errMsg+0x74>
+    1014:	e28dd010 	add	sp, sp, #16
+    1018:	e8bd4070 	pop	{r4, r5, r6, lr}
+    101c:	e28dd010 	add	sp, sp, #16
+    1020:	e12fff1e 	bx	lr
+    1024:	ebfffedf 	bl	ba8 <__stack_chk_fail@plt>
+    1028:	00012038 	.word	0x00012038
+    102c:	00000080 	.word	0x00000080
+
+00001030 <errExit>:
+/* Display error message including 'errno' diagnostic, and
+   terminate the process */
+
+void
+errExit(const char *format, ...)
+{
+    1030:	e92d000f 	push	{r0, r1, r2, r3}
+    1034:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    1038:	e24dd014 	sub	sp, sp, #20
+    103c:	e59f303c 	ldr	r3, [pc, #60]	; 1080 <errExit+0x50>
+    1040:	e08f3003 	add	r3, pc, r3
+    1044:	e59f2038 	ldr	r2, [pc, #56]	; 1084 <errExit+0x54>
+    1048:	e7933002 	ldr	r3, [r3, r2]
+    104c:	e5933000 	ldr	r3, [r3]
+    1050:	e58d300c 	str	r3, [sp, #12]
+    va_list argList;
+
+    va_start(argList, format);
+    1054:	e28d401c 	add	r4, sp, #28
+    1058:	e58d4008 	str	r4, [sp, #8]
+    outputError(TRUE, errno, TRUE, format, argList);
+    105c:	ebfffef2 	bl	c2c <__errno_location@plt>
+    1060:	e5901000 	ldr	r1, [r0]
+    1064:	e58d4000 	str	r4, [sp]
+    1068:	e59d3018 	ldr	r3, [sp, #24]
+    106c:	e3a02001 	mov	r2, #1
+    1070:	e1a00002 	mov	r0, r2
+    1074:	ebffff72 	bl	e44 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    1078:	e3a00001 	mov	r0, #1
+    107c:	ebffff5e 	bl	dfc <terminate>
+    1080:	00011fb8 	.word	0x00011fb8
+    1084:	00000080 	.word	0x00000080
+
+00001088 <err_exit>:
+   stdio buffers that were partially filled by the caller and without
+   invoking exit handlers that were established by the caller. */
+
+void
+err_exit(const char *format, ...)
+{
+    1088:	e92d000f 	push	{r0, r1, r2, r3}
+    108c:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    1090:	e24dd014 	sub	sp, sp, #20
+    1094:	e59f303c 	ldr	r3, [pc, #60]	; 10d8 <err_exit+0x50>
+    1098:	e08f3003 	add	r3, pc, r3
+    109c:	e59f2038 	ldr	r2, [pc, #56]	; 10dc <err_exit+0x54>
+    10a0:	e7933002 	ldr	r3, [r3, r2]
+    10a4:	e5933000 	ldr	r3, [r3]
+    10a8:	e58d300c 	str	r3, [sp, #12]
+    va_list argList;
+
+    va_start(argList, format);
+    10ac:	e28d401c 	add	r4, sp, #28
+    10b0:	e58d4008 	str	r4, [sp, #8]
+    outputError(TRUE, errno, FALSE, format, argList);
+    10b4:	ebfffedc 	bl	c2c <__errno_location@plt>
+    10b8:	e5901000 	ldr	r1, [r0]
+    10bc:	e58d4000 	str	r4, [sp]
+    10c0:	e59d3018 	ldr	r3, [sp, #24]
+    10c4:	e3a02000 	mov	r2, #0
+    10c8:	e3a00001 	mov	r0, #1
+    10cc:	ebffff5c 	bl	e44 <outputError>
+    va_end(argList);
+
+    terminate(FALSE);
+    10d0:	e3a00000 	mov	r0, #0
+    10d4:	ebffff48 	bl	dfc <terminate>
+    10d8:	00011f60 	.word	0x00011f60
+    10dc:	00000080 	.word	0x00000080
+
+000010e0 <errExitEN>:
+/* The following function does the same as errExit(), but expects
+   the error number in 'errnum' */
+
+void
+errExitEN(int errnum, const char *format, ...)
+{
+    10e0:	e92d000e 	push	{r1, r2, r3}
+    10e4:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    10e8:	e24dd010 	sub	sp, sp, #16
+    10ec:	e59f3038 	ldr	r3, [pc, #56]	; 112c <errExitEN+0x4c>
+    10f0:	e08f3003 	add	r3, pc, r3
+    10f4:	e59f2034 	ldr	r2, [pc, #52]	; 1130 <errExitEN+0x50>
+    10f8:	e7933002 	ldr	r3, [r3, r2]
+    10fc:	e5933000 	ldr	r3, [r3]
+    1100:	e58d300c 	str	r3, [sp, #12]
+    va_list argList;
+
+    va_start(argList, format);
+    1104:	e28d3018 	add	r3, sp, #24
+    1108:	e58d3008 	str	r3, [sp, #8]
+    outputError(TRUE, errnum, TRUE, format, argList);
+    110c:	e58d3000 	str	r3, [sp]
+    1110:	e59d3014 	ldr	r3, [sp, #20]
+    1114:	e3a02001 	mov	r2, #1
+    1118:	e1a01000 	mov	r1, r0
+    111c:	e1a00002 	mov	r0, r2
+    1120:	ebffff47 	bl	e44 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    1124:	e3a00001 	mov	r0, #1
+    1128:	ebffff33 	bl	dfc <terminate>
+    112c:	00011f08 	.word	0x00011f08
+    1130:	00000080 	.word	0x00000080
+
+00001134 <fatal>:
+
+/* Print an error message (without an 'errno' diagnostic) */
+
+void
+fatal(const char *format, ...)
+{
+    1134:	e92d000f 	push	{r0, r1, r2, r3}
+    1138:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    113c:	e24dd014 	sub	sp, sp, #20
+    1140:	e59f3038 	ldr	r3, [pc, #56]	; 1180 <fatal+0x4c>
+    1144:	e08f3003 	add	r3, pc, r3
+    1148:	e59f2034 	ldr	r2, [pc, #52]	; 1184 <fatal+0x50>
+    114c:	e7933002 	ldr	r3, [r3, r2]
+    1150:	e5933000 	ldr	r3, [r3]
+    1154:	e58d300c 	str	r3, [sp, #12]
+    va_list argList;
+
+    va_start(argList, format);
+    1158:	e28d301c 	add	r3, sp, #28
+    115c:	e58d3008 	str	r3, [sp, #8]
+    outputError(FALSE, 0, TRUE, format, argList);
+    1160:	e58d3000 	str	r3, [sp]
+    1164:	e59d3018 	ldr	r3, [sp, #24]
+    1168:	e3a02001 	mov	r2, #1
+    116c:	e3a01000 	mov	r1, #0
+    1170:	e1a00001 	mov	r0, r1
+    1174:	ebffff32 	bl	e44 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    1178:	e3a00001 	mov	r0, #1
+    117c:	ebffff1e 	bl	dfc <terminate>
+    1180:	00011eb4 	.word	0x00011eb4
+    1184:	00000080 	.word	0x00000080
+
+00001188 <usageErr>:
+
+/* Print a command usage error message and terminate the process */
+
+void
+usageErr(const char *format, ...)
+{
+    1188:	e92d000f 	push	{r0, r1, r2, r3}
+    118c:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    1190:	e24dd00c 	sub	sp, sp, #12
+    1194:	e59d5010 	ldr	r5, [sp, #16]
+    1198:	e59f4068 	ldr	r4, [pc, #104]	; 1208 <usageErr+0x80>
+    119c:	e08f4004 	add	r4, pc, r4
+    11a0:	e59f3064 	ldr	r3, [pc, #100]	; 120c <usageErr+0x84>
+    11a4:	e7943003 	ldr	r3, [r4, r3]
+    11a8:	e5933000 	ldr	r3, [r3]
+    11ac:	e58d3004 	str	r3, [sp, #4]
+    va_list argList;
+
+    fflush(stdout);           /* Flush any pending stdout */
+    11b0:	e59f3058 	ldr	r3, [pc, #88]	; 1210 <usageErr+0x88>
+    11b4:	e7943003 	ldr	r3, [r4, r3]
+    11b8:	e5930000 	ldr	r0, [r3]
+    11bc:	ebfffe67 	bl	b60 <fflush@plt>
+
+    fprintf(stderr, "Usage: ");
+    11c0:	e59f304c 	ldr	r3, [pc, #76]	; 1214 <usageErr+0x8c>
+    11c4:	e7944003 	ldr	r4, [r4, r3]
+
+# ifdef __va_arg_pack
+__fortify_function int
+fprintf (FILE *__restrict __stream, const char *__restrict __fmt, ...)
+{
+  return __fprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt,
+    11c8:	e5943000 	ldr	r3, [r4]
+    11cc:	e3a02007 	mov	r2, #7
+    11d0:	e3a01001 	mov	r1, #1
+    11d4:	e59f003c 	ldr	r0, [pc, #60]	; 1218 <usageErr+0x90>
+    11d8:	e08f0000 	add	r0, pc, r0
+    11dc:	ebfffe77 	bl	bc0 <fwrite@plt>
+    va_start(argList, format);
+    11e0:	e28d3014 	add	r3, sp, #20
+    11e4:	e58d3000 	str	r3, [sp]
+
+__fortify_function int
+vfprintf (FILE *__restrict __stream,
+	  const char *__restrict __fmt, __gnuc_va_list __ap)
+{
+  return __vfprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt, __ap);
+    11e8:	e1a02005 	mov	r2, r5
+    11ec:	e3a01001 	mov	r1, #1
+    11f0:	e5940000 	ldr	r0, [r4]
+    11f4:	ebfffe80 	bl	bfc <__vfprintf_chk@plt>
+    vfprintf(stderr, format, argList);
+    va_end(argList);
+
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    11f8:	e5940000 	ldr	r0, [r4]
+    11fc:	ebfffe57 	bl	b60 <fflush@plt>
+    exit(EXIT_FAILURE);
+    1200:	e3a00001 	mov	r0, #1
+    1204:	ebfffe82 	bl	c14 <exit@plt>
+    1208:	00011e5c 	.word	0x00011e5c
+    120c:	00000080 	.word	0x00000080
+    1210:	00000090 	.word	0x00000090
+    1214:	00000084 	.word	0x00000084
+    1218:	00000930 	.word	0x00000930
+
+0000121c <cmdLineErr>:
+/* Diagnose an error in command-line arguments and
+   terminate the process */
+
+void
+cmdLineErr(const char *format, ...)
+{
+    121c:	e92d000f 	push	{r0, r1, r2, r3}
+    1220:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+    1224:	e24dd00c 	sub	sp, sp, #12
+    1228:	e59d5010 	ldr	r5, [sp, #16]
+    122c:	e59f4068 	ldr	r4, [pc, #104]	; 129c <cmdLineErr+0x80>
+    1230:	e08f4004 	add	r4, pc, r4
+    1234:	e59f3064 	ldr	r3, [pc, #100]	; 12a0 <cmdLineErr+0x84>
+    1238:	e7943003 	ldr	r3, [r4, r3]
+    123c:	e5933000 	ldr	r3, [r3]
+    1240:	e58d3004 	str	r3, [sp, #4]
+    va_list argList;
+
+    fflush(stdout);           /* Flush any pending stdout */
+    1244:	e59f3058 	ldr	r3, [pc, #88]	; 12a4 <cmdLineErr+0x88>
+    1248:	e7943003 	ldr	r3, [r4, r3]
+    124c:	e5930000 	ldr	r0, [r3]
+    1250:	ebfffe42 	bl	b60 <fflush@plt>
+
+    fprintf(stderr, "Command-line usage error: ");
+    1254:	e59f304c 	ldr	r3, [pc, #76]	; 12a8 <cmdLineErr+0x8c>
+    1258:	e7944003 	ldr	r4, [r4, r3]
+  return __fprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt,
+    125c:	e5943000 	ldr	r3, [r4]
+    1260:	e3a0201a 	mov	r2, #26
+    1264:	e3a01001 	mov	r1, #1
+    1268:	e59f003c 	ldr	r0, [pc, #60]	; 12ac <cmdLineErr+0x90>
+    126c:	e08f0000 	add	r0, pc, r0
+    1270:	ebfffe52 	bl	bc0 <fwrite@plt>
+    va_start(argList, format);
+    1274:	e28d3014 	add	r3, sp, #20
+    1278:	e58d3000 	str	r3, [sp]
+  return __vfprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt, __ap);
+    127c:	e1a02005 	mov	r2, r5
+    1280:	e3a01001 	mov	r1, #1
+    1284:	e5940000 	ldr	r0, [r4]
+    1288:	ebfffe5b 	bl	bfc <__vfprintf_chk@plt>
+    vfprintf(stderr, format, argList);
+    va_end(argList);
+
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    128c:	e5940000 	ldr	r0, [r4]
+    1290:	ebfffe32 	bl	b60 <fflush@plt>
+    exit(EXIT_FAILURE);
+    1294:	e3a00001 	mov	r0, #1
+    1298:	ebfffe5d 	bl	c14 <exit@plt>
+    129c:	00011dc8 	.word	0x00011dc8
+    12a0:	00000080 	.word	0x00000080
+    12a4:	00000090 	.word	0x00000090
+    12a8:	00000084 	.word	0x00000084
+    12ac:	000008a4 	.word	0x000008a4
+
+000012b0 <f_int>:
+#define OPCODE_LEN 12
+uint8_t f_opcode[12] = {0x00, 0xf0, 0x20, 0xe3, 0xee, 0x00, 0xa0, 0xe3, 0x1e, 0xff, 0x2f, 0xe1};
+
+uint8_t f_int(void)
+{
+    __asm("nop");
+    12b0:	e320f000 	nop	{0}
+    return 0xee;
+}
+    12b4:	e3a000ee 	mov	r0, #238	; 0xee
+    12b8:	e12fff1e 	bx	lr
+
+000012bc <exec_opcode>:
+
+// function that executes an array of opcodes
+// based on https://stackoverflow.com/questions/37122186/c-put-x86-instructions-into-array-and-execute-them
+uint8_t exec_opcode(const uint8_t *code, size_t codelen)
+{
+    12bc:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+    12c0:	e24dd00c 	sub	sp, sp, #12
+    12c4:	e1a07000 	mov	r7, r0
+    12c8:	e1a06001 	mov	r6, r1
+    uint8_t ret;
+    // in order to manipulate memory protection, we must work with
+    // whole pages allocated directly from the operating system.
+    static size_t pagesize;
+    if (!pagesize) {
+    12cc:	e59f30e8 	ldr	r3, [pc, #232]	; 13bc <exec_opcode+0x100>
+    12d0:	e08f3003 	add	r3, pc, r3
+    12d4:	e5933000 	ldr	r3, [r3]
+    12d8:	e3530000 	cmp	r3, #0
+    12dc:	1a000006 	bne	12fc <exec_opcode+0x40>
+        pagesize = sysconf(_SC_PAGESIZE);
+    12e0:	e3a0001e 	mov	r0, #30
+    12e4:	ebfffe32 	bl	bb4 <sysconf@plt>
+    12e8:	e59f30d0 	ldr	r3, [pc, #208]	; 13c0 <exec_opcode+0x104>
+    12ec:	e08f3003 	add	r3, pc, r3
+    12f0:	e5830000 	str	r0, [r3]
+        if (pagesize == (size_t)-1) {
+    12f4:	e3700001 	cmn	r0, #1
+    12f8:	0a000026 	beq	1398 <exec_opcode+0xdc>
+    }
+
+    // allocate at least enough space for the code + 1 byte
+    // (so that there will be at least one INT3 - see below),
+    // rounded up to a multiple of the system page size.
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    12fc:	e59f30c0 	ldr	r3, [pc, #192]	; 13c4 <exec_opcode+0x108>
+    1300:	e08f3003 	add	r3, pc, r3
+    1304:	e5934000 	ldr	r4, [r3]
+                               / pagesize) * pagesize;
+    1308:	e1a01004 	mov	r1, r4
+    130c:	e0840006 	add	r0, r4, r6
+    1310:	eb00014e 	bl	1850 <__udivsi3>
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    1314:	e0040490 	mul	r4, r0, r4
+
+    void *executable_area = mmap(0, rounded_codesize,
+    1318:	e3a00000 	mov	r0, #0
+    131c:	e58d0004 	str	r0, [sp, #4]
+    1320:	e3e03000 	mvn	r3, #0
+    1324:	e58d3000 	str	r3, [sp]
+    1328:	e3a03022 	mov	r3, #34	; 0x22
+    132c:	e3a02003 	mov	r2, #3
+    1330:	e1a01004 	mov	r1, r4
+    1334:	ebfffe39 	bl	c20 <mmap@plt>
+                                 PROT_READ|PROT_WRITE,
+                                 MAP_PRIVATE|MAP_ANONYMOUS,
+                                 -1, 0);
+    if (!executable_area) {
+    1338:	e2505000 	subs	r5, r0, #0
+    133c:	0a000018 	beq	13a4 <exec_opcode+0xe8>
+
+__fortify_function void *
+__NTH (memcpy (void *__restrict __dest, const void *__restrict __src,
+	       size_t __len))
+{
+  return __builtin___memcpy_chk (__dest, __src, __len, __bos0 (__dest));
+    1340:	e1a02006 	mov	r2, r6
+    1344:	e1a01007 	mov	r1, r7
+    1348:	e1a00005 	mov	r0, r5
+    134c:	ebfffe0f 	bl	b90 <memcpy@plt>
+    {
+      __warn_memset_zero_len ();
+      return __dest;
+    }
+#endif
+  return __builtin___memset_chk (__dest, __ch, __len, __bos0 (__dest));
+    1350:	e0442006 	sub	r2, r4, r6
+    1354:	e3a010cc 	mov	r1, #204	; 0xcc
+    1358:	e0850006 	add	r0, r5, r6
+    135c:	ebfffe35 	bl	c38 <memset@plt>
+    // a prompt crash if the generated code runs off the end.
+    // must change this if generating code for non-x86.
+    memset(executable_area + codelen, 0xCC, rounded_codesize - codelen);
+
+    // make executable_area actually executable (and unwritable)
+    if (mprotect(executable_area, rounded_codesize, PROT_READ|PROT_EXEC)) {
+    1360:	e3a02005 	mov	r2, #5
+    1364:	e1a01004 	mov	r1, r4
+    1368:	e1a00005 	mov	r0, r5
+    136c:	ebfffdfe 	bl	b6c <mprotect@plt>
+    1370:	e3500000 	cmp	r0, #0
+    1374:	1a00000d 	bne	13b0 <exec_opcode+0xf4>
+        errExit("mprotect");
+    }
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) executable_area)();
+    1378:	e12fff35 	blx	r5
+    137c:	e1a06000 	mov	r6, r0
+
+    munmap(executable_area, rounded_codesize);
+    1380:	e1a01004 	mov	r1, r4
+    1384:	e1a00005 	mov	r0, r5
+    1388:	ebfffe30 	bl	c50 <munmap@plt>
+    return ret;
+}
+    138c:	e1a00006 	mov	r0, r6
+    1390:	e28dd00c 	add	sp, sp, #12
+    1394:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+            errExit("getpagesize");
+    1398:	e59f0028 	ldr	r0, [pc, #40]	; 13c8 <exec_opcode+0x10c>
+    139c:	e08f0000 	add	r0, pc, r0
+    13a0:	ebffff22 	bl	1030 <errExit>
+        errExit("mmap");
+    13a4:	e59f0020 	ldr	r0, [pc, #32]	; 13cc <exec_opcode+0x110>
+    13a8:	e08f0000 	add	r0, pc, r0
+    13ac:	ebffff1f 	bl	1030 <errExit>
+        errExit("mprotect");
+    13b0:	e59f0018 	ldr	r0, [pc, #24]	; 13d0 <exec_opcode+0x114>
+    13b4:	e08f0000 	add	r0, pc, r0
+    13b8:	ebffff1c 	bl	1030 <errExit>
+    13bc:	00011ddc 	.word	0x00011ddc
+    13c0:	00011dc0 	.word	0x00011dc0
+    13c4:	00011dac 	.word	0x00011dac
+    13c8:	00000cac 	.word	0x00000cac
+    13cc:	00000cac 	.word	0x00000cac
+    13d0:	00000ca8 	.word	0x00000ca8
+
+000013d4 <exec_opcode_WX>:
+
+
+// same as above, but asume writable memory can be executed
+uint8_t exec_opcode_WX(const uint8_t *code, size_t codelen)
+{
+    13d4:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+    13d8:	e24dd00c 	sub	sp, sp, #12
+    13dc:	e1a07000 	mov	r7, r0
+    13e0:	e1a05001 	mov	r5, r1
+    uint8_t ret;
+    // in order to manipulate memory protection, we must work with
+    // whole pages allocated directly from the operating system.
+    static size_t pagesize;
+    if (!pagesize) {
+    13e4:	e59f30c4 	ldr	r3, [pc, #196]	; 14b0 <exec_opcode_WX+0xdc>
+    13e8:	e08f3003 	add	r3, pc, r3
+    13ec:	e5933004 	ldr	r3, [r3, #4]
+    13f0:	e3530000 	cmp	r3, #0
+    13f4:	1a000006 	bne	1414 <exec_opcode_WX+0x40>
+        pagesize = sysconf(_SC_PAGESIZE);
+    13f8:	e3a0001e 	mov	r0, #30
+    13fc:	ebfffdec 	bl	bb4 <sysconf@plt>
+    1400:	e59f30ac 	ldr	r3, [pc, #172]	; 14b4 <exec_opcode_WX+0xe0>
+    1404:	e08f3003 	add	r3, pc, r3
+    1408:	e5830004 	str	r0, [r3, #4]
+        if (pagesize == (size_t)-1) {
+    140c:	e3700001 	cmn	r0, #1
+    1410:	0a000020 	beq	1498 <exec_opcode_WX+0xc4>
+    }
+
+    // allocate at least enough space for the code + 1 byte
+    // (so that there will be at least one INT3 - see below),
+    // rounded up to a multiple of the system page size.
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    1414:	e59f309c 	ldr	r3, [pc, #156]	; 14b8 <exec_opcode_WX+0xe4>
+    1418:	e08f3003 	add	r3, pc, r3
+    141c:	e5934004 	ldr	r4, [r3, #4]
+                               / pagesize) * pagesize;
+    1420:	e1a01004 	mov	r1, r4
+    1424:	e0840005 	add	r0, r4, r5
+    1428:	eb000108 	bl	1850 <__udivsi3>
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    142c:	e0040490 	mul	r4, r0, r4
+
+    void *executable_area = mmap(0, rounded_codesize,
+    1430:	e3a00000 	mov	r0, #0
+    1434:	e58d0004 	str	r0, [sp, #4]
+    1438:	e3e03000 	mvn	r3, #0
+    143c:	e58d3000 	str	r3, [sp]
+    1440:	e3a03022 	mov	r3, #34	; 0x22
+    1444:	e3a02007 	mov	r2, #7
+    1448:	e1a01004 	mov	r1, r4
+    144c:	ebfffdf3 	bl	c20 <mmap@plt>
+                                 PROT_READ|PROT_WRITE|PROT_EXEC,
+                                 MAP_PRIVATE|MAP_ANONYMOUS,
+                                 -1, 0);
+    if (!executable_area) {
+    1450:	e2506000 	subs	r6, r0, #0
+    1454:	0a000012 	beq	14a4 <exec_opcode_WX+0xd0>
+  return __builtin___memcpy_chk (__dest, __src, __len, __bos0 (__dest));
+    1458:	e1a02005 	mov	r2, r5
+    145c:	e1a01007 	mov	r1, r7
+    1460:	e1a00006 	mov	r0, r6
+    1464:	ebfffdc9 	bl	b90 <memcpy@plt>
+  return __builtin___memset_chk (__dest, __ch, __len, __bos0 (__dest));
+    1468:	e0442005 	sub	r2, r4, r5
+    146c:	e3a010cc 	mov	r1, #204	; 0xcc
+    1470:	e0860005 	add	r0, r6, r5
+    1474:	ebfffdef 	bl	c38 <memset@plt>
+    // a prompt crash if the generated code runs off the end.
+    // must change this if generating code for non-x86.
+    memset(executable_area + codelen, 0xCC, rounded_codesize - codelen);
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) executable_area)();
+    1478:	e12fff36 	blx	r6
+    147c:	e1a05000 	mov	r5, r0
+
+    munmap(executable_area, rounded_codesize);
+    1480:	e1a01004 	mov	r1, r4
+    1484:	e1a00006 	mov	r0, r6
+    1488:	ebfffdf0 	bl	c50 <munmap@plt>
+    return ret;
+}
+    148c:	e1a00005 	mov	r0, r5
+    1490:	e28dd00c 	add	sp, sp, #12
+    1494:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+            errExit("getpagesize");
+    1498:	e59f001c 	ldr	r0, [pc, #28]	; 14bc <exec_opcode_WX+0xe8>
+    149c:	e08f0000 	add	r0, pc, r0
+    14a0:	ebfffee2 	bl	1030 <errExit>
+        errExit("mmap");
+    14a4:	e59f0014 	ldr	r0, [pc, #20]	; 14c0 <exec_opcode_WX+0xec>
+    14a8:	e08f0000 	add	r0, pc, r0
+    14ac:	ebfffedf 	bl	1030 <errExit>
+    14b0:	00011cc4 	.word	0x00011cc4
+    14b4:	00011ca8 	.word	0x00011ca8
+    14b8:	00011c94 	.word	0x00011c94
+    14bc:	00000bac 	.word	0x00000bac
+    14c0:	00000bac 	.word	0x00000bac
+
+000014c4 <exec_opcode_no_mmap>:
+
+// same as above, but asume writable memory can be executed and no mmap is needed
+uint8_t exec_opcode_no_mmap(const uint8_t *code, size_t codelen)
+{
+    14c4:	e92d4010 	push	{r4, lr}
+    uint8_t ret;
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) code)();
+    14c8:	e12fff30 	blx	r0
+    return ret;
+}
+    14cc:	e8bd8010 	pop	{r4, pc}
+
+000014d0 <main>:
+
+int main()
+{
+    14d0:	e92d4030 	push	{r4, r5, lr}
+    14d4:	e24dd01c 	sub	sp, sp, #28
+    14d8:	e59f52f0 	ldr	r5, [pc, #752]	; 17d0 <main+0x300>
+    14dc:	e08f5005 	add	r5, pc, r5
+    14e0:	e59f32ec 	ldr	r3, [pc, #748]	; 17d4 <main+0x304>
+    14e4:	e7953003 	ldr	r3, [r5, r3]
+    14e8:	e5933000 	ldr	r3, [r3]
+    14ec:	e58d3014 	str	r3, [sp, #20]
+  return __builtin___memcpy_chk (__dest, __src, __len, __bos0 (__dest));
+    14f0:	e59f22e0 	ldr	r2, [pc, #736]	; 17d8 <main+0x308>
+    14f4:	e08f2002 	add	r2, pc, r2
+    14f8:	e28dc008 	add	ip, sp, #8
+    14fc:	e1a0300c 	mov	r3, ip
+    1500:	e5920000 	ldr	r0, [r2]
+    1504:	e5921004 	ldr	r1, [r2, #4]
+    1508:	e5922008 	ldr	r2, [r2, #8]
+    150c:	e8a30007 	stmia	r3!, {r0, r1, r2}
+    uint8_t ret;
+
+    ap = (uint8_t *)&f_int;
+
+    memcpy(current_opcode, ap, OPCODE_LEN);
+    if (memcmp(current_opcode, f_opcode, OPCODE_LEN) != 0) {
+    1510:	e3a0200c 	mov	r2, #12
+    1514:	e59f12c0 	ldr	r1, [pc, #704]	; 17dc <main+0x30c>
+    1518:	e08f1001 	add	r1, pc, r1
+    151c:	e1a0000c 	mov	r0, ip
+    1520:	ebfffd9d 	bl	b9c <memcmp@plt>
+    1524:	e3500000 	cmp	r0, #0
+    1528:	1a000057 	bne	168c <main+0x1bc>
+  return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+    152c:	e59f22ac 	ldr	r2, [pc, #684]	; 17e0 <main+0x310>
+    1530:	e08f2002 	add	r2, pc, r2
+    1534:	e59f12a8 	ldr	r1, [pc, #680]	; 17e4 <main+0x314>
+    1538:	e08f1001 	add	r1, pc, r1
+    153c:	e3a00001 	mov	r0, #1
+    1540:	ebfffdbf 	bl	c44 <__printf_chk@plt>
+        printf("};\r\n");
+    }
+
+#ifdef SCENARIO1
+    printf("* execute internal function from %p", f_int);
+    ret = f_int();
+    1544:	ebffff59 	bl	12b0 <f_int>
+    if (ret == 0xee) {
+    1548:	e35000ee 	cmp	r0, #238	; 0xee
+    154c:	0a00008a 	beq	177c <main+0x2ac>
+    1550:	e1a02000 	mov	r2, r0
+    1554:	e59f128c 	ldr	r1, [pc, #652]	; 17e8 <main+0x318>
+    1558:	e08f1001 	add	r1, pc, r1
+    155c:	e3a00001 	mov	r0, #1
+    1560:	ebfffdb7 	bl	c44 <__printf_chk@plt>
+    1564:	e59f4280 	ldr	r4, [pc, #640]	; 17ec <main+0x31c>
+    1568:	e08f4004 	add	r4, pc, r4
+    156c:	e1a02004 	mov	r2, r4
+    1570:	e59f1278 	ldr	r1, [pc, #632]	; 17f0 <main+0x320>
+    1574:	e08f1001 	add	r1, pc, r1
+    1578:	e3a00001 	mov	r0, #1
+    157c:	ebfffdb0 	bl	c44 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO2
+    printf("* execute stored opcodes via mmap obeying NX %p", f_opcode);
+    ret = exec_opcode(f_opcode, sizeof(f_opcode));
+    1580:	e3a0100c 	mov	r1, #12
+    1584:	e1a00004 	mov	r0, r4
+    1588:	ebffff4b 	bl	12bc <exec_opcode>
+    if (ret == 0xee) {
+    158c:	e35000ee 	cmp	r0, #238	; 0xee
+    1590:	0a00007d 	beq	178c <main+0x2bc>
+    1594:	e1a02000 	mov	r2, r0
+    1598:	e59f1254 	ldr	r1, [pc, #596]	; 17f4 <main+0x324>
+    159c:	e08f1001 	add	r1, pc, r1
+    15a0:	e3a00001 	mov	r0, #1
+    15a4:	ebfffda6 	bl	c44 <__printf_chk@plt>
+    15a8:	e28d4008 	add	r4, sp, #8
+    15ac:	e1a02004 	mov	r2, r4
+    15b0:	e59f1240 	ldr	r1, [pc, #576]	; 17f8 <main+0x328>
+    15b4:	e08f1001 	add	r1, pc, r1
+    15b8:	e3a00001 	mov	r0, #1
+    15bc:	ebfffda0 	bl	c44 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO3
+    printf("* execute detected opcodes via mmap obeying NX %p", current_opcode);
+    ret = exec_opcode(current_opcode, sizeof(f_opcode));
+    15c0:	e3a0100c 	mov	r1, #12
+    15c4:	e1a00004 	mov	r0, r4
+    15c8:	ebffff3b 	bl	12bc <exec_opcode>
+    if (ret == 0xee) {
+    15cc:	e35000ee 	cmp	r0, #238	; 0xee
+    15d0:	0a000071 	beq	179c <main+0x2cc>
+    15d4:	e1a02000 	mov	r2, r0
+    15d8:	e59f121c 	ldr	r1, [pc, #540]	; 17fc <main+0x32c>
+    15dc:	e08f1001 	add	r1, pc, r1
+    15e0:	e3a00001 	mov	r0, #1
+    15e4:	ebfffd96 	bl	c44 <__printf_chk@plt>
+    15e8:	e28d4008 	add	r4, sp, #8
+    15ec:	e1a02004 	mov	r2, r4
+    15f0:	e59f1208 	ldr	r1, [pc, #520]	; 1800 <main+0x330>
+    15f4:	e08f1001 	add	r1, pc, r1
+    15f8:	e3a00001 	mov	r0, #1
+    15fc:	ebfffd90 	bl	c44 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO4
+    printf("* execute detected opcodes via mmap not obeying NX %p", current_opcode);
+    ret = exec_opcode_WX(current_opcode, sizeof(f_opcode));
+    1600:	e3a0100c 	mov	r1, #12
+    1604:	e1a00004 	mov	r0, r4
+    1608:	ebffff71 	bl	13d4 <exec_opcode_WX>
+    if (ret == 0xee) {
+    160c:	e35000ee 	cmp	r0, #238	; 0xee
+    1610:	0a000065 	beq	17ac <main+0x2dc>
+    1614:	e1a02000 	mov	r2, r0
+    1618:	e59f11e4 	ldr	r1, [pc, #484]	; 1804 <main+0x334>
+    161c:	e08f1001 	add	r1, pc, r1
+    1620:	e3a00001 	mov	r0, #1
+    1624:	ebfffd86 	bl	c44 <__printf_chk@plt>
+    1628:	e28d4008 	add	r4, sp, #8
+    162c:	e1a02004 	mov	r2, r4
+    1630:	e59f11d0 	ldr	r1, [pc, #464]	; 1808 <main+0x338>
+    1634:	e08f1001 	add	r1, pc, r1
+    1638:	e3a00001 	mov	r0, #1
+    163c:	ebfffd80 	bl	c44 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO5
+    printf("* execute detected opcodes without mmap, also not obeying NX %p", current_opcode);
+    ret = exec_opcode_no_mmap(current_opcode, sizeof(f_opcode));
+    1640:	e3a0100c 	mov	r1, #12
+    1644:	e1a00004 	mov	r0, r4
+    1648:	ebffff9d 	bl	14c4 <exec_opcode_no_mmap>
+    if (ret == 0xee) {
+    164c:	e35000ee 	cmp	r0, #238	; 0xee
+    1650:	0a000059 	beq	17bc <main+0x2ec>
+    1654:	e1a02000 	mov	r2, r0
+    1658:	e59f11ac 	ldr	r1, [pc, #428]	; 180c <main+0x33c>
+    165c:	e08f1001 	add	r1, pc, r1
+    1660:	e3a00001 	mov	r0, #1
+    1664:	ebfffd76 	bl	c44 <__printf_chk@plt>
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    }
+#endif
+
+}
+    1668:	e3a00000 	mov	r0, #0
+    166c:	e59f3160 	ldr	r3, [pc, #352]	; 17d4 <main+0x304>
+    1670:	e7953003 	ldr	r3, [r5, r3]
+    1674:	e59d2014 	ldr	r2, [sp, #20]
+    1678:	e5933000 	ldr	r3, [r3]
+    167c:	e1520003 	cmp	r2, r3
+    1680:	1a000051 	bne	17cc <main+0x2fc>
+    1684:	e28dd01c 	add	sp, sp, #28
+    1688:	e8bd8030 	pop	{r4, r5, pc}
+    168c:	e59f017c 	ldr	r0, [pc, #380]	; 1810 <main+0x340>
+    1690:	e08f0000 	add	r0, pc, r0
+    1694:	ebfffd4f 	bl	bd8 <puts@plt>
+    1698:	e59f2174 	ldr	r2, [pc, #372]	; 1814 <main+0x344>
+    169c:	e08f2002 	add	r2, pc, r2
+    16a0:	e59f1170 	ldr	r1, [pc, #368]	; 1818 <main+0x348>
+    16a4:	e08f1001 	add	r1, pc, r1
+    16a8:	e3a00001 	mov	r0, #1
+    16ac:	ebfffd64 	bl	c44 <__printf_chk@plt>
+        for (i=0;i<8;i++) {
+    16b0:	e3a04000 	mov	r4, #0
+    16b4:	ea000011 	b	1700 <main+0x230>
+            printf("%02x%02x%02x%02x ", (uint8_t)(*(ap+4*i)), (uint8_t)(*(ap+4*i+1)), (uint8_t)*((ap+4*i+2)), (uint8_t)(*(ap+4*i+3)));
+    16b8:	e1a01104 	lsl	r1, r4, #2
+    16bc:	e59f0158 	ldr	r0, [pc, #344]	; 181c <main+0x34c>
+    16c0:	e08f0000 	add	r0, pc, r0
+    16c4:	e7d02104 	ldrb	r2, [r0, r4, lsl #2]
+    16c8:	e2813001 	add	r3, r1, #1
+    16cc:	e7d33000 	ldrb	r3, [r3, r0]
+    16d0:	e281c002 	add	ip, r1, #2
+    16d4:	e7dcc000 	ldrb	ip, [ip, r0]
+    16d8:	e2811003 	add	r1, r1, #3
+    16dc:	e7d11000 	ldrb	r1, [r1, r0]
+    16e0:	e58d1004 	str	r1, [sp, #4]
+    16e4:	e58dc000 	str	ip, [sp]
+    16e8:	e59f1130 	ldr	r1, [pc, #304]	; 1820 <main+0x350>
+    16ec:	e08f1001 	add	r1, pc, r1
+    16f0:	e3a00001 	mov	r0, #1
+    16f4:	ebfffd52 	bl	c44 <__printf_chk@plt>
+        for (i=0;i<8;i++) {
+    16f8:	e2844001 	add	r4, r4, #1
+    16fc:	e6ef4074 	uxtb	r4, r4
+    1700:	e3540007 	cmp	r4, #7
+    1704:	9affffeb 	bls	16b8 <main+0x1e8>
+    1708:	e3a0200c 	mov	r2, #12
+    170c:	e59f1110 	ldr	r1, [pc, #272]	; 1824 <main+0x354>
+    1710:	e08f1001 	add	r1, pc, r1
+    1714:	e3a00001 	mov	r0, #1
+    1718:	ebfffd49 	bl	c44 <__printf_chk@plt>
+        for (i=0; i<OPCODE_LEN; i++) {
+    171c:	e3a04000 	mov	r4, #0
+    1720:	ea000007 	b	1744 <main+0x274>
+            printf("0x%02x%s", (uint8_t)(*(ap+i)), i < (OPCODE_LEN-1) ? ", ":"");
+    1724:	e59f30fc 	ldr	r3, [pc, #252]	; 1828 <main+0x358>
+    1728:	e08f3003 	add	r3, pc, r3
+    172c:	e59f10f8 	ldr	r1, [pc, #248]	; 182c <main+0x35c>
+    1730:	e08f1001 	add	r1, pc, r1
+    1734:	e3a00001 	mov	r0, #1
+    1738:	ebfffd41 	bl	c44 <__printf_chk@plt>
+        for (i=0; i<OPCODE_LEN; i++) {
+    173c:	e2844001 	add	r4, r4, #1
+    1740:	e6ef4074 	uxtb	r4, r4
+    1744:	e354000b 	cmp	r4, #11
+    1748:	8a000007 	bhi	176c <main+0x29c>
+            printf("0x%02x%s", (uint8_t)(*(ap+i)), i < (OPCODE_LEN-1) ? ", ":"");
+    174c:	e59f30dc 	ldr	r3, [pc, #220]	; 1830 <main+0x360>
+    1750:	e08f3003 	add	r3, pc, r3
+    1754:	e7d42003 	ldrb	r2, [r4, r3]
+    1758:	e354000a 	cmp	r4, #10
+    175c:	8afffff0 	bhi	1724 <main+0x254>
+    1760:	e59f30cc 	ldr	r3, [pc, #204]	; 1834 <main+0x364>
+    1764:	e08f3003 	add	r3, pc, r3
+    1768:	eaffffef 	b	172c <main+0x25c>
+    176c:	e59f00c4 	ldr	r0, [pc, #196]	; 1838 <main+0x368>
+    1770:	e08f0000 	add	r0, pc, r0
+    1774:	ebfffd17 	bl	bd8 <puts@plt>
+    1778:	eaffff6b 	b	152c <main+0x5c>
+    177c:	e59f00b8 	ldr	r0, [pc, #184]	; 183c <main+0x36c>
+    1780:	e08f0000 	add	r0, pc, r0
+    1784:	ebfffd13 	bl	bd8 <puts@plt>
+    1788:	eaffff75 	b	1564 <main+0x94>
+    178c:	e59f00ac 	ldr	r0, [pc, #172]	; 1840 <main+0x370>
+    1790:	e08f0000 	add	r0, pc, r0
+    1794:	ebfffd0f 	bl	bd8 <puts@plt>
+    1798:	eaffff82 	b	15a8 <main+0xd8>
+    179c:	e59f00a0 	ldr	r0, [pc, #160]	; 1844 <main+0x374>
+    17a0:	e08f0000 	add	r0, pc, r0
+    17a4:	ebfffd0b 	bl	bd8 <puts@plt>
+    17a8:	eaffff8e 	b	15e8 <main+0x118>
+    17ac:	e59f0094 	ldr	r0, [pc, #148]	; 1848 <main+0x378>
+    17b0:	e08f0000 	add	r0, pc, r0
+    17b4:	ebfffd07 	bl	bd8 <puts@plt>
+    17b8:	eaffff9a 	b	1628 <main+0x158>
+    17bc:	e59f0088 	ldr	r0, [pc, #136]	; 184c <main+0x37c>
+    17c0:	e08f0000 	add	r0, pc, r0
+    17c4:	ebfffd03 	bl	bd8 <puts@plt>
+    17c8:	eaffffa6 	b	1668 <main+0x198>
+}
+    17cc:	ebfffcf5 	bl	ba8 <__stack_chk_fail@plt>
+    17d0:	00011b1c 	.word	0x00011b1c
+    17d4:	00000080 	.word	0x00000080
+    17d8:	fffffdb4 	.word	0xfffffdb4
+    17dc:	00011b84 	.word	0x00011b84
+    17e0:	fffffd78 	.word	0xfffffd78
+    17e4:	00000ba0 	.word	0x00000ba0
+    17e8:	00000bac 	.word	0x00000bac
+    17ec:	00011b34 	.word	0x00011b34
+    17f0:	00000ba0 	.word	0x00000ba0
+    17f4:	00000b68 	.word	0x00000b68
+    17f8:	00000b90 	.word	0x00000b90
+    17fc:	00000b28 	.word	0x00000b28
+    1800:	00000b84 	.word	0x00000b84
+    1804:	00000ae8 	.word	0x00000ae8
+    1808:	00000b7c 	.word	0x00000b7c
+    180c:	00000aa8 	.word	0x00000aa8
+    1810:	000009dc 	.word	0x000009dc
+    1814:	fffffc0c 	.word	0xfffffc0c
+    1818:	000009ec 	.word	0x000009ec
+    181c:	fffffbe8 	.word	0xfffffbe8
+    1820:	000009ac 	.word	0x000009ac
+    1824:	0000099c 	.word	0x0000099c
+    1828:	00000964 	.word	0x00000964
+    182c:	00000998 	.word	0x00000998
+    1830:	fffffb58 	.word	0xfffffb58
+    1834:	00000904 	.word	0x00000904
+    1838:	00000964 	.word	0x00000964
+    183c:	0000097c 	.word	0x0000097c
+    1840:	0000096c 	.word	0x0000096c
+    1844:	0000095c 	.word	0x0000095c
+    1848:	0000094c 	.word	0x0000094c
+    184c:	0000093c 	.word	0x0000093c
+
+00001850 <__udivsi3>:
+    1850:	e2512001 	subs	r2, r1, #1
+    1854:	012fff1e 	bxeq	lr
+    1858:	3a000074 	bcc	1a30 <__udivsi3+0x1e0>
+    185c:	e1500001 	cmp	r0, r1
+    1860:	9a00006b 	bls	1a14 <__udivsi3+0x1c4>
+    1864:	e1110002 	tst	r1, r2
+    1868:	0a00006c 	beq	1a20 <__udivsi3+0x1d0>
+    186c:	e16f3f10 	clz	r3, r0
+    1870:	e16f2f11 	clz	r2, r1
+    1874:	e0423003 	sub	r3, r2, r3
+    1878:	e273301f 	rsbs	r3, r3, #31
+    187c:	10833083 	addne	r3, r3, r3, lsl #1
+    1880:	e3a02000 	mov	r2, #0
+    1884:	108ff103 	addne	pc, pc, r3, lsl #2
+    1888:	e320f000 	nop	{0}
+    188c:	e1500f81 	cmp	r0, r1, lsl #31
+    1890:	e0a22002 	adc	r2, r2, r2
+    1894:	20400f81 	subcs	r0, r0, r1, lsl #31
+    1898:	e1500f01 	cmp	r0, r1, lsl #30
+    189c:	e0a22002 	adc	r2, r2, r2
+    18a0:	20400f01 	subcs	r0, r0, r1, lsl #30
+    18a4:	e1500e81 	cmp	r0, r1, lsl #29
+    18a8:	e0a22002 	adc	r2, r2, r2
+    18ac:	20400e81 	subcs	r0, r0, r1, lsl #29
+    18b0:	e1500e01 	cmp	r0, r1, lsl #28
+    18b4:	e0a22002 	adc	r2, r2, r2
+    18b8:	20400e01 	subcs	r0, r0, r1, lsl #28
+    18bc:	e1500d81 	cmp	r0, r1, lsl #27
+    18c0:	e0a22002 	adc	r2, r2, r2
+    18c4:	20400d81 	subcs	r0, r0, r1, lsl #27
+    18c8:	e1500d01 	cmp	r0, r1, lsl #26
+    18cc:	e0a22002 	adc	r2, r2, r2
+    18d0:	20400d01 	subcs	r0, r0, r1, lsl #26
+    18d4:	e1500c81 	cmp	r0, r1, lsl #25
+    18d8:	e0a22002 	adc	r2, r2, r2
+    18dc:	20400c81 	subcs	r0, r0, r1, lsl #25
+    18e0:	e1500c01 	cmp	r0, r1, lsl #24
+    18e4:	e0a22002 	adc	r2, r2, r2
+    18e8:	20400c01 	subcs	r0, r0, r1, lsl #24
+    18ec:	e1500b81 	cmp	r0, r1, lsl #23
+    18f0:	e0a22002 	adc	r2, r2, r2
+    18f4:	20400b81 	subcs	r0, r0, r1, lsl #23
+    18f8:	e1500b01 	cmp	r0, r1, lsl #22
+    18fc:	e0a22002 	adc	r2, r2, r2
+    1900:	20400b01 	subcs	r0, r0, r1, lsl #22
+    1904:	e1500a81 	cmp	r0, r1, lsl #21
+    1908:	e0a22002 	adc	r2, r2, r2
+    190c:	20400a81 	subcs	r0, r0, r1, lsl #21
+    1910:	e1500a01 	cmp	r0, r1, lsl #20
+    1914:	e0a22002 	adc	r2, r2, r2
+    1918:	20400a01 	subcs	r0, r0, r1, lsl #20
+    191c:	e1500981 	cmp	r0, r1, lsl #19
+    1920:	e0a22002 	adc	r2, r2, r2
+    1924:	20400981 	subcs	r0, r0, r1, lsl #19
+    1928:	e1500901 	cmp	r0, r1, lsl #18
+    192c:	e0a22002 	adc	r2, r2, r2
+    1930:	20400901 	subcs	r0, r0, r1, lsl #18
+    1934:	e1500881 	cmp	r0, r1, lsl #17
+    1938:	e0a22002 	adc	r2, r2, r2
+    193c:	20400881 	subcs	r0, r0, r1, lsl #17
+    1940:	e1500801 	cmp	r0, r1, lsl #16
+    1944:	e0a22002 	adc	r2, r2, r2
+    1948:	20400801 	subcs	r0, r0, r1, lsl #16
+    194c:	e1500781 	cmp	r0, r1, lsl #15
+    1950:	e0a22002 	adc	r2, r2, r2
+    1954:	20400781 	subcs	r0, r0, r1, lsl #15
+    1958:	e1500701 	cmp	r0, r1, lsl #14
+    195c:	e0a22002 	adc	r2, r2, r2
+    1960:	20400701 	subcs	r0, r0, r1, lsl #14
+    1964:	e1500681 	cmp	r0, r1, lsl #13
+    1968:	e0a22002 	adc	r2, r2, r2
+    196c:	20400681 	subcs	r0, r0, r1, lsl #13
+    1970:	e1500601 	cmp	r0, r1, lsl #12
+    1974:	e0a22002 	adc	r2, r2, r2
+    1978:	20400601 	subcs	r0, r0, r1, lsl #12
+    197c:	e1500581 	cmp	r0, r1, lsl #11
+    1980:	e0a22002 	adc	r2, r2, r2
+    1984:	20400581 	subcs	r0, r0, r1, lsl #11
+    1988:	e1500501 	cmp	r0, r1, lsl #10
+    198c:	e0a22002 	adc	r2, r2, r2
+    1990:	20400501 	subcs	r0, r0, r1, lsl #10
+    1994:	e1500481 	cmp	r0, r1, lsl #9
+    1998:	e0a22002 	adc	r2, r2, r2
+    199c:	20400481 	subcs	r0, r0, r1, lsl #9
+    19a0:	e1500401 	cmp	r0, r1, lsl #8
+    19a4:	e0a22002 	adc	r2, r2, r2
+    19a8:	20400401 	subcs	r0, r0, r1, lsl #8
+    19ac:	e1500381 	cmp	r0, r1, lsl #7
+    19b0:	e0a22002 	adc	r2, r2, r2
+    19b4:	20400381 	subcs	r0, r0, r1, lsl #7
+    19b8:	e1500301 	cmp	r0, r1, lsl #6
+    19bc:	e0a22002 	adc	r2, r2, r2
+    19c0:	20400301 	subcs	r0, r0, r1, lsl #6
+    19c4:	e1500281 	cmp	r0, r1, lsl #5
+    19c8:	e0a22002 	adc	r2, r2, r2
+    19cc:	20400281 	subcs	r0, r0, r1, lsl #5
+    19d0:	e1500201 	cmp	r0, r1, lsl #4
+    19d4:	e0a22002 	adc	r2, r2, r2
+    19d8:	20400201 	subcs	r0, r0, r1, lsl #4
+    19dc:	e1500181 	cmp	r0, r1, lsl #3
+    19e0:	e0a22002 	adc	r2, r2, r2
+    19e4:	20400181 	subcs	r0, r0, r1, lsl #3
+    19e8:	e1500101 	cmp	r0, r1, lsl #2
+    19ec:	e0a22002 	adc	r2, r2, r2
+    19f0:	20400101 	subcs	r0, r0, r1, lsl #2
+    19f4:	e1500081 	cmp	r0, r1, lsl #1
+    19f8:	e0a22002 	adc	r2, r2, r2
+    19fc:	20400081 	subcs	r0, r0, r1, lsl #1
+    1a00:	e1500001 	cmp	r0, r1
+    1a04:	e0a22002 	adc	r2, r2, r2
+    1a08:	20400001 	subcs	r0, r0, r1
+    1a0c:	e1a00002 	mov	r0, r2
+    1a10:	e12fff1e 	bx	lr
+    1a14:	03a00001 	moveq	r0, #1
+    1a18:	13a00000 	movne	r0, #0
+    1a1c:	e12fff1e 	bx	lr
+    1a20:	e16f2f11 	clz	r2, r1
+    1a24:	e262201f 	rsb	r2, r2, #31
+    1a28:	e1a00230 	lsr	r0, r0, r2
+    1a2c:	e12fff1e 	bx	lr
+    1a30:	e3500000 	cmp	r0, #0
+    1a34:	13e00000 	mvnne	r0, #0
+    1a38:	ea000007 	b	1a5c <__aeabi_ldiv0>
+
+00001a3c <__aeabi_uidivmod>:
+    1a3c:	e3510000 	cmp	r1, #0
+    1a40:	0afffffa 	beq	1a30 <__udivsi3+0x1e0>
+    1a44:	e92d4003 	push	{r0, r1, lr}
+    1a48:	ebffff80 	bl	1850 <__udivsi3>
+    1a4c:	e8bd4006 	pop	{r1, r2, lr}
+    1a50:	e0030092 	mul	r3, r2, r0
+    1a54:	e0411003 	sub	r1, r1, r3
+    1a58:	e12fff1e 	bx	lr
+
+00001a5c <__aeabi_ldiv0>:
+    1a5c:	e92d4002 	push	{r1, lr}
+    1a60:	e3a00008 	mov	r0, #8
+    1a64:	ebfffc37 	bl	b48 <raise@plt>
+    1a68:	e8bd8002 	pop	{r1, pc}
+
+00001a6c <__libc_csu_init>:
+    1a6c:	e92d47f0 	push	{r4, r5, r6, r7, r8, r9, sl, lr}
+    1a70:	e1a07000 	mov	r7, r0
+    1a74:	e59f604c 	ldr	r6, [pc, #76]	; 1ac8 <__libc_csu_init+0x5c>
+    1a78:	e1a08001 	mov	r8, r1
+    1a7c:	e59f5048 	ldr	r5, [pc, #72]	; 1acc <__libc_csu_init+0x60>
+    1a80:	e1a09002 	mov	r9, r2
+    1a84:	e08f6006 	add	r6, pc, r6
+    1a88:	ebfffc26 	bl	b28 <_init>
+    1a8c:	e08f5005 	add	r5, pc, r5
+    1a90:	e0466005 	sub	r6, r6, r5
+    1a94:	e1b06146 	asrs	r6, r6, #2
+    1a98:	08bd87f0 	popeq	{r4, r5, r6, r7, r8, r9, sl, pc}
+    1a9c:	e2455004 	sub	r5, r5, #4
+    1aa0:	e3a04000 	mov	r4, #0
+    1aa4:	e2844001 	add	r4, r4, #1
+    1aa8:	e5b53004 	ldr	r3, [r5, #4]!
+    1aac:	e1a02009 	mov	r2, r9
+    1ab0:	e1a01008 	mov	r1, r8
+    1ab4:	e1a00007 	mov	r0, r7
+    1ab8:	e12fff33 	blx	r3
+    1abc:	e1560004 	cmp	r6, r4
+    1ac0:	1afffff7 	bne	1aa4 <__libc_csu_init+0x38>
+    1ac4:	e8bd87f0 	pop	{r4, r5, r6, r7, r8, r9, sl, pc}
+    1ac8:	00011260 	.word	0x00011260
+    1acc:	00011254 	.word	0x00011254
+
+00001ad0 <__libc_csu_fini>:
+    1ad0:	e12fff1e 	bx	lr
+
+Disassembly of section .fini:
+
+00001ad4 <_fini>:
+    1ad4:	e92d4008 	push	{r3, lr}
+    1ad8:	e8bd8008 	pop	{r3, pc}

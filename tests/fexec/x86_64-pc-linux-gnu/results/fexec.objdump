@@ -1,0 +1,1451 @@
+
+./build/fexec:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000002000 <_init>:
+    2000:	48 83 ec 08          	sub    $0x8,%rsp
+    2004:	48 8b 05 cd 4f 00 00 	mov    0x4fcd(%rip),%rax        # 6fd8 <__gmon_start__>
+    200b:	48 85 c0             	test   %rax,%rax
+    200e:	74 02                	je     2012 <_init+0x12>
+    2010:	ff d0                	callq  *%rax
+    2012:	48 83 c4 08          	add    $0x8,%rsp
+    2016:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000002020 <.plt>:
+    2020:	ff 35 e2 4e 00 00    	pushq  0x4ee2(%rip)        # 6f08 <_GLOBAL_OFFSET_TABLE_+0x8>
+    2026:	ff 25 e4 4e 00 00    	jmpq   *0x4ee4(%rip)        # 6f10 <_GLOBAL_OFFSET_TABLE_+0x10>
+    202c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002030 <getenv@plt>:
+    2030:	ff 25 e2 4e 00 00    	jmpq   *0x4ee2(%rip)        # 6f18 <getenv@GLIBC_2.2.5>
+    2036:	68 00 00 00 00       	pushq  $0x0
+    203b:	e9 e0 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002040 <__snprintf_chk@plt>:
+    2040:	ff 25 da 4e 00 00    	jmpq   *0x4eda(%rip)        # 6f20 <__snprintf_chk@GLIBC_2.3.4>
+    2046:	68 01 00 00 00       	pushq  $0x1
+    204b:	e9 d0 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002050 <__vfprintf_chk@plt>:
+    2050:	ff 25 d2 4e 00 00    	jmpq   *0x4ed2(%rip)        # 6f28 <__vfprintf_chk@GLIBC_2.3.4>
+    2056:	68 02 00 00 00       	pushq  $0x2
+    205b:	e9 c0 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002060 <abort@plt>:
+    2060:	ff 25 ca 4e 00 00    	jmpq   *0x4eca(%rip)        # 6f30 <abort@GLIBC_2.2.5>
+    2066:	68 03 00 00 00       	pushq  $0x3
+    206b:	e9 b0 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002070 <__errno_location@plt>:
+    2070:	ff 25 c2 4e 00 00    	jmpq   *0x4ec2(%rip)        # 6f38 <__errno_location@GLIBC_2.2.5>
+    2076:	68 04 00 00 00       	pushq  $0x4
+    207b:	e9 a0 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002080 <_exit@plt>:
+    2080:	ff 25 ba 4e 00 00    	jmpq   *0x4eba(%rip)        # 6f40 <_exit@GLIBC_2.2.5>
+    2086:	68 05 00 00 00       	pushq  $0x5
+    208b:	e9 90 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002090 <puts@plt>:
+    2090:	ff 25 b2 4e 00 00    	jmpq   *0x4eb2(%rip)        # 6f48 <puts@GLIBC_2.2.5>
+    2096:	68 06 00 00 00       	pushq  $0x6
+    209b:	e9 80 ff ff ff       	jmpq   2020 <.plt>
+
+00000000000020a0 <__stack_chk_fail@plt>:
+    20a0:	ff 25 aa 4e 00 00    	jmpq   *0x4eaa(%rip)        # 6f50 <__stack_chk_fail@GLIBC_2.4>
+    20a6:	68 07 00 00 00       	pushq  $0x7
+    20ab:	e9 70 ff ff ff       	jmpq   2020 <.plt>
+
+00000000000020b0 <mmap@plt>:
+    20b0:	ff 25 a2 4e 00 00    	jmpq   *0x4ea2(%rip)        # 6f58 <mmap@GLIBC_2.2.5>
+    20b6:	68 08 00 00 00       	pushq  $0x8
+    20bb:	e9 60 ff ff ff       	jmpq   2020 <.plt>
+
+00000000000020c0 <fputs@plt>:
+    20c0:	ff 25 9a 4e 00 00    	jmpq   *0x4e9a(%rip)        # 6f60 <fputs@GLIBC_2.2.5>
+    20c6:	68 09 00 00 00       	pushq  $0x9
+    20cb:	e9 50 ff ff ff       	jmpq   2020 <.plt>
+
+00000000000020d0 <memset@plt>:
+    20d0:	ff 25 92 4e 00 00    	jmpq   *0x4e92(%rip)        # 6f68 <memset@GLIBC_2.2.5>
+    20d6:	68 0a 00 00 00       	pushq  $0xa
+    20db:	e9 40 ff ff ff       	jmpq   2020 <.plt>
+
+00000000000020e0 <memcmp@plt>:
+    20e0:	ff 25 8a 4e 00 00    	jmpq   *0x4e8a(%rip)        # 6f70 <memcmp@GLIBC_2.2.5>
+    20e6:	68 0b 00 00 00       	pushq  $0xb
+    20eb:	e9 30 ff ff ff       	jmpq   2020 <.plt>
+
+00000000000020f0 <memcpy@plt>:
+    20f0:	ff 25 82 4e 00 00    	jmpq   *0x4e82(%rip)        # 6f78 <memcpy@GLIBC_2.14>
+    20f6:	68 0c 00 00 00       	pushq  $0xc
+    20fb:	e9 20 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002100 <fflush@plt>:
+    2100:	ff 25 7a 4e 00 00    	jmpq   *0x4e7a(%rip)        # 6f80 <fflush@GLIBC_2.2.5>
+    2106:	68 0d 00 00 00       	pushq  $0xd
+    210b:	e9 10 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002110 <__vsnprintf_chk@plt>:
+    2110:	ff 25 72 4e 00 00    	jmpq   *0x4e72(%rip)        # 6f88 <__vsnprintf_chk@GLIBC_2.3.4>
+    2116:	68 0e 00 00 00       	pushq  $0xe
+    211b:	e9 00 ff ff ff       	jmpq   2020 <.plt>
+
+0000000000002120 <munmap@plt>:
+    2120:	ff 25 6a 4e 00 00    	jmpq   *0x4e6a(%rip)        # 6f90 <munmap@GLIBC_2.2.5>
+    2126:	68 0f 00 00 00       	pushq  $0xf
+    212b:	e9 f0 fe ff ff       	jmpq   2020 <.plt>
+
+0000000000002130 <__printf_chk@plt>:
+    2130:	ff 25 62 4e 00 00    	jmpq   *0x4e62(%rip)        # 6f98 <__printf_chk@GLIBC_2.3.4>
+    2136:	68 10 00 00 00       	pushq  $0x10
+    213b:	e9 e0 fe ff ff       	jmpq   2020 <.plt>
+
+0000000000002140 <mprotect@plt>:
+    2140:	ff 25 5a 4e 00 00    	jmpq   *0x4e5a(%rip)        # 6fa0 <mprotect@GLIBC_2.2.5>
+    2146:	68 11 00 00 00       	pushq  $0x11
+    214b:	e9 d0 fe ff ff       	jmpq   2020 <.plt>
+
+0000000000002150 <sysconf@plt>:
+    2150:	ff 25 52 4e 00 00    	jmpq   *0x4e52(%rip)        # 6fa8 <sysconf@GLIBC_2.2.5>
+    2156:	68 12 00 00 00       	pushq  $0x12
+    215b:	e9 c0 fe ff ff       	jmpq   2020 <.plt>
+
+0000000000002160 <exit@plt>:
+    2160:	ff 25 4a 4e 00 00    	jmpq   *0x4e4a(%rip)        # 6fb0 <exit@GLIBC_2.2.5>
+    2166:	68 13 00 00 00       	pushq  $0x13
+    216b:	e9 b0 fe ff ff       	jmpq   2020 <.plt>
+
+0000000000002170 <fwrite@plt>:
+    2170:	ff 25 42 4e 00 00    	jmpq   *0x4e42(%rip)        # 6fb8 <fwrite@GLIBC_2.2.5>
+    2176:	68 14 00 00 00       	pushq  $0x14
+    217b:	e9 a0 fe ff ff       	jmpq   2020 <.plt>
+
+0000000000002180 <strerror@plt>:
+    2180:	ff 25 3a 4e 00 00    	jmpq   *0x4e3a(%rip)        # 6fc0 <strerror@GLIBC_2.2.5>
+    2186:	68 15 00 00 00       	pushq  $0x15
+    218b:	e9 90 fe ff ff       	jmpq   2020 <.plt>
+
+Disassembly of section .plt.got:
+
+0000000000002190 <__cxa_finalize@plt>:
+    2190:	ff 25 52 4e 00 00    	jmpq   *0x4e52(%rip)        # 6fe8 <__cxa_finalize@GLIBC_2.2.5>
+    2196:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+00000000000021a0 <_start>:
+    21a0:	31 ed                	xor    %ebp,%ebp
+    21a2:	49 89 d1             	mov    %rdx,%r9
+    21a5:	5e                   	pop    %rsi
+    21a6:	48 89 e2             	mov    %rsp,%rdx
+    21a9:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    21ad:	50                   	push   %rax
+    21ae:	54                   	push   %rsp
+    21af:	4c 8d 05 7a 0e 00 00 	lea    0xe7a(%rip),%r8        # 3030 <__libc_csu_fini>
+    21b6:	48 8d 0d e3 0d 00 00 	lea    0xde3(%rip),%rcx        # 2fa0 <__libc_csu_init>
+    21bd:	48 8d 3d 8a 0a 00 00 	lea    0xa8a(%rip),%rdi        # 2c4e <main>
+    21c4:	ff 15 06 4e 00 00    	callq  *0x4e06(%rip)        # 6fd0 <__libc_start_main@GLIBC_2.2.5>
+    21ca:	f4                   	hlt    
+    21cb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+    21d0:	48 8d 3d 81 4e 00 00 	lea    0x4e81(%rip),%rdi        # 7058 <__TMC_END__>
+    21d7:	55                   	push   %rbp
+    21d8:	48 8d 05 79 4e 00 00 	lea    0x4e79(%rip),%rax        # 7058 <__TMC_END__>
+    21df:	48 39 f8             	cmp    %rdi,%rax
+    21e2:	48 89 e5             	mov    %rsp,%rbp
+    21e5:	74 19                	je     2200 <_start+0x60>
+    21e7:	48 8b 05 da 4d 00 00 	mov    0x4dda(%rip),%rax        # 6fc8 <_ITM_deregisterTMCloneTable>
+    21ee:	48 85 c0             	test   %rax,%rax
+    21f1:	74 0d                	je     2200 <_start+0x60>
+    21f3:	5d                   	pop    %rbp
+    21f4:	ff e0                	jmpq   *%rax
+    21f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    21fd:	00 00 00 
+    2200:	5d                   	pop    %rbp
+    2201:	c3                   	retq   
+    2202:	0f 1f 40 00          	nopl   0x0(%rax)
+    2206:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    220d:	00 00 00 
+    2210:	48 8d 3d 41 4e 00 00 	lea    0x4e41(%rip),%rdi        # 7058 <__TMC_END__>
+    2217:	48 8d 35 3a 4e 00 00 	lea    0x4e3a(%rip),%rsi        # 7058 <__TMC_END__>
+    221e:	55                   	push   %rbp
+    221f:	48 29 fe             	sub    %rdi,%rsi
+    2222:	48 89 e5             	mov    %rsp,%rbp
+    2225:	48 c1 fe 03          	sar    $0x3,%rsi
+    2229:	48 89 f0             	mov    %rsi,%rax
+    222c:	48 c1 e8 3f          	shr    $0x3f,%rax
+    2230:	48 01 c6             	add    %rax,%rsi
+    2233:	48 d1 fe             	sar    %rsi
+    2236:	74 18                	je     2250 <_start+0xb0>
+    2238:	48 8b 05 a1 4d 00 00 	mov    0x4da1(%rip),%rax        # 6fe0 <_ITM_registerTMCloneTable>
+    223f:	48 85 c0             	test   %rax,%rax
+    2242:	74 0c                	je     2250 <_start+0xb0>
+    2244:	5d                   	pop    %rbp
+    2245:	ff e0                	jmpq   *%rax
+    2247:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    224e:	00 00 
+    2250:	5d                   	pop    %rbp
+    2251:	c3                   	retq   
+    2252:	0f 1f 40 00          	nopl   0x0(%rax)
+    2256:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    225d:	00 00 00 
+    2260:	80 3d 21 4e 00 00 00 	cmpb   $0x0,0x4e21(%rip)        # 7088 <stderr@@GLIBC_2.2.5+0x8>
+    2267:	75 2f                	jne    2298 <_start+0xf8>
+    2269:	48 83 3d 77 4d 00 00 	cmpq   $0x0,0x4d77(%rip)        # 6fe8 <__cxa_finalize@GLIBC_2.2.5>
+    2270:	00 
+    2271:	55                   	push   %rbp
+    2272:	48 89 e5             	mov    %rsp,%rbp
+    2275:	74 0c                	je     2283 <_start+0xe3>
+    2277:	48 8b 3d 8a 4d 00 00 	mov    0x4d8a(%rip),%rdi        # 7008 <__dso_handle>
+    227e:	e8 0d ff ff ff       	callq  2190 <__cxa_finalize@plt>
+    2283:	e8 48 ff ff ff       	callq  21d0 <_start+0x30>
+    2288:	c6 05 f9 4d 00 00 01 	movb   $0x1,0x4df9(%rip)        # 7088 <stderr@@GLIBC_2.2.5+0x8>
+    228f:	5d                   	pop    %rbp
+    2290:	c3                   	retq   
+    2291:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    2298:	f3 c3                	repz retq 
+    229a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    22a0:	55                   	push   %rbp
+    22a1:	48 89 e5             	mov    %rsp,%rbp
+    22a4:	5d                   	pop    %rbp
+    22a5:	e9 66 ff ff ff       	jmpq   2210 <_start+0x70>
+
+00000000000022aa <terminate>:
+#ifdef __GNUC__                 /* Prevent 'gcc -Wall' complaining  */
+__attribute__ ((__noreturn__))  /* if we call this function as last */
+#endif                          /* statement in a non-void function */
+static void
+terminate(Boolean useExit3)
+{
+    22aa:	53                   	push   %rbx
+    22ab:	48 83 ec 10          	sub    $0x10,%rsp
+    22af:	89 fb                	mov    %edi,%ebx
+    22b1:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    22b8:	00 00 
+    22ba:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    22bf:	31 c0                	xor    %eax,%eax
+
+    /* Dump core if EF_DUMPCORE environment variable is defined and
+       is a nonempty string; otherwise call exit(3) or _exit(2),
+       depending on the value of 'useExit3'. */
+
+    s = getenv("EF_DUMPCORE");
+    22c1:	48 8d 3d 3c 1d 00 00 	lea    0x1d3c(%rip),%rdi        # 4004 <_IO_stdin_used+0x4>
+    22c8:	e8 63 fd ff ff       	callq  2030 <getenv@plt>
+
+    if (s != NULL && *s != '\0')
+    22cd:	48 85 c0             	test   %rax,%rax
+    22d0:	74 05                	je     22d7 <terminate+0x2d>
+    22d2:	80 38 00             	cmpb   $0x0,(%rax)
+    22d5:	75 0e                	jne    22e5 <terminate+0x3b>
+        abort();
+    else if (useExit3)
+    22d7:	84 db                	test   %bl,%bl
+    22d9:	74 0f                	je     22ea <terminate+0x40>
+        exit(EXIT_FAILURE);
+    22db:	bf 01 00 00 00       	mov    $0x1,%edi
+    22e0:	e8 7b fe ff ff       	callq  2160 <exit@plt>
+        abort();
+    22e5:	e8 76 fd ff ff       	callq  2060 <abort@plt>
+    else
+        _exit(EXIT_FAILURE);
+    22ea:	bf 01 00 00 00       	mov    $0x1,%edi
+    22ef:	e8 8c fd ff ff       	callq  2080 <_exit@plt>
+
+00000000000022f4 <outputError>:
+        'format' and 'ap'. */
+
+static void
+outputError(Boolean useErr, int err, Boolean flushStdout,
+        const char *format, va_list ap)
+{
+    22f4:	41 54                	push   %r12
+    22f6:	55                   	push   %rbp
+    22f7:	53                   	push   %rbx
+    22f8:	48 81 ec 00 06 00 00 	sub    $0x600,%rsp
+    22ff:	41 89 fc             	mov    %edi,%r12d
+    2302:	89 f3                	mov    %esi,%ebx
+    2304:	89 d5                	mov    %edx,%ebp
+    2306:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    230d:	00 00 
+    230f:	48 89 84 24 f8 05 00 	mov    %rax,0x5f8(%rsp)
+    2316:	00 
+    2317:	31 c0                	xor    %eax,%eax
+
+__fortify_function int
+__NTH (vsnprintf (char *__restrict __s, size_t __n,
+		  const char *__restrict __fmt, __gnuc_va_list __ap))
+{
+  return __builtin___vsnprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+    2319:	48 8d bc 24 00 02 00 	lea    0x200(%rsp),%rdi
+    2320:	00 
+    2321:	4d 89 c1             	mov    %r8,%r9
+    2324:	49 89 c8             	mov    %rcx,%r8
+    2327:	b9 f4 01 00 00       	mov    $0x1f4,%ecx
+    232c:	ba 01 00 00 00       	mov    $0x1,%edx
+    2331:	be f4 01 00 00       	mov    $0x1f4,%esi
+    2336:	e8 d5 fd ff ff       	callq  2110 <__vsnprintf_chk@plt>
+#define BUF_SIZE 500
+    char buf[BUF_SIZE], userMsg[BUF_SIZE], errText[BUF_SIZE];
+
+    vsnprintf(userMsg, BUF_SIZE, format, ap);
+
+    if (useErr)
+    233b:	45 84 e4             	test   %r12b,%r12b
+    233e:	0f 84 dc 00 00 00    	je     2420 <outputError+0x12c>
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+    2344:	89 df                	mov    %ebx,%edi
+    2346:	e8 35 fe ff ff       	callq  2180 <strerror@plt>
+                (err > 0 && err <= MAX_ENAME) ?
+    234b:	8d 53 ff             	lea    -0x1(%rbx),%edx
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+    234e:	81 fa 84 00 00 00    	cmp    $0x84,%edx
+    2354:	0f 87 ba 00 00 00    	ja     2414 <outputError+0x120>
+    235a:	48 63 db             	movslq %ebx,%rbx
+    235d:	48 8d 15 7c 45 00 00 	lea    0x457c(%rip),%rdx        # 68e0 <ename>
+    2364:	4c 8b 0c da          	mov    (%rdx,%rbx,8),%r9
+  return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+    2368:	48 8d bc 24 00 04 00 	lea    0x400(%rsp),%rdi
+    236f:	00 
+    2370:	48 83 ec 08          	sub    $0x8,%rsp
+    2374:	50                   	push   %rax
+    2375:	4c 8d 05 9e 1c 00 00 	lea    0x1c9e(%rip),%r8        # 401a <_IO_stdin_used+0x1a>
+    237c:	b9 f4 01 00 00       	mov    $0x1f4,%ecx
+    2381:	ba 01 00 00 00       	mov    $0x1,%edx
+    2386:	be f4 01 00 00       	mov    $0x1f4,%esi
+    238b:	b8 00 00 00 00       	mov    $0x0,%eax
+    2390:	e8 ab fc ff ff       	callq  2040 <__snprintf_chk@plt>
+    2395:	48 83 c4 10          	add    $0x10,%rsp
+    2399:	48 89 e7             	mov    %rsp,%rdi
+    239c:	48 83 ec 08          	sub    $0x8,%rsp
+    23a0:	48 8d 84 24 08 02 00 	lea    0x208(%rsp),%rax
+    23a7:	00 
+    23a8:	50                   	push   %rax
+    23a9:	4c 8d 8c 24 10 04 00 	lea    0x410(%rsp),%r9
+    23b0:	00 
+    23b1:	4c 8d 05 6b 1c 00 00 	lea    0x1c6b(%rip),%r8        # 4023 <_IO_stdin_used+0x23>
+    23b8:	b9 f4 01 00 00       	mov    $0x1f4,%ecx
+    23bd:	ba 01 00 00 00       	mov    $0x1,%edx
+    23c2:	be f4 01 00 00       	mov    $0x1f4,%esi
+    23c7:	b8 00 00 00 00       	mov    $0x0,%eax
+    23cc:	e8 6f fc ff ff       	callq  2040 <__snprintf_chk@plt>
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-truncation"
+    snprintf(buf, BUF_SIZE, "ERROR%s %s\n", errText, userMsg);
+#pragma GCC diagnostic pop
+
+    if (flushStdout)
+    23d1:	48 83 c4 10          	add    $0x10,%rsp
+    23d5:	40 84 ed             	test   %bpl,%bpl
+    23d8:	75 55                	jne    242f <outputError+0x13b>
+        fflush(stdout);       /* Flush any pending stdout */
+    fputs(buf, stderr);
+    23da:	48 89 e7             	mov    %rsp,%rdi
+    23dd:	48 8b 35 9c 4c 00 00 	mov    0x4c9c(%rip),%rsi        # 7080 <stderr@@GLIBC_2.2.5>
+    23e4:	e8 d7 fc ff ff       	callq  20c0 <fputs@plt>
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    23e9:	48 8b 3d 90 4c 00 00 	mov    0x4c90(%rip),%rdi        # 7080 <stderr@@GLIBC_2.2.5>
+    23f0:	e8 0b fd ff ff       	callq  2100 <fflush@plt>
+}
+    23f5:	48 8b 84 24 f8 05 00 	mov    0x5f8(%rsp),%rax
+    23fc:	00 
+    23fd:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    2404:	00 00 
+    2406:	75 35                	jne    243d <outputError+0x149>
+    2408:	48 81 c4 00 06 00 00 	add    $0x600,%rsp
+    240f:	5b                   	pop    %rbx
+    2410:	5d                   	pop    %rbp
+    2411:	41 5c                	pop    %r12
+    2413:	c3                   	retq   
+        snprintf(errText, BUF_SIZE, " [%s %s]",
+    2414:	4c 8d 0d f5 1b 00 00 	lea    0x1bf5(%rip),%r9        # 4010 <_IO_stdin_used+0x10>
+    241b:	e9 48 ff ff ff       	jmpq   2368 <outputError+0x74>
+    2420:	66 c7 84 24 00 04 00 	movw   $0x3a,0x400(%rsp)
+    2427:	00 3a 00 
+    242a:	e9 6a ff ff ff       	jmpq   2399 <outputError+0xa5>
+        fflush(stdout);       /* Flush any pending stdout */
+    242f:	48 8b 3d 2a 4c 00 00 	mov    0x4c2a(%rip),%rdi        # 7060 <stdout@@GLIBC_2.2.5>
+    2436:	e8 c5 fc ff ff       	callq  2100 <fflush@plt>
+    243b:	eb 9d                	jmp    23da <outputError+0xe6>
+}
+    243d:	e8 5e fc ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+0000000000002442 <errMsg>:
+/* Display error message including 'errno' diagnostic, and
+   return to caller */
+
+void
+errMsg(const char *format, ...)
+{
+    2442:	41 54                	push   %r12
+    2444:	55                   	push   %rbp
+    2445:	53                   	push   %rbx
+    2446:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+    244d:	49 89 fc             	mov    %rdi,%r12
+    2450:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+    2455:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    245a:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    245f:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    2464:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    2469:	84 c0                	test   %al,%al
+    246b:	74 37                	je     24a4 <errMsg+0x62>
+    246d:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    2472:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    2477:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    247c:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    2483:	00 
+    2484:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    248b:	00 
+    248c:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    2493:	00 
+    2494:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    249b:	00 
+    249c:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    24a3:	00 
+    24a4:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    24ab:	00 00 
+    24ad:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    24b2:	31 c0                	xor    %eax,%eax
+    va_list argList;
+    int savedErrno;
+
+    savedErrno = errno;       /* In case we change it here */
+    24b4:	e8 b7 fb ff ff       	callq  2070 <__errno_location@plt>
+    24b9:	48 89 c3             	mov    %rax,%rbx
+    24bc:	8b 28                	mov    (%rax),%ebp
+
+    va_start(argList, format);
+    24be:	c7 04 24 08 00 00 00 	movl   $0x8,(%rsp)
+    24c5:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    24cc:	00 
+    24cd:	48 8d 84 24 f0 00 00 	lea    0xf0(%rsp),%rax
+    24d4:	00 
+    24d5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    24da:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    24df:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    outputError(TRUE, errno, TRUE, format, argList);
+    24e4:	49 89 e0             	mov    %rsp,%r8
+    24e7:	4c 89 e1             	mov    %r12,%rcx
+    24ea:	ba 01 00 00 00       	mov    $0x1,%edx
+    24ef:	8b 33                	mov    (%rbx),%esi
+    24f1:	bf 01 00 00 00       	mov    $0x1,%edi
+    24f6:	e8 f9 fd ff ff       	callq  22f4 <outputError>
+    va_end(argList);
+
+    errno = savedErrno;
+    24fb:	89 2b                	mov    %ebp,(%rbx)
+}
+    24fd:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2502:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    2509:	00 00 
+    250b:	75 0c                	jne    2519 <errMsg+0xd7>
+    250d:	48 81 c4 d0 00 00 00 	add    $0xd0,%rsp
+    2514:	5b                   	pop    %rbx
+    2515:	5d                   	pop    %rbp
+    2516:	41 5c                	pop    %r12
+    2518:	c3                   	retq   
+    2519:	e8 82 fb ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+000000000000251e <errExit>:
+/* Display error message including 'errno' diagnostic, and
+   terminate the process */
+
+void
+errExit(const char *format, ...)
+{
+    251e:	53                   	push   %rbx
+    251f:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+    2526:	48 89 fb             	mov    %rdi,%rbx
+    2529:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+    252e:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    2533:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    2538:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    253d:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    2542:	84 c0                	test   %al,%al
+    2544:	74 37                	je     257d <errExit+0x5f>
+    2546:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    254b:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    2550:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    2555:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    255c:	00 
+    255d:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    2564:	00 
+    2565:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    256c:	00 
+    256d:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    2574:	00 
+    2575:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    257c:	00 
+    257d:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2584:	00 00 
+    2586:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    258b:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    258d:	c7 04 24 08 00 00 00 	movl   $0x8,(%rsp)
+    2594:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    259b:	00 
+    259c:	48 8d 84 24 e0 00 00 	lea    0xe0(%rsp),%rax
+    25a3:	00 
+    25a4:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    25a9:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    25ae:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    outputError(TRUE, errno, TRUE, format, argList);
+    25b3:	e8 b8 fa ff ff       	callq  2070 <__errno_location@plt>
+    25b8:	49 89 e0             	mov    %rsp,%r8
+    25bb:	48 89 d9             	mov    %rbx,%rcx
+    25be:	ba 01 00 00 00       	mov    $0x1,%edx
+    25c3:	8b 30                	mov    (%rax),%esi
+    25c5:	bf 01 00 00 00       	mov    $0x1,%edi
+    25ca:	e8 25 fd ff ff       	callq  22f4 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    25cf:	bf 01 00 00 00       	mov    $0x1,%edi
+    25d4:	e8 d1 fc ff ff       	callq  22aa <terminate>
+
+00000000000025d9 <err_exit>:
+   stdio buffers that were partially filled by the caller and without
+   invoking exit handlers that were established by the caller. */
+
+void
+err_exit(const char *format, ...)
+{
+    25d9:	53                   	push   %rbx
+    25da:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+    25e1:	48 89 fb             	mov    %rdi,%rbx
+    25e4:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+    25e9:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    25ee:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    25f3:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    25f8:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    25fd:	84 c0                	test   %al,%al
+    25ff:	74 37                	je     2638 <err_exit+0x5f>
+    2601:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    2606:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    260b:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    2610:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    2617:	00 
+    2618:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    261f:	00 
+    2620:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    2627:	00 
+    2628:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    262f:	00 
+    2630:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    2637:	00 
+    2638:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    263f:	00 00 
+    2641:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2646:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    2648:	c7 04 24 08 00 00 00 	movl   $0x8,(%rsp)
+    264f:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    2656:	00 
+    2657:	48 8d 84 24 e0 00 00 	lea    0xe0(%rsp),%rax
+    265e:	00 
+    265f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2664:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    2669:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    outputError(TRUE, errno, FALSE, format, argList);
+    266e:	e8 fd f9 ff ff       	callq  2070 <__errno_location@plt>
+    2673:	49 89 e0             	mov    %rsp,%r8
+    2676:	48 89 d9             	mov    %rbx,%rcx
+    2679:	ba 00 00 00 00       	mov    $0x0,%edx
+    267e:	8b 30                	mov    (%rax),%esi
+    2680:	bf 01 00 00 00       	mov    $0x1,%edi
+    2685:	e8 6a fc ff ff       	callq  22f4 <outputError>
+    va_end(argList);
+
+    terminate(FALSE);
+    268a:	bf 00 00 00 00       	mov    $0x0,%edi
+    268f:	e8 16 fc ff ff       	callq  22aa <terminate>
+
+0000000000002694 <errExitEN>:
+/* The following function does the same as errExit(), but expects
+   the error number in 'errnum' */
+
+void
+errExitEN(int errnum, const char *format, ...)
+{
+    2694:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+    269b:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    26a0:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    26a5:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    26aa:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    26af:	84 c0                	test   %al,%al
+    26b1:	74 37                	je     26ea <errExitEN+0x56>
+    26b3:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    26b8:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    26bd:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    26c2:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    26c9:	00 
+    26ca:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    26d1:	00 
+    26d2:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    26d9:	00 
+    26da:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    26e1:	00 
+    26e2:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    26e9:	00 
+    26ea:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    26f1:	00 00 
+    26f3:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    26f8:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    26fa:	c7 04 24 10 00 00 00 	movl   $0x10,(%rsp)
+    2701:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    2708:	00 
+    2709:	48 8d 84 24 e0 00 00 	lea    0xe0(%rsp),%rax
+    2710:	00 
+    2711:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2716:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    271b:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    outputError(TRUE, errnum, TRUE, format, argList);
+    2720:	49 89 e0             	mov    %rsp,%r8
+    2723:	48 89 f1             	mov    %rsi,%rcx
+    2726:	ba 01 00 00 00       	mov    $0x1,%edx
+    272b:	89 fe                	mov    %edi,%esi
+    272d:	bf 01 00 00 00       	mov    $0x1,%edi
+    2732:	e8 bd fb ff ff       	callq  22f4 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    2737:	bf 01 00 00 00       	mov    $0x1,%edi
+    273c:	e8 69 fb ff ff       	callq  22aa <terminate>
+
+0000000000002741 <fatal>:
+
+/* Print an error message (without an 'errno' diagnostic) */
+
+void
+fatal(const char *format, ...)
+{
+    2741:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+    2748:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+    274d:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    2752:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    2757:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    275c:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    2761:	84 c0                	test   %al,%al
+    2763:	74 37                	je     279c <fatal+0x5b>
+    2765:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    276a:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    276f:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    2774:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    277b:	00 
+    277c:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    2783:	00 
+    2784:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    278b:	00 
+    278c:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    2793:	00 
+    2794:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    279b:	00 
+    279c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    27a3:	00 00 
+    27a5:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    27aa:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    va_start(argList, format);
+    27ac:	c7 04 24 08 00 00 00 	movl   $0x8,(%rsp)
+    27b3:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    27ba:	00 
+    27bb:	48 8d 84 24 e0 00 00 	lea    0xe0(%rsp),%rax
+    27c2:	00 
+    27c3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    27c8:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    27cd:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    outputError(FALSE, 0, TRUE, format, argList);
+    27d2:	49 89 e0             	mov    %rsp,%r8
+    27d5:	48 89 f9             	mov    %rdi,%rcx
+    27d8:	ba 01 00 00 00       	mov    $0x1,%edx
+    27dd:	be 00 00 00 00       	mov    $0x0,%esi
+    27e2:	bf 00 00 00 00       	mov    $0x0,%edi
+    27e7:	e8 08 fb ff ff       	callq  22f4 <outputError>
+    va_end(argList);
+
+    terminate(TRUE);
+    27ec:	bf 01 00 00 00       	mov    $0x1,%edi
+    27f1:	e8 b4 fa ff ff       	callq  22aa <terminate>
+
+00000000000027f6 <usageErr>:
+
+/* Print a command usage error message and terminate the process */
+
+void
+usageErr(const char *format, ...)
+{
+    27f6:	53                   	push   %rbx
+    27f7:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+    27fe:	48 89 fb             	mov    %rdi,%rbx
+    2801:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+    2806:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    280b:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    2810:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    2815:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    281a:	84 c0                	test   %al,%al
+    281c:	74 37                	je     2855 <usageErr+0x5f>
+    281e:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    2823:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    2828:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    282d:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    2834:	00 
+    2835:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    283c:	00 
+    283d:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    2844:	00 
+    2845:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    284c:	00 
+    284d:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    2854:	00 
+    2855:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    285c:	00 00 
+    285e:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2863:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    fflush(stdout);           /* Flush any pending stdout */
+    2865:	48 8b 3d f4 47 00 00 	mov    0x47f4(%rip),%rdi        # 7060 <stdout@@GLIBC_2.2.5>
+    286c:	e8 8f f8 ff ff       	callq  2100 <fflush@plt>
+
+# ifdef __va_arg_pack
+__fortify_function int
+fprintf (FILE *__restrict __stream, const char *__restrict __fmt, ...)
+{
+  return __fprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt,
+    2871:	48 8b 0d 08 48 00 00 	mov    0x4808(%rip),%rcx        # 7080 <stderr@@GLIBC_2.2.5>
+    2878:	ba 07 00 00 00       	mov    $0x7,%edx
+    287d:	be 01 00 00 00       	mov    $0x1,%esi
+    2882:	48 8d 3d a6 17 00 00 	lea    0x17a6(%rip),%rdi        # 402f <_IO_stdin_used+0x2f>
+    2889:	e8 e2 f8 ff ff       	callq  2170 <fwrite@plt>
+
+    fprintf(stderr, "Usage: ");
+    va_start(argList, format);
+    288e:	c7 04 24 08 00 00 00 	movl   $0x8,(%rsp)
+    2895:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    289c:	00 
+    289d:	48 8d 84 24 e0 00 00 	lea    0xe0(%rsp),%rax
+    28a4:	00 
+    28a5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    28aa:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    28af:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+
+__fortify_function int
+vfprintf (FILE *__restrict __stream,
+	  const char *__restrict __fmt, __gnuc_va_list __ap)
+{
+  return __vfprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt, __ap);
+    28b4:	48 89 e1             	mov    %rsp,%rcx
+    28b7:	48 89 da             	mov    %rbx,%rdx
+    28ba:	be 01 00 00 00       	mov    $0x1,%esi
+    28bf:	48 8b 3d ba 47 00 00 	mov    0x47ba(%rip),%rdi        # 7080 <stderr@@GLIBC_2.2.5>
+    28c6:	e8 85 f7 ff ff       	callq  2050 <__vfprintf_chk@plt>
+    vfprintf(stderr, format, argList);
+    va_end(argList);
+
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    28cb:	48 8b 3d ae 47 00 00 	mov    0x47ae(%rip),%rdi        # 7080 <stderr@@GLIBC_2.2.5>
+    28d2:	e8 29 f8 ff ff       	callq  2100 <fflush@plt>
+    exit(EXIT_FAILURE);
+    28d7:	bf 01 00 00 00       	mov    $0x1,%edi
+    28dc:	e8 7f f8 ff ff       	callq  2160 <exit@plt>
+
+00000000000028e1 <cmdLineErr>:
+/* Diagnose an error in command-line arguments and
+   terminate the process */
+
+void
+cmdLineErr(const char *format, ...)
+{
+    28e1:	53                   	push   %rbx
+    28e2:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+    28e9:	48 89 fb             	mov    %rdi,%rbx
+    28ec:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+    28f1:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+    28f6:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+    28fb:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+    2900:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+    2905:	84 c0                	test   %al,%al
+    2907:	74 37                	je     2940 <cmdLineErr+0x5f>
+    2909:	0f 29 44 24 50       	movaps %xmm0,0x50(%rsp)
+    290e:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+    2913:	0f 29 54 24 70       	movaps %xmm2,0x70(%rsp)
+    2918:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+    291f:	00 
+    2920:	0f 29 a4 24 90 00 00 	movaps %xmm4,0x90(%rsp)
+    2927:	00 
+    2928:	0f 29 ac 24 a0 00 00 	movaps %xmm5,0xa0(%rsp)
+    292f:	00 
+    2930:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+    2937:	00 
+    2938:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+    293f:	00 
+    2940:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2947:	00 00 
+    2949:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    294e:	31 c0                	xor    %eax,%eax
+    va_list argList;
+
+    fflush(stdout);           /* Flush any pending stdout */
+    2950:	48 8b 3d 09 47 00 00 	mov    0x4709(%rip),%rdi        # 7060 <stdout@@GLIBC_2.2.5>
+    2957:	e8 a4 f7 ff ff       	callq  2100 <fflush@plt>
+  return __fprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt,
+    295c:	48 8b 0d 1d 47 00 00 	mov    0x471d(%rip),%rcx        # 7080 <stderr@@GLIBC_2.2.5>
+    2963:	ba 1a 00 00 00       	mov    $0x1a,%edx
+    2968:	be 01 00 00 00       	mov    $0x1,%esi
+    296d:	48 8d 3d c3 16 00 00 	lea    0x16c3(%rip),%rdi        # 4037 <_IO_stdin_used+0x37>
+    2974:	e8 f7 f7 ff ff       	callq  2170 <fwrite@plt>
+
+    fprintf(stderr, "Command-line usage error: ");
+    va_start(argList, format);
+    2979:	c7 04 24 08 00 00 00 	movl   $0x8,(%rsp)
+    2980:	c7 44 24 04 30 00 00 	movl   $0x30,0x4(%rsp)
+    2987:	00 
+    2988:	48 8d 84 24 e0 00 00 	lea    0xe0(%rsp),%rax
+    298f:	00 
+    2990:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2995:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+    299a:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+  return __vfprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt, __ap);
+    299f:	48 89 e1             	mov    %rsp,%rcx
+    29a2:	48 89 da             	mov    %rbx,%rdx
+    29a5:	be 01 00 00 00       	mov    $0x1,%esi
+    29aa:	48 8b 3d cf 46 00 00 	mov    0x46cf(%rip),%rdi        # 7080 <stderr@@GLIBC_2.2.5>
+    29b1:	e8 9a f6 ff ff       	callq  2050 <__vfprintf_chk@plt>
+    vfprintf(stderr, format, argList);
+    va_end(argList);
+
+    fflush(stderr);           /* In case stderr is not line-buffered */
+    29b6:	48 8b 3d c3 46 00 00 	mov    0x46c3(%rip),%rdi        # 7080 <stderr@@GLIBC_2.2.5>
+    29bd:	e8 3e f7 ff ff       	callq  2100 <fflush@plt>
+    exit(EXIT_FAILURE);
+    29c2:	bf 01 00 00 00       	mov    $0x1,%edi
+    29c7:	e8 94 f7 ff ff       	callq  2160 <exit@plt>
+
+00000000000029cc <f_int>:
+
+#define OPCODE_LEN 52
+uint8_t f_opcode[OPCODE_LEN] = {0x48, 0x83, 0xec, 0x18, 0x64, 0x48, 0x8b, 0x04, 0x25, 0x28, 0x00, 0x00, 0x00, 0x48, 0x89, 0x44, 0x24, 0x08, 0x31, 0xc0, 0x90, 0x48, 0x8b, 0x54, 0x24, 0x08, 0x64, 0x48, 0x33, 0x14, 0x25, 0x28, 0x00, 0x00, 0x00, 0x75, 0x0a, 0xb8, 0xee, 0xff, 0xff, 0xff, 0x48, 0x83, 0xc4, 0x18, 0xc3, 0xe8, 0xa0, 0xf6, 0xff, 0xff};
+
+uint8_t f_int(void)
+{
+    29cc:	48 83 ec 18          	sub    $0x18,%rsp
+    29d0:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    29d7:	00 00 
+    29d9:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    29de:	31 c0                	xor    %eax,%eax
+    __asm("nop");
+    29e0:	90                   	nop
+    return 0xee;
+}
+    29e1:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+    29e6:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+    29ed:	00 00 
+    29ef:	75 0a                	jne    29fb <f_int+0x2f>
+    29f1:	b8 ee ff ff ff       	mov    $0xffffffee,%eax
+    29f6:	48 83 c4 18          	add    $0x18,%rsp
+    29fa:	c3                   	retq   
+    29fb:	e8 a0 f6 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+0000000000002a00 <exec_opcode>:
+
+// function that executes an array of opcodes
+// based on https://stackoverflow.com/questions/37122186/c-put-x86-instructions-into-array-and-execute-them
+uint8_t exec_opcode(const uint8_t *code, size_t codelen)
+{
+    2a00:	41 55                	push   %r13
+    2a02:	41 54                	push   %r12
+    2a04:	55                   	push   %rbp
+    2a05:	53                   	push   %rbx
+    2a06:	48 83 ec 18          	sub    $0x18,%rsp
+    2a0a:	49 89 fd             	mov    %rdi,%r13
+    2a0d:	48 89 f5             	mov    %rsi,%rbp
+    2a10:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2a17:	00 00 
+    2a19:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2a1e:	31 c0                	xor    %eax,%eax
+    uint8_t ret;
+    // in order to manipulate memory protection, we must work with
+    // whole pages allocated directly from the operating system.
+    static size_t pagesize;
+    if (!pagesize) {
+    2a20:	48 83 3d 70 46 00 00 	cmpq   $0x0,0x4670(%rip)        # 7098 <pagesize.3512>
+    2a27:	00 
+    2a28:	75 1b                	jne    2a45 <exec_opcode+0x45>
+        pagesize = sysconf(_SC_PAGESIZE);
+    2a2a:	bf 1e 00 00 00       	mov    $0x1e,%edi
+    2a2f:	e8 1c f7 ff ff       	callq  2150 <sysconf@plt>
+    2a34:	48 89 05 5d 46 00 00 	mov    %rax,0x465d(%rip)        # 7098 <pagesize.3512>
+        if (pagesize == (size_t)-1) {
+    2a3b:	48 83 f8 ff          	cmp    $0xffffffffffffffff,%rax
+    2a3f:	0f 84 a5 00 00 00    	je     2aea <exec_opcode+0xea>
+    }
+
+    // allocate at least enough space for the code + 1 byte
+    // (so that there will be at least one INT3 - see below),
+    // rounded up to a multiple of the system page size.
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    2a45:	48 8b 1d 4c 46 00 00 	mov    0x464c(%rip),%rbx        # 7098 <pagesize.3512>
+    2a4c:	48 8d 04 2b          	lea    (%rbx,%rbp,1),%rax
+                               / pagesize) * pagesize;
+    2a50:	ba 00 00 00 00       	mov    $0x0,%edx
+    2a55:	48 f7 f3             	div    %rbx
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    2a58:	48 0f af d8          	imul   %rax,%rbx
+
+    void *executable_area = mmap(0, rounded_codesize,
+    2a5c:	41 b9 00 00 00 00    	mov    $0x0,%r9d
+    2a62:	41 b8 ff ff ff ff    	mov    $0xffffffff,%r8d
+    2a68:	b9 22 00 00 00       	mov    $0x22,%ecx
+    2a6d:	ba 03 00 00 00       	mov    $0x3,%edx
+    2a72:	48 89 de             	mov    %rbx,%rsi
+    2a75:	bf 00 00 00 00       	mov    $0x0,%edi
+    2a7a:	e8 31 f6 ff ff       	callq  20b0 <mmap@plt>
+    2a7f:	49 89 c4             	mov    %rax,%r12
+                                 PROT_READ|PROT_WRITE,
+                                 MAP_PRIVATE|MAP_ANONYMOUS,
+                                 -1, 0);
+    if (!executable_area) {
+    2a82:	48 85 c0             	test   %rax,%rax
+    2a85:	74 74                	je     2afb <exec_opcode+0xfb>
+
+__fortify_function void *
+__NTH (memcpy (void *__restrict __dest, const void *__restrict __src,
+	       size_t __len))
+{
+  return __builtin___memcpy_chk (__dest, __src, __len, __bos0 (__dest));
+    2a87:	48 89 ea             	mov    %rbp,%rdx
+    2a8a:	4c 89 ee             	mov    %r13,%rsi
+    2a8d:	48 89 c7             	mov    %rax,%rdi
+    2a90:	e8 5b f6 ff ff       	callq  20f0 <memcpy@plt>
+    memcpy(executable_area, code, codelen);
+
+    // fill the space at the end with INT3 instructions, to guarantee
+    // a prompt crash if the generated code runs off the end.
+    // must change this if generating code for non-x86.
+    memset(executable_area + codelen, 0xCC, rounded_codesize - codelen);
+    2a95:	48 89 da             	mov    %rbx,%rdx
+    2a98:	48 29 ea             	sub    %rbp,%rdx
+    2a9b:	49 8d 3c 2c          	lea    (%r12,%rbp,1),%rdi
+    {
+      __warn_memset_zero_len ();
+      return __dest;
+    }
+#endif
+  return __builtin___memset_chk (__dest, __ch, __len, __bos0 (__dest));
+    2a9f:	be cc 00 00 00       	mov    $0xcc,%esi
+    2aa4:	e8 27 f6 ff ff       	callq  20d0 <memset@plt>
+
+    // make executable_area actually executable (and unwritable)
+    if (mprotect(executable_area, rounded_codesize, PROT_READ|PROT_EXEC)) {
+    2aa9:	ba 05 00 00 00       	mov    $0x5,%edx
+    2aae:	48 89 de             	mov    %rbx,%rsi
+    2ab1:	4c 89 e7             	mov    %r12,%rdi
+    2ab4:	e8 87 f6 ff ff       	callq  2140 <mprotect@plt>
+    2ab9:	85 c0                	test   %eax,%eax
+    2abb:	75 4f                	jne    2b0c <exec_opcode+0x10c>
+        errExit("mprotect");
+    }
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) executable_area)();
+    2abd:	41 ff d4             	callq  *%r12
+    2ac0:	89 c5                	mov    %eax,%ebp
+
+    munmap(executable_area, rounded_codesize);
+    2ac2:	48 89 de             	mov    %rbx,%rsi
+    2ac5:	4c 89 e7             	mov    %r12,%rdi
+    2ac8:	e8 53 f6 ff ff       	callq  2120 <munmap@plt>
+    return ret;
+}
+    2acd:	89 e8                	mov    %ebp,%eax
+    2acf:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+    2ad4:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+    2adb:	00 00 
+    2add:	75 3e                	jne    2b1d <exec_opcode+0x11d>
+    2adf:	48 83 c4 18          	add    $0x18,%rsp
+    2ae3:	5b                   	pop    %rbx
+    2ae4:	5d                   	pop    %rbp
+    2ae5:	41 5c                	pop    %r12
+    2ae7:	41 5d                	pop    %r13
+    2ae9:	c3                   	retq   
+            errExit("getpagesize");
+    2aea:	48 8d 3d ce 19 00 00 	lea    0x19ce(%rip),%rdi        # 44bf <_IO_stdin_used+0x4bf>
+    2af1:	b8 00 00 00 00       	mov    $0x0,%eax
+    2af6:	e8 23 fa ff ff       	callq  251e <errExit>
+        errExit("mmap");
+    2afb:	48 8d 3d c9 19 00 00 	lea    0x19c9(%rip),%rdi        # 44cb <_IO_stdin_used+0x4cb>
+    2b02:	b8 00 00 00 00       	mov    $0x0,%eax
+    2b07:	e8 12 fa ff ff       	callq  251e <errExit>
+        errExit("mprotect");
+    2b0c:	48 8d 3d bd 19 00 00 	lea    0x19bd(%rip),%rdi        # 44d0 <_IO_stdin_used+0x4d0>
+    2b13:	b8 00 00 00 00       	mov    $0x0,%eax
+    2b18:	e8 01 fa ff ff       	callq  251e <errExit>
+}
+    2b1d:	e8 7e f5 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+0000000000002b22 <exec_opcode_WX>:
+
+
+// same as above, but asume writable memory can be executed
+uint8_t exec_opcode_WX(const uint8_t *code, size_t codelen)
+{
+    2b22:	41 55                	push   %r13
+    2b24:	41 54                	push   %r12
+    2b26:	55                   	push   %rbp
+    2b27:	53                   	push   %rbx
+    2b28:	48 83 ec 18          	sub    $0x18,%rsp
+    2b2c:	49 89 fc             	mov    %rdi,%r12
+    2b2f:	48 89 f5             	mov    %rsi,%rbp
+    2b32:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2b39:	00 00 
+    2b3b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2b40:	31 c0                	xor    %eax,%eax
+    uint8_t ret;
+    // in order to manipulate memory protection, we must work with
+    // whole pages allocated directly from the operating system.
+    static size_t pagesize;
+    if (!pagesize) {
+    2b42:	48 83 3d 46 45 00 00 	cmpq   $0x0,0x4546(%rip)        # 7090 <pagesize.3521>
+    2b49:	00 
+    2b4a:	75 1b                	jne    2b67 <exec_opcode_WX+0x45>
+        pagesize = sysconf(_SC_PAGESIZE);
+    2b4c:	bf 1e 00 00 00       	mov    $0x1e,%edi
+    2b51:	e8 fa f5 ff ff       	callq  2150 <sysconf@plt>
+    2b56:	48 89 05 33 45 00 00 	mov    %rax,0x4533(%rip)        # 7090 <pagesize.3521>
+        if (pagesize == (size_t)-1) {
+    2b5d:	48 83 f8 ff          	cmp    $0xffffffffffffffff,%rax
+    2b61:	0f 84 90 00 00 00    	je     2bf7 <exec_opcode_WX+0xd5>
+    }
+
+    // allocate at least enough space for the code + 1 byte
+    // (so that there will be at least one INT3 - see below),
+    // rounded up to a multiple of the system page size.
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    2b67:	48 8b 35 22 45 00 00 	mov    0x4522(%rip),%rsi        # 7090 <pagesize.3521>
+    2b6e:	48 8d 04 2e          	lea    (%rsi,%rbp,1),%rax
+                               / pagesize) * pagesize;
+    2b72:	ba 00 00 00 00       	mov    $0x0,%edx
+    2b77:	48 f7 f6             	div    %rsi
+    size_t rounded_codesize = ((codelen + 1 + pagesize - 1)
+    2b7a:	48 0f af f0          	imul   %rax,%rsi
+    2b7e:	49 89 f5             	mov    %rsi,%r13
+
+    void *executable_area = mmap(0, rounded_codesize,
+    2b81:	41 b9 00 00 00 00    	mov    $0x0,%r9d
+    2b87:	41 b8 ff ff ff ff    	mov    $0xffffffff,%r8d
+    2b8d:	b9 22 00 00 00       	mov    $0x22,%ecx
+    2b92:	ba 07 00 00 00       	mov    $0x7,%edx
+    2b97:	bf 00 00 00 00       	mov    $0x0,%edi
+    2b9c:	e8 0f f5 ff ff       	callq  20b0 <mmap@plt>
+    2ba1:	48 89 c3             	mov    %rax,%rbx
+                                 PROT_READ|PROT_WRITE|PROT_EXEC,
+                                 MAP_PRIVATE|MAP_ANONYMOUS,
+                                 -1, 0);
+    if (!executable_area) {
+    2ba4:	48 85 c0             	test   %rax,%rax
+    2ba7:	74 5f                	je     2c08 <exec_opcode_WX+0xe6>
+  return __builtin___memcpy_chk (__dest, __src, __len, __bos0 (__dest));
+    2ba9:	48 89 ea             	mov    %rbp,%rdx
+    2bac:	4c 89 e6             	mov    %r12,%rsi
+    2baf:	48 89 c7             	mov    %rax,%rdi
+    2bb2:	e8 39 f5 ff ff       	callq  20f0 <memcpy@plt>
+    memcpy(executable_area, code, codelen);
+
+    // fill the space at the end with INT3 instructions, to guarantee
+    // a prompt crash if the generated code runs off the end.
+    // must change this if generating code for non-x86.
+    memset(executable_area + codelen, 0xCC, rounded_codesize - codelen);
+    2bb7:	4c 89 ea             	mov    %r13,%rdx
+    2bba:	48 29 ea             	sub    %rbp,%rdx
+    2bbd:	48 8d 3c 2b          	lea    (%rbx,%rbp,1),%rdi
+  return __builtin___memset_chk (__dest, __ch, __len, __bos0 (__dest));
+    2bc1:	be cc 00 00 00       	mov    $0xcc,%esi
+    2bc6:	e8 05 f5 ff ff       	callq  20d0 <memset@plt>
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) executable_area)();
+    2bcb:	ff d3                	callq  *%rbx
+    2bcd:	89 c5                	mov    %eax,%ebp
+
+    munmap(executable_area, rounded_codesize);
+    2bcf:	4c 89 ee             	mov    %r13,%rsi
+    2bd2:	48 89 df             	mov    %rbx,%rdi
+    2bd5:	e8 46 f5 ff ff       	callq  2120 <munmap@plt>
+    return ret;
+}
+    2bda:	89 e8                	mov    %ebp,%eax
+    2bdc:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+    2be1:	64 48 33 0c 25 28 00 	xor    %fs:0x28,%rcx
+    2be8:	00 00 
+    2bea:	75 2d                	jne    2c19 <exec_opcode_WX+0xf7>
+    2bec:	48 83 c4 18          	add    $0x18,%rsp
+    2bf0:	5b                   	pop    %rbx
+    2bf1:	5d                   	pop    %rbp
+    2bf2:	41 5c                	pop    %r12
+    2bf4:	41 5d                	pop    %r13
+    2bf6:	c3                   	retq   
+            errExit("getpagesize");
+    2bf7:	48 8d 3d c1 18 00 00 	lea    0x18c1(%rip),%rdi        # 44bf <_IO_stdin_used+0x4bf>
+    2bfe:	b8 00 00 00 00       	mov    $0x0,%eax
+    2c03:	e8 16 f9 ff ff       	callq  251e <errExit>
+        errExit("mmap");
+    2c08:	48 8d 3d bc 18 00 00 	lea    0x18bc(%rip),%rdi        # 44cb <_IO_stdin_used+0x4cb>
+    2c0f:	b8 00 00 00 00       	mov    $0x0,%eax
+    2c14:	e8 05 f9 ff ff       	callq  251e <errExit>
+}
+    2c19:	e8 82 f4 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+0000000000002c1e <exec_opcode_no_mmap>:
+
+// same as above, but asume writable memory can be executed and no mmap is needed
+uint8_t exec_opcode_no_mmap(const uint8_t *code, size_t codelen)
+{
+    2c1e:	48 83 ec 18          	sub    $0x18,%rsp
+    2c22:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2c29:	00 00 
+    2c2b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2c30:	31 c0                	xor    %eax,%eax
+    uint8_t ret;
+
+    // now we can call it
+    ret = ((uint8_t (*)(void)) code)();
+    2c32:	ff d7                	callq  *%rdi
+    return ret;
+}
+    2c34:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+    2c39:	64 48 33 14 25 28 00 	xor    %fs:0x28,%rdx
+    2c40:	00 00 
+    2c42:	75 05                	jne    2c49 <exec_opcode_no_mmap+0x2b>
+    2c44:	48 83 c4 18          	add    $0x18,%rsp
+    2c48:	c3                   	retq   
+    2c49:	e8 52 f4 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+0000000000002c4e <main>:
+
+int main()
+{
+    2c4e:	53                   	push   %rbx
+    2c4f:	48 83 ec 40          	sub    $0x40,%rsp
+    2c53:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2c5a:	00 00 
+    2c5c:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+    2c61:	31 c0                	xor    %eax,%eax
+    2c63:	48 8b 05 62 fd ff ff 	mov    -0x29e(%rip),%rax        # 29cc <f_int>
+    2c6a:	48 8b 15 63 fd ff ff 	mov    -0x29d(%rip),%rdx        # 29d4 <f_int+0x8>
+    2c71:	48 89 04 24          	mov    %rax,(%rsp)
+    2c75:	48 89 54 24 08       	mov    %rdx,0x8(%rsp)
+    2c7a:	48 8b 05 5b fd ff ff 	mov    -0x2a5(%rip),%rax        # 29dc <f_int+0x10>
+    2c81:	48 8b 15 5c fd ff ff 	mov    -0x2a4(%rip),%rdx        # 29e4 <f_int+0x18>
+    2c88:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    2c8d:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+    2c92:	48 8b 05 53 fd ff ff 	mov    -0x2ad(%rip),%rax        # 29ec <f_int+0x20>
+    2c99:	48 8b 15 54 fd ff ff 	mov    -0x2ac(%rip),%rdx        # 29f4 <f_int+0x28>
+    2ca0:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+    2ca5:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+    2caa:	8b 05 4c fd ff ff    	mov    -0x2b4(%rip),%eax        # 29fc <f_int+0x30>
+    2cb0:	89 44 24 30          	mov    %eax,0x30(%rsp)
+    uint8_t ret;
+
+    ap = (uint8_t *)&f_int;
+
+    memcpy(current_opcode, ap, OPCODE_LEN);
+    if (memcmp(current_opcode, f_opcode, OPCODE_LEN) != 0) {
+    2cb4:	48 89 e7             	mov    %rsp,%rdi
+    2cb7:	ba 34 00 00 00       	mov    $0x34,%edx
+    2cbc:	48 8d 35 5d 43 00 00 	lea    0x435d(%rip),%rsi        # 7020 <f_opcode>
+    2cc3:	e8 18 f4 ff ff       	callq  20e0 <memcmp@plt>
+    2cc8:	85 c0                	test   %eax,%eax
+    2cca:	0f 85 8f 01 00 00    	jne    2e5f <main+0x211>
+  return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+    2cd0:	48 8d 15 f5 fc ff ff 	lea    -0x30b(%rip),%rdx        # 29cc <f_int>
+    2cd7:	48 8d 35 82 18 00 00 	lea    0x1882(%rip),%rsi        # 4560 <_IO_stdin_used+0x560>
+    2cde:	bf 01 00 00 00       	mov    $0x1,%edi
+    2ce3:	b8 00 00 00 00       	mov    $0x0,%eax
+    2ce8:	e8 43 f4 ff ff       	callq  2130 <__printf_chk@plt>
+        printf("};\r\n");
+    }
+
+#ifdef SCENARIO1
+    printf("* execute internal function from %p", f_int);
+    ret = f_int();
+    2ced:	e8 da fc ff ff       	callq  29cc <f_int>
+    if (ret == 0xee) {
+    2cf2:	3c ee                	cmp    $0xee,%al
+    2cf4:	0f 84 4b 02 00 00    	je     2f45 <main+0x2f7>
+        printf(" \t[ok]\r\n");
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2cfa:	0f b6 d0             	movzbl %al,%edx
+    2cfd:	48 8d 35 21 18 00 00 	lea    0x1821(%rip),%rsi        # 4525 <_IO_stdin_used+0x525>
+    2d04:	bf 01 00 00 00       	mov    $0x1,%edi
+    2d09:	b8 00 00 00 00       	mov    $0x0,%eax
+    2d0e:	e8 1d f4 ff ff       	callq  2130 <__printf_chk@plt>
+    2d13:	48 8d 15 06 43 00 00 	lea    0x4306(%rip),%rdx        # 7020 <f_opcode>
+    2d1a:	48 8d 35 67 18 00 00 	lea    0x1867(%rip),%rsi        # 4588 <_IO_stdin_used+0x588>
+    2d21:	bf 01 00 00 00       	mov    $0x1,%edi
+    2d26:	b8 00 00 00 00       	mov    $0x0,%eax
+    2d2b:	e8 00 f4 ff ff       	callq  2130 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO2
+    printf("* execute stored opcodes via mmap obeying NX %p", f_opcode);
+    ret = exec_opcode(f_opcode, sizeof(f_opcode));
+    2d30:	be 34 00 00 00       	mov    $0x34,%esi
+    2d35:	48 8d 3d e4 42 00 00 	lea    0x42e4(%rip),%rdi        # 7020 <f_opcode>
+    2d3c:	e8 bf fc ff ff       	callq  2a00 <exec_opcode>
+    if (ret == 0xee) {
+    2d41:	3c ee                	cmp    $0xee,%al
+    2d43:	0f 84 0d 02 00 00    	je     2f56 <main+0x308>
+        printf(" \t[ok]\r\n");
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2d49:	0f b6 d0             	movzbl %al,%edx
+    2d4c:	48 8d 35 d2 17 00 00 	lea    0x17d2(%rip),%rsi        # 4525 <_IO_stdin_used+0x525>
+    2d53:	bf 01 00 00 00       	mov    $0x1,%edi
+    2d58:	b8 00 00 00 00       	mov    $0x0,%eax
+    2d5d:	e8 ce f3 ff ff       	callq  2130 <__printf_chk@plt>
+    2d62:	48 89 e3             	mov    %rsp,%rbx
+    2d65:	48 89 da             	mov    %rbx,%rdx
+    2d68:	48 8d 35 49 18 00 00 	lea    0x1849(%rip),%rsi        # 45b8 <_IO_stdin_used+0x5b8>
+    2d6f:	bf 01 00 00 00       	mov    $0x1,%edi
+    2d74:	b8 00 00 00 00       	mov    $0x0,%eax
+    2d79:	e8 b2 f3 ff ff       	callq  2130 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO3
+    printf("* execute detected opcodes via mmap obeying NX %p", current_opcode);
+    ret = exec_opcode(current_opcode, sizeof(f_opcode));
+    2d7e:	be 34 00 00 00       	mov    $0x34,%esi
+    2d83:	48 89 df             	mov    %rbx,%rdi
+    2d86:	e8 75 fc ff ff       	callq  2a00 <exec_opcode>
+    if (ret == 0xee) {
+    2d8b:	3c ee                	cmp    $0xee,%al
+    2d8d:	0f 84 d4 01 00 00    	je     2f67 <main+0x319>
+        printf(" \t[ok]\r\n");
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2d93:	0f b6 d0             	movzbl %al,%edx
+    2d96:	48 8d 35 88 17 00 00 	lea    0x1788(%rip),%rsi        # 4525 <_IO_stdin_used+0x525>
+    2d9d:	bf 01 00 00 00       	mov    $0x1,%edi
+    2da2:	b8 00 00 00 00       	mov    $0x0,%eax
+    2da7:	e8 84 f3 ff ff       	callq  2130 <__printf_chk@plt>
+    2dac:	48 89 e3             	mov    %rsp,%rbx
+    2daf:	48 89 da             	mov    %rbx,%rdx
+    2db2:	48 8d 35 37 18 00 00 	lea    0x1837(%rip),%rsi        # 45f0 <_IO_stdin_used+0x5f0>
+    2db9:	bf 01 00 00 00       	mov    $0x1,%edi
+    2dbe:	b8 00 00 00 00       	mov    $0x0,%eax
+    2dc3:	e8 68 f3 ff ff       	callq  2130 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO4
+    printf("* execute detected opcodes via mmap not obeying NX %p", current_opcode);
+    ret = exec_opcode_WX(current_opcode, sizeof(f_opcode));
+    2dc8:	be 34 00 00 00       	mov    $0x34,%esi
+    2dcd:	48 89 df             	mov    %rbx,%rdi
+    2dd0:	e8 4d fd ff ff       	callq  2b22 <exec_opcode_WX>
+    if (ret == 0xee) {
+    2dd5:	3c ee                	cmp    $0xee,%al
+    2dd7:	0f 84 9b 01 00 00    	je     2f78 <main+0x32a>
+        printf(" \t[ok]\r\n");
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2ddd:	0f b6 d0             	movzbl %al,%edx
+    2de0:	48 8d 35 3e 17 00 00 	lea    0x173e(%rip),%rsi        # 4525 <_IO_stdin_used+0x525>
+    2de7:	bf 01 00 00 00       	mov    $0x1,%edi
+    2dec:	b8 00 00 00 00       	mov    $0x0,%eax
+    2df1:	e8 3a f3 ff ff       	callq  2130 <__printf_chk@plt>
+    2df6:	48 89 e3             	mov    %rsp,%rbx
+    2df9:	48 89 da             	mov    %rbx,%rdx
+    2dfc:	48 8d 35 25 18 00 00 	lea    0x1825(%rip),%rsi        # 4628 <_IO_stdin_used+0x628>
+    2e03:	bf 01 00 00 00       	mov    $0x1,%edi
+    2e08:	b8 00 00 00 00       	mov    $0x0,%eax
+    2e0d:	e8 1e f3 ff ff       	callq  2130 <__printf_chk@plt>
+    }
+#endif
+
+#ifdef SCENARIO5
+    printf("* execute detected opcodes without mmap, also not obeying NX %p", current_opcode);
+    ret = exec_opcode_no_mmap(current_opcode, sizeof(f_opcode));
+    2e12:	be 34 00 00 00       	mov    $0x34,%esi
+    2e17:	48 89 df             	mov    %rbx,%rdi
+    2e1a:	e8 ff fd ff ff       	callq  2c1e <exec_opcode_no_mmap>
+    if (ret == 0xee) {
+    2e1f:	3c ee                	cmp    $0xee,%al
+    2e21:	0f 84 62 01 00 00    	je     2f89 <main+0x33b>
+        printf(" \t[ok]\r\n");
+    } else {
+        printf(", ret 0x%02x\r\n", ret);
+    2e27:	0f b6 d0             	movzbl %al,%edx
+    2e2a:	48 8d 35 f4 16 00 00 	lea    0x16f4(%rip),%rsi        # 4525 <_IO_stdin_used+0x525>
+    2e31:	bf 01 00 00 00       	mov    $0x1,%edi
+    2e36:	b8 00 00 00 00       	mov    $0x0,%eax
+    2e3b:	e8 f0 f2 ff ff       	callq  2130 <__printf_chk@plt>
+    }
+#endif
+
+}
+    2e40:	b8 00 00 00 00       	mov    $0x0,%eax
+    2e45:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+    2e4a:	64 48 33 3c 25 28 00 	xor    %fs:0x28,%rdi
+    2e51:	00 00 
+    2e53:	0f 85 41 01 00 00    	jne    2f9a <main+0x34c>
+    2e59:	48 83 c4 40          	add    $0x40,%rsp
+    2e5d:	5b                   	pop    %rbx
+    2e5e:	c3                   	retq   
+    2e5f:	48 8d 3d d2 16 00 00 	lea    0x16d2(%rip),%rdi        # 4538 <_IO_stdin_used+0x538>
+    2e66:	e8 25 f2 ff ff       	callq  2090 <puts@plt>
+    2e6b:	48 8d 15 5a fb ff ff 	lea    -0x4a6(%rip),%rdx        # 29cc <f_int>
+    2e72:	48 8d 35 63 16 00 00 	lea    0x1663(%rip),%rsi        # 44dc <_IO_stdin_used+0x4dc>
+    2e79:	bf 01 00 00 00       	mov    $0x1,%edi
+    2e7e:	b8 00 00 00 00       	mov    $0x0,%eax
+    2e83:	e8 a8 f2 ff ff       	callq  2130 <__printf_chk@plt>
+        for (i=0;i<8;i++) {
+    2e88:	bb 00 00 00 00       	mov    $0x0,%ebx
+    2e8d:	eb 3d                	jmp    2ecc <main+0x27e>
+            printf("%02x%02x%02x%02x ", (uint8_t)(*(ap+4*i)), (uint8_t)(*(ap+4*i+1)), (uint8_t)*((ap+4*i+2)), (uint8_t)(*(ap+4*i+3)));
+    2e8f:	0f b6 c3             	movzbl %bl,%eax
+    2e92:	c1 e0 02             	shl    $0x2,%eax
+    2e95:	48 98                	cltq   
+    2e97:	48 8d 35 2e fb ff ff 	lea    -0x4d2(%rip),%rsi        # 29cc <f_int>
+    2e9e:	0f b6 4c 06 01       	movzbl 0x1(%rsi,%rax,1),%ecx
+    2ea3:	0f b6 14 06          	movzbl (%rsi,%rax,1),%edx
+    2ea7:	44 0f b6 4c 06 03    	movzbl 0x3(%rsi,%rax,1),%r9d
+    2ead:	44 0f b6 44 06 02    	movzbl 0x2(%rsi,%rax,1),%r8d
+    2eb3:	48 8d 35 29 16 00 00 	lea    0x1629(%rip),%rsi        # 44e3 <_IO_stdin_used+0x4e3>
+    2eba:	bf 01 00 00 00       	mov    $0x1,%edi
+    2ebf:	b8 00 00 00 00       	mov    $0x0,%eax
+    2ec4:	e8 67 f2 ff ff       	callq  2130 <__printf_chk@plt>
+        for (i=0;i<8;i++) {
+    2ec9:	83 c3 01             	add    $0x1,%ebx
+    2ecc:	80 fb 07             	cmp    $0x7,%bl
+    2ecf:	76 be                	jbe    2e8f <main+0x241>
+    2ed1:	ba 34 00 00 00       	mov    $0x34,%edx
+    2ed6:	48 8d 35 18 16 00 00 	lea    0x1618(%rip),%rsi        # 44f5 <_IO_stdin_used+0x4f5>
+    2edd:	bf 01 00 00 00       	mov    $0x1,%edi
+    2ee2:	b8 00 00 00 00       	mov    $0x0,%eax
+    2ee7:	e8 44 f2 ff ff       	callq  2130 <__printf_chk@plt>
+        for (i=0; i<OPCODE_LEN; i++) {
+    2eec:	bb 00 00 00 00       	mov    $0x0,%ebx
+    2ef1:	eb 2e                	jmp    2f21 <main+0x2d3>
+            printf("0x%02x%s", (uint8_t)(*(ap+i)), i < (OPCODE_LEN-1) ? ", ":"");
+    2ef3:	48 8d 0d 39 16 00 00 	lea    0x1639(%rip),%rcx        # 4533 <_IO_stdin_used+0x533>
+    2efa:	0f b6 c3             	movzbl %bl,%eax
+    2efd:	48 8d 15 c8 fa ff ff 	lea    -0x538(%rip),%rdx        # 29cc <f_int>
+    2f04:	0f b6 14 02          	movzbl (%rdx,%rax,1),%edx
+    2f08:	48 8d 35 01 16 00 00 	lea    0x1601(%rip),%rsi        # 4510 <_IO_stdin_used+0x510>
+    2f0f:	bf 01 00 00 00       	mov    $0x1,%edi
+    2f14:	b8 00 00 00 00       	mov    $0x0,%eax
+    2f19:	e8 12 f2 ff ff       	callq  2130 <__printf_chk@plt>
+        for (i=0; i<OPCODE_LEN; i++) {
+    2f1e:	83 c3 01             	add    $0x1,%ebx
+    2f21:	80 fb 33             	cmp    $0x33,%bl
+    2f24:	77 0e                	ja     2f34 <main+0x2e6>
+            printf("0x%02x%s", (uint8_t)(*(ap+i)), i < (OPCODE_LEN-1) ? ", ":"");
+    2f26:	80 fb 32             	cmp    $0x32,%bl
+    2f29:	77 c8                	ja     2ef3 <main+0x2a5>
+    2f2b:	48 8d 0d a7 15 00 00 	lea    0x15a7(%rip),%rcx        # 44d9 <_IO_stdin_used+0x4d9>
+    2f32:	eb c6                	jmp    2efa <main+0x2ac>
+    2f34:	48 8d 3d de 15 00 00 	lea    0x15de(%rip),%rdi        # 4519 <_IO_stdin_used+0x519>
+    2f3b:	e8 50 f1 ff ff       	callq  2090 <puts@plt>
+    2f40:	e9 8b fd ff ff       	jmpq   2cd0 <main+0x82>
+    2f45:	48 8d 3d d1 15 00 00 	lea    0x15d1(%rip),%rdi        # 451d <_IO_stdin_used+0x51d>
+    2f4c:	e8 3f f1 ff ff       	callq  2090 <puts@plt>
+    2f51:	e9 bd fd ff ff       	jmpq   2d13 <main+0xc5>
+    2f56:	48 8d 3d c0 15 00 00 	lea    0x15c0(%rip),%rdi        # 451d <_IO_stdin_used+0x51d>
+    2f5d:	e8 2e f1 ff ff       	callq  2090 <puts@plt>
+    2f62:	e9 fb fd ff ff       	jmpq   2d62 <main+0x114>
+    2f67:	48 8d 3d af 15 00 00 	lea    0x15af(%rip),%rdi        # 451d <_IO_stdin_used+0x51d>
+    2f6e:	e8 1d f1 ff ff       	callq  2090 <puts@plt>
+    2f73:	e9 34 fe ff ff       	jmpq   2dac <main+0x15e>
+    2f78:	48 8d 3d 9e 15 00 00 	lea    0x159e(%rip),%rdi        # 451d <_IO_stdin_used+0x51d>
+    2f7f:	e8 0c f1 ff ff       	callq  2090 <puts@plt>
+    2f84:	e9 6d fe ff ff       	jmpq   2df6 <main+0x1a8>
+    2f89:	48 8d 3d 8d 15 00 00 	lea    0x158d(%rip),%rdi        # 451d <_IO_stdin_used+0x51d>
+    2f90:	e8 fb f0 ff ff       	callq  2090 <puts@plt>
+    2f95:	e9 a6 fe ff ff       	jmpq   2e40 <main+0x1f2>
+}
+    2f9a:	e8 01 f1 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+    2f9f:	90                   	nop
+
+0000000000002fa0 <__libc_csu_init>:
+    2fa0:	41 57                	push   %r15
+    2fa2:	41 56                	push   %r14
+    2fa4:	49 89 d7             	mov    %rdx,%r15
+    2fa7:	41 55                	push   %r13
+    2fa9:	41 54                	push   %r12
+    2fab:	4c 8d 25 1e 39 00 00 	lea    0x391e(%rip),%r12        # 68d0 <__init_array_start>
+    2fb2:	55                   	push   %rbp
+    2fb3:	48 8d 2d 1e 39 00 00 	lea    0x391e(%rip),%rbp        # 68d8 <__init_array_end>
+    2fba:	53                   	push   %rbx
+    2fbb:	41 89 fd             	mov    %edi,%r13d
+    2fbe:	49 89 f6             	mov    %rsi,%r14
+    2fc1:	4c 29 e5             	sub    %r12,%rbp
+    2fc4:	48 83 ec 18          	sub    $0x18,%rsp
+    2fc8:	48 c1 fd 03          	sar    $0x3,%rbp
+    2fcc:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2fd3:	00 00 
+    2fd5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2fda:	31 c0                	xor    %eax,%eax
+    2fdc:	e8 1f f0 ff ff       	callq  2000 <_init>
+    2fe1:	48 85 ed             	test   %rbp,%rbp
+    2fe4:	74 20                	je     3006 <__libc_csu_init+0x66>
+    2fe6:	31 db                	xor    %ebx,%ebx
+    2fe8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    2fef:	00 
+    2ff0:	4c 89 fa             	mov    %r15,%rdx
+    2ff3:	4c 89 f6             	mov    %r14,%rsi
+    2ff6:	44 89 ef             	mov    %r13d,%edi
+    2ff9:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+    2ffd:	48 83 c3 01          	add    $0x1,%rbx
+    3001:	48 39 dd             	cmp    %rbx,%rbp
+    3004:	75 ea                	jne    2ff0 <__libc_csu_init+0x50>
+    3006:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    300b:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    3012:	00 00 
+    3014:	75 0f                	jne    3025 <__libc_csu_init+0x85>
+    3016:	48 83 c4 18          	add    $0x18,%rsp
+    301a:	5b                   	pop    %rbx
+    301b:	5d                   	pop    %rbp
+    301c:	41 5c                	pop    %r12
+    301e:	41 5d                	pop    %r13
+    3020:	41 5e                	pop    %r14
+    3022:	41 5f                	pop    %r15
+    3024:	c3                   	retq   
+    3025:	e8 76 f0 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+    302a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000003030 <__libc_csu_fini>:
+    3030:	48 83 ec 18          	sub    $0x18,%rsp
+    3034:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    303b:	00 00 
+    303d:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    3042:	31 c0                	xor    %eax,%eax
+    3044:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    3049:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    3050:	00 00 
+    3052:	75 05                	jne    3059 <__libc_csu_fini+0x29>
+    3054:	48 83 c4 18          	add    $0x18,%rsp
+    3058:	c3                   	retq   
+    3059:	e8 42 f0 ff ff       	callq  20a0 <__stack_chk_fail@plt>
+
+Disassembly of section .fini:
+
+0000000000003060 <_fini>:
+    3060:	48 83 ec 08          	sub    $0x8,%rsp
+    3064:	48 83 c4 08          	add    $0x8,%rsp
+    3068:	c3                   	retq   

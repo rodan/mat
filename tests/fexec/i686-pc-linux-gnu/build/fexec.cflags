@@ -1,0 +1,1 @@
+-Wall -Wno-switch -fno-force-addr -finline-limit=1 -fno-schedule-insns -fshort-enums -Wl,-Map=output.map -Og -ggdb

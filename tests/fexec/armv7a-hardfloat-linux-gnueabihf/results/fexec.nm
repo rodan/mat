@@ -1,0 +1,86 @@
+00001850 t .udivsi3_skip_div0_test
+00012f08 a _DYNAMIC
+00013000 a _GLOBAL_OFFSET_TABLE_
+00001adc 00000004 R _IO_stdin_used
+         w _ITM_deregisterTMCloneTable
+         w _ITM_registerTMCloneTable
+00002200 r __FRAME_END__
+000130b0 D __TMC_END__
+00001a5c 00000010 t __aeabi_idiv0
+00001a5c 00000010 W __aeabi_ldiv0
+00001850 t __aeabi_uidiv
+00001a3c 00000020 T __aeabi_uidivmod
+000130bc B __bss_end__
+000130b0 B __bss_start
+000130b0 B __bss_start__
+         w __cxa_finalize@@GLIBC_2.4
+0001309c D __data_start
+00000d90 t __do_global_dtors_aux
+00012cec t __do_global_dtors_aux_fini_array_entry
+000130a0 D __dso_handle
+000130bc B __end__
+         U __errno_location@@GLIBC_2.4
+00012ce8 t __frame_dummy_init_array_entry
+         w __gmon_start__
+00012cec t __init_array_end
+00012ce8 t __init_array_start
+00001ad0 00000004 T __libc_csu_fini
+00001a6c 00000064 T __libc_csu_init
+         U __libc_start_main@@GLIBC_2.4
+         U __printf_chk@@GLIBC_2.4
+         U __snprintf_chk@@GLIBC_2.4
+         U __stack_chk_fail@@GLIBC_2.4
+         U __stack_chk_guard@@GLIBC_2.4
+00001850 000001ec T __udivsi3
+         U __vfprintf_chk@@GLIBC_2.4
+         U __vsnprintf_chk@@GLIBC_2.4
+000130bc B _bss_end__
+000130b0 D _edata
+000130bc B _end
+         U _exit@@GLIBC_2.4
+00001ad4 T _fini
+00000b28 t _init
+00000c80 T _start
+         U abort@@GLIBC_2.4
+00000cd8 t call_weak_fn
+0000121c 00000094 T cmdLineErr
+000130b0 00000001 b completed.11340
+0001309c W data_start
+00000cfc t deregister_tm_clones
+00012cf0 00000218 d ename
+00001030 00000058 T errExit
+000010e0 00000054 T errExitEN
+00000fb0 00000080 T errMsg
+00001088 00000058 T err_exit
+000012bc 00000118 T exec_opcode
+000013d4 000000f0 T exec_opcode_WX
+000014c4 0000000c T exec_opcode_no_mmap
+         U exit@@GLIBC_2.4
+000012b0 0000000c T f_int
+000130a4 0000000c D f_opcode
+00001134 00000054 T fatal
+         U fflush@@GLIBC_2.4
+         U fputs@@GLIBC_2.4
+00000df8 t frame_dummy
+         U fwrite@@GLIBC_2.4
+         U getenv@@GLIBC_2.4
+000014d0 00000380 T main
+         U memcmp@@GLIBC_2.4
+         U memcpy@@GLIBC_2.4
+         U memset@@GLIBC_2.4
+         U mmap@@GLIBC_2.4
+         U mprotect@@GLIBC_2.4
+         U munmap@@GLIBC_2.4
+00000e44 0000016c t outputError
+000130b4 00000004 b pagesize.7253
+000130b8 00000004 b pagesize.7262
+         U puts@@GLIBC_2.4
+         U raise@@GLIBC_2.4
+00000d40 t register_tm_clones
+00000000 a shift
+         U stderr@@GLIBC_2.4
+         U stdout@@GLIBC_2.4
+         U strerror@@GLIBC_2.4
+         U sysconf@@GLIBC_2.4
+00000dfc 00000048 t terminate
+00001188 00000094 T usageErr

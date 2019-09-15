@@ -1,0 +1,65 @@
+0000000000006d10 d _DYNAMIC
+0000000000006f00 d _GLOBAL_OFFSET_TABLE_
+0000000000004000 0000000000000004 R _IO_stdin_used
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+0000000000004668 r __GNU_EH_FRAME_HDR
+0000000000007058 D __TMC_END__
+0000000000007054 B __bss_start
+                 w __cxa_finalize@@GLIBC_2.2.5
+0000000000007000 D __data_start
+0000000000007008 D __dso_handle
+                 U __errno_location@@GLIBC_2.2.5
+                 w __gmon_start__
+00000000000068d8 t __init_array_end
+00000000000068d0 t __init_array_start
+0000000000003030 000000000000002e T __libc_csu_fini
+0000000000002fa0 000000000000008a T __libc_csu_init
+                 U __libc_start_main@@GLIBC_2.2.5
+                 U __printf_chk@@GLIBC_2.3.4
+                 U __snprintf_chk@@GLIBC_2.3.4
+                 U __stack_chk_fail@@GLIBC_2.4
+                 U __vfprintf_chk@@GLIBC_2.3.4
+                 U __vsnprintf_chk@@GLIBC_2.3.4
+0000000000007054 D _edata
+00000000000070a0 B _end
+                 U _exit@@GLIBC_2.2.5
+0000000000003060 T _fini
+0000000000002000 t _init
+00000000000021a0 000000000000002b T _start
+                 U abort@@GLIBC_2.2.5
+00000000000028e1 00000000000000eb T cmdLineErr
+0000000000007000 W data_start
+00000000000068e0 0000000000000430 d ename
+000000000000251e 00000000000000bb T errExit
+0000000000002694 00000000000000ad T errExitEN
+0000000000002442 00000000000000dc T errMsg
+00000000000025d9 00000000000000bb T err_exit
+0000000000002a00 0000000000000122 T exec_opcode
+0000000000002b22 00000000000000fc T exec_opcode_WX
+0000000000002c1e 0000000000000030 T exec_opcode_no_mmap
+                 U exit@@GLIBC_2.2.5
+00000000000029cc 0000000000000034 T f_int
+0000000000007020 0000000000000034 D f_opcode
+0000000000002741 00000000000000b5 T fatal
+                 U fflush@@GLIBC_2.2.5
+                 U fputs@@GLIBC_2.2.5
+                 U fwrite@@GLIBC_2.2.5
+                 U getenv@@GLIBC_2.2.5
+0000000000002c4e 0000000000000351 T main
+                 U memcmp@@GLIBC_2.2.5
+                 U memcpy@@GLIBC_2.14
+                 U memset@@GLIBC_2.2.5
+                 U mmap@@GLIBC_2.2.5
+                 U mprotect@@GLIBC_2.2.5
+                 U munmap@@GLIBC_2.2.5
+00000000000022f4 000000000000014e t outputError
+0000000000007098 0000000000000008 b pagesize.3512
+0000000000007090 0000000000000008 b pagesize.3521
+                 U puts@@GLIBC_2.2.5
+0000000000007080 0000000000000008 B stderr@@GLIBC_2.2.5
+0000000000007060 0000000000000008 B stdout@@GLIBC_2.2.5
+                 U strerror@@GLIBC_2.2.5
+                 U sysconf@@GLIBC_2.2.5
+00000000000022aa 000000000000004a t terminate
+00000000000027f6 00000000000000eb T usageErr

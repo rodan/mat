@@ -1,0 +1,1 @@
+-D__MSP430FR5994__ -mmcu=MSP430FR5994  -Wall -Wno-switch -fno-force-addr -finline-limit=1 -fno-schedule-insns -fshort-enums -Wl,-Map=output.map -O1 -ggdb

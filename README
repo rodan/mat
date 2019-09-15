@@ -1,0 +1,17 @@
+* description
+
+mat - Multi-architecture testing ground - small snippets of code that would help me understands subtle differences between operating systems and hardware architectures.
+
+software and hardware platforms covered:
+    x86_64-pc-linux-gnu - X1 Thinkpad with Gentoo Linux
+    i686-pc-linux-gnu - T42 Thinkpad with Hardened Gentoo Linux + grsec + selinux
+    ppc-apple-darwin - PowerPC G5 with MacOSX 10.5.8 + ports
+    armv7a-hardfloat-linux-gnueabihf - beaglebone black with Gentoo Linux
+    msp430fr5994 - Texas Instruments uC with no OS
+    
+  "os-libs" is taken from the book "The Linux Programming Interface" written by Michael Kerrisk.
+
+  Author:          Petre Rodan <2b4eda@subdimension.ro>
+  Available from:  https://github.com/rodan/mat
+  License:         GPL/BSD
+

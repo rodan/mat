@@ -1,0 +1,33 @@
+scenario2
+lipo i686-pc-linux-gnu # ./build/fexec 
+* execute internal function from 0x1258032c     [ok]
+* execute stored opcodes via mmap obeying NX 0x12583020ERROR [EACCES Permission denied] mprotect
+
+scenario3
+* execute internal function from 0x13d1d32c     [ok]
+* execute detected opcodes via mmap obeying NX 0x5d7e16e5ERROR [EACCES Permission denied] mprotect
+
+scenario4
+* execute internal function from 0x1559432c     [ok]
+Segmentation fault
+
+[ 1415.833974] grsec: From 192.168.2.10: Segmentation fault occurred at 00000007 in /local/src/mat/tests/fexec/i686-pc-linux-gnu/build/fexec[fexec:8931] uid/euid:0/0 gid/egid:0/0, parent /bin/bash[bash:7717] uid/euid:0/0 gid/egid:0/0
+[ 1415.841265] grsec: From 192.168.2.10: denied resource overstep by requesting 4096 for RLIMIT_CORE against limit 0 for /local/src/mat/tests/fexec/i686-pc-linux-gnu/build/fexec[fexec:8931] uid/euid:0/0 gid/egid:0/0, parent /bin/bash[bash:7717] uid/euid:0/0 gid/egid:0/0
+
+scenario5
+* execute internal function from 0x1082132c     [ok]
+Killed
+
+[ 1476.314104] PAX: From 192.168.2.10: execution attempt in: <stack>, 59d52000-59d74000 bffde000
+[ 1476.318819] PAX: terminating task: /local/src/mat/tests/fexec/i686-pc-linux-gnu/build/fexec(fexec):9170, uid/euid: 0/0, PC: 59d72c75, SP: 59d72c2c
+[ 1476.326679] PAX: bytes at PC: 55 89 e5 8d a4 24 d8 ef ff ff 83 0c 24 00 8d a4 24 10 10 00 
+[ 1476.331191] PAX: bytes at SP-4: 4d17b700 108215a5 59d72c6f 59d72c6e 59d72c98 4b1eaa00 59d72c75 00000000 59d72cb8 108217cf 59d72c75 00000027 59d72c75 59d72c6f 59d72ed9 0000002f 00000000 0000db3e 00000000 e5895500 d824a48d
+[ 1476.339970] grsec: From 192.168.2.10: denied resource overstep by requesting 4096 for RLIMIT_CORE against limit 0 for /local/src/mat/tests/fexec/i686-pc-linux-gnu/build/fexec[fexec:9170] uid/euid:0/0 gid/egid:0/0, parent /bin/bash[bash:7717] uid/euid:0/0 gid/egid:0/0
+
+lipo i686-pc-linux-gnu # uname -a
+Linux lipo 3.14.50-grsec-l043 #13 PREEMPT Sun Nov 29 21:33:10 EET 2015 i686 Intel(R) Pentium(R) M processor 1.70GHz GenuineIntel GNU/Linux
+
+
+
+
+

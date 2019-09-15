@@ -1,0 +1,9 @@
+beagle /usr/src/mat/tests/fexec/armv7a-hardfloat-linux-gnueabihf # ./build/fexec 
+* execute internal function from 0x4b82b0       [ok]
+* execute stored opcodes via mmap obeying NX 0x4ca0a4   [ok]
+* execute detected opcodes via mmap obeying NX 0xbe9bb108       [ok]
+* execute detected opcodes via mmap not obeying NX 0xbe9bb108   [ok]
+Segmentation fault
+beagle /usr/src/mat/tests/fexec/armv7a-hardfloat-linux-gnueabihf # uname -a
+Linux beagle 4.14.108+ #2 SMP PREEMPT Wed Jun 26 16:54:56 EEST 2019 armv7l ARMv7 Processor rev 2 (v7l) Generic AM33XX (Flattened Device Tree) GNU/Linux
+

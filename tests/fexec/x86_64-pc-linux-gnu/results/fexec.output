@@ -1,0 +1,9 @@
+prodan@lipo ~/_work/linux/mat/tests/fexec/x86_64-pc-linux-gnu $ ./build/fexec 
+* execute internal function from 0x5598b48b29cc         [ok]
+* execute stored opcodes via mmap obeying NX 0x5598b48b7020     [ok]
+* execute detected opcodes via mmap obeying NX 0x7ffd164ec080   [ok]
+* execute detected opcodes via mmap not obeying NX 0x7ffd164ec080       [ok]
+Segmentation fault
+prodan@lipo ~/_work/linux/mat/tests/fexec/x86_64-pc-linux-gnu $ uname -a
+Linux lipo 4.19.56-l051 #1 SMP PREEMPT Thu Jun 27 10:36:07 EEST 2019 x86_64 Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz GenuineIntel GNU/Linux
+

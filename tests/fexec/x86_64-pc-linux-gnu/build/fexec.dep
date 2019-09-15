@@ -1,0 +1,109 @@
+# DO NOT DELETE
+
+build/main.o: /usr/include/stdio.h /usr/include/bits/libc-header-start.h
+build/main.o: /usr/include/features.h /usr/include/stdc-predef.h
+build/main.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
+build/main.o: /usr/include/bits/long-double.h /usr/include/gnu/stubs.h
+build/main.o: /usr/include/bits/types.h /usr/include/bits/timesize.h
+build/main.o: /usr/include/bits/typesizes.h /usr/include/bits/time64.h
+build/main.o: /usr/include/bits/types/__fpos_t.h
+build/main.o: /usr/include/bits/types/__mbstate_t.h
+build/main.o: /usr/include/bits/types/__fpos64_t.h
+build/main.o: /usr/include/bits/types/__FILE.h /usr/include/bits/types/FILE.h
+build/main.o: /usr/include/bits/types/struct_FILE.h
+build/main.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
+build/main.o: /usr/include/stdint.h /usr/include/bits/wchar.h
+build/main.o: /usr/include/bits/stdint-intn.h
+build/main.o: /usr/include/bits/stdint-uintn.h /usr/include/stdlib.h
+build/main.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
+build/main.o: /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h
+build/main.o: /usr/include/sys/types.h /usr/include/bits/types/clock_t.h
+build/main.o: /usr/include/bits/types/clockid_t.h
+build/main.o: /usr/include/bits/types/time_t.h
+build/main.o: /usr/include/bits/types/timer_t.h /usr/include/endian.h
+build/main.o: /usr/include/bits/endian.h /usr/include/bits/byteswap.h
+build/main.o: /usr/include/bits/uintn-identity.h /usr/include/sys/select.h
+build/main.o: /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h
+build/main.o: /usr/include/bits/types/__sigset_t.h
+build/main.o: /usr/include/bits/types/struct_timeval.h
+build/main.o: /usr/include/bits/types/struct_timespec.h
+build/main.o: /usr/include/bits/pthreadtypes.h
+build/main.o: /usr/include/bits/thread-shared-types.h
+build/main.o: /usr/include/bits/pthreadtypes-arch.h /usr/include/alloca.h
+build/main.o: /usr/include/bits/stdlib-float.h /usr/include/unistd.h
+build/main.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+build/main.o: /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h
+build/main.o: /usr/include/bits/getopt_core.h /usr/include/string.h
+build/main.o: /usr/include/bits/types/locale_t.h
+build/main.o: /usr/include/bits/types/__locale_t.h /usr/include/strings.h
+build/main.o: /usr/include/sys/mman.h /usr/include/bits/mman.h
+build/main.o: /usr/include/bits/mman-map-flags-generic.h
+build/main.o: /usr/include/bits/mman-linux.h /usr/include/bits/mman-shared.h
+build/main.o: ../../../os-libs/error_functions.h
+build/error_functions.o: ../../../os-libs/error_functions.h
+build/error_functions.o: ../../../os-libs/tlpi_hdr.h
+build/error_functions.o: /usr/include/sys/types.h
+build/error_functions.o: /usr/include/features.h
+build/error_functions.o: /usr/include/stdc-predef.h
+build/error_functions.o: /usr/include/sys/cdefs.h
+build/error_functions.o: /usr/include/bits/wordsize.h
+build/error_functions.o: /usr/include/bits/long-double.h
+build/error_functions.o: /usr/include/gnu/stubs.h
+build/error_functions.o: /usr/include/bits/types.h
+build/error_functions.o: /usr/include/bits/timesize.h
+build/error_functions.o: /usr/include/bits/typesizes.h
+build/error_functions.o: /usr/include/bits/time64.h
+build/error_functions.o: /usr/include/bits/types/clock_t.h
+build/error_functions.o: /usr/include/bits/types/clockid_t.h
+build/error_functions.o: /usr/include/bits/types/time_t.h
+build/error_functions.o: /usr/include/bits/types/timer_t.h
+build/error_functions.o: /usr/include/bits/stdint-intn.h
+build/error_functions.o: /usr/include/endian.h
+build/error_functions.o: /usr/include/bits/endian.h
+build/error_functions.o: /usr/include/bits/byteswap.h
+build/error_functions.o: /usr/include/bits/uintn-identity.h
+build/error_functions.o: /usr/include/sys/select.h
+build/error_functions.o: /usr/include/bits/select.h
+build/error_functions.o: /usr/include/bits/types/sigset_t.h
+build/error_functions.o: /usr/include/bits/types/__sigset_t.h
+build/error_functions.o: /usr/include/bits/types/struct_timeval.h
+build/error_functions.o: /usr/include/bits/types/struct_timespec.h
+build/error_functions.o: /usr/include/bits/pthreadtypes.h
+build/error_functions.o: /usr/include/bits/thread-shared-types.h
+build/error_functions.o: /usr/include/bits/pthreadtypes-arch.h
+build/error_functions.o: /usr/include/stdio.h
+build/error_functions.o: /usr/include/bits/libc-header-start.h
+build/error_functions.o: /usr/include/bits/types/__fpos_t.h
+build/error_functions.o: /usr/include/bits/types/__mbstate_t.h
+build/error_functions.o: /usr/include/bits/types/__fpos64_t.h
+build/error_functions.o: /usr/include/bits/types/__FILE.h
+build/error_functions.o: /usr/include/bits/types/FILE.h
+build/error_functions.o: /usr/include/bits/types/struct_FILE.h
+build/error_functions.o: /usr/include/bits/stdio_lim.h
+build/error_functions.o: /usr/include/bits/sys_errlist.h
+build/error_functions.o: /usr/include/stdlib.h
+build/error_functions.o: /usr/include/bits/waitflags.h
+build/error_functions.o: /usr/include/bits/waitstatus.h
+build/error_functions.o: /usr/include/bits/floatn.h
+build/error_functions.o: /usr/include/bits/floatn-common.h
+build/error_functions.o: /usr/include/alloca.h
+build/error_functions.o: /usr/include/bits/stdlib-float.h
+build/error_functions.o: /usr/include/unistd.h
+build/error_functions.o: /usr/include/bits/posix_opt.h
+build/error_functions.o: /usr/include/bits/environments.h
+build/error_functions.o: /usr/include/bits/confname.h
+build/error_functions.o: /usr/include/bits/getopt_posix.h
+build/error_functions.o: /usr/include/bits/getopt_core.h
+build/error_functions.o: /usr/include/errno.h
+build/error_functions.o: /usr/include/bits/errno.h
+build/error_functions.o: /usr/include/linux/errno.h
+build/error_functions.o: /usr/include/asm/errno.h
+build/error_functions.o: /usr/include/asm-generic/errno.h
+build/error_functions.o: /usr/include/asm-generic/errno-base.h
+build/error_functions.o: /usr/include/string.h
+build/error_functions.o: /usr/include/bits/types/locale_t.h
+build/error_functions.o: /usr/include/bits/types/__locale_t.h
+build/error_functions.o: /usr/include/strings.h
+build/error_functions.o: ../../../os-libs/get_num.h
+build/error_functions.o: ename.c.inc
+tags: ../../../os-libs/error_functions.h ../../../os-libs/get_num.h ../../../os-libs/tlpi_hdr.h /usr/include/alloca.h /usr/include/asm-generic/errno-base.h /usr/include/asm-generic/errno.h /usr/include/asm/errno.h /usr/include/bits/byteswap.h /usr/include/bits/confname.h /usr/include/bits/endian.h /usr/include/bits/environments.h /usr/include/bits/errno.h /usr/include/bits/floatn-common.h /usr/include/bits/floatn.h /usr/include/bits/getopt_core.h /usr/include/bits/getopt_posix.h /usr/include/bits/libc-header-start.h /usr/include/bits/long-double.h /usr/include/bits/mman-linux.h /usr/include/bits/mman-map-flags-generic.h /usr/include/bits/posix_opt.h /usr/include/bits/pthreadtypes-arch.h /usr/include/bits/pthreadtypes.h /usr/include/bits/select.h /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h /usr/include/bits/stdio_lim.h /usr/include/bits/stdlib-float.h /usr/include/bits/sys_errlist.h /usr/include/bits/thread-shared-types.h /usr/include/bits/time64.h /usr/include/bits/timesize.h /usr/include/bits/types.h /usr/include/bits/types/FILE.h /usr/include/bits/types/__FILE.h /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__locale_t.h /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__sigset_t.h /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h /usr/include/bits/types/locale_t.h /usr/include/bits/types/sigset_t.h /usr/include/bits/types/struct_FILE.h /usr/include/bits/types/struct_timespec.h /usr/include/bits/types/struct_timeval.h /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h /usr/include/bits/typesizes.h /usr/include/bits/uintn-identity.h /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h /usr/include/bits/wordsize.h /usr/include/endian.h /usr/include/errno.h /usr/include/features.h /usr/include/gnu/stubs.h /usr/include/linux/errno.h /usr/include/stdc-predef.h /usr/include/stdint.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h /usr/include/sys/cdefs.h /usr/include/sys/mman.h /usr/include/sys/select.h /usr/include/sys/types.h /usr/include/unistd.h ename.c.inc
