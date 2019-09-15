@@ -1,0 +1,8 @@
+peter@freebsd ~/mat/tests/fexec/x86_64-portbld-freebsd12.0 $ ./build/fexec 
+* execute internal function from 0x4014b6       [ok]
+* execute stored opcodes via mmap obeying NX 0x6029d8   [ok]
+* execute detected opcodes via mmap obeying NX 0x7fffffffea99   [ok]
+* execute detected opcodes via mmap not obeying NX 0x7fffffffea99       [ok]
+Segmentation fault (core dumped)
+peter@freebsd ~/mat/tests/fexec/x86_64-portbld-freebsd12.0 $ uname -a
+FreeBSD freebsd 12.0-RELEASE FreeBSD 12.0-RELEASE r341666 GENERIC  amd64
