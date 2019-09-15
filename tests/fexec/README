@@ -1,0 +1,77 @@
+
+simple test that checks how an uint8_t array containing machine code stored in RAM can be executed. there are 5 scenarios that are ifdef-ed for each platform, in this order:
+
+#define SCENARIO1
+// execute internal function. absolutely nothing special here. only used to get the opcodes for the current architecture.
+
+#define SCENARIO2
+// execute stored opcodes via mmap while obeying NX.
+// the stored array gets executed after a mmap() and a mprotect() that disables write permissions on the memory page.
+
+#define SCENARIO3
+// execute detected opcodes via mmap while obeying NX.
+// the array is read from the internal's function address. it gets executed after a mmap() and a mprotect() that disables write permissions on the memory page.
+
+#define SCENARIO4
+// execute detected opcodes via mmap not obeying NX.
+// the stored array gets executed after a mmap() and a mprotect() that forgets to disables write permissions on the memory page.
+
+#define SCENARIO5
+// execute detected opcodes without mmap, also not obeying NX.
+// here the raw array gets executed. without any mmap, mprotect.
+
+
+results:
+
+amd64-unknown-openbsd6.5
+    scenario 1 works as expected
+    scenario 2 works as expected
+    scenario 3 works as expected
+    scenario 4 segfault
+    scenario 5 segfault
+
+armv7a-hardfloat-linux-gnueabihf
+    scenario 1 works as expected
+    scenario 2 works as expected
+    scenario 3 works as expected
+    scenario 4 works as expected
+    scenario 5 segfault
+
+i686-pc-linux-gnu
+    scenario 1 works as expected
+    scenario 2 [EACCES Permission denied] mprotect
+    scenario 3 [EACCES Permission denied] mprotect
+    scenario 4 segfault
+    scenario 5 process killed by kernel
+ (this is a highly secure server setup and calls to mprotect are only allowed to given binaries)
+
+msp430fr5994
+    scenario 1 works as expected
+    scenario 2 mmap() not implemented
+    scenario 3 mmap() not implemented
+    scenario 4 mmap() not implemented
+    scenario 5 works. wow.
+
+ppc-apple-darwin9
+    scenario 1 works as expected
+    scenario 2 works
+    scenario 3 works
+    scenario 4 works
+    scenario 5 works. wow.
+
+x86_64-pc-linux-gnu
+    scenario 1 works as expected
+    scenario 2 works
+    scenario 3 works
+    scenario 4 works. strange that NX is not enforced. need to dig deeper.
+    scenario 5 segfault
+
+x86_64-portbld-freebsd12.0
+    scenario 1 works as expected
+    scenario 2 works
+    scenario 3 works
+    scenario 4 works. NX not enforced. wonder why.
+    scenario 5 segfault
+
+detailed results and dissasembly available in */results/*
+
