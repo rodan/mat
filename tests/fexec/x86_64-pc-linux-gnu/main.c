@@ -111,8 +111,8 @@ uint8_t exec_opcode_WX(const uint8_t *code, size_t codelen)
         errExit("mmap");
     }
 
-    // at this point, executable_area points to memory that is writable but
-    // *not* executable.  load the code into it.
+    // at this point, executable_area points to memory that is writable and
+    // also executable.  load the code into it.
     memcpy(executable_area, code, codelen);
 
     // fill the space at the end with INT3 instructions, to guarantee

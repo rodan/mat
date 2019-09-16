@@ -3,11 +3,13 @@
 mat - Multi-architecture testing ground - small snippets of code that would help me understands subtle differences between operating systems and hardware architectures.
 
 software and hardware platforms covered:
-    x86_64-pc-linux-gnu - X1 Thinkpad with Gentoo Linux
-    i686-pc-linux-gnu - T42 Thinkpad with Hardened Gentoo Linux + grsec + selinux
-    ppc-apple-darwin - PowerPC G5 with MacOSX 10.5.8 + ports
+    amd64-unknown-openbsd6.5 - OpenBSD 6.5 on Intel XEON
     armv7a-hardfloat-linux-gnueabihf - beaglebone black with Gentoo Linux
+    i686-pc-linux-gnu - T42 Thinkpad with Hardened Gentoo Linux + grsec + selinux
     msp430fr5994 - Texas Instruments uC with no OS
+    ppc-apple-darwin - PowerPC G5 with MacOSX 10.5.8 + ports
+    x86_64-pc-linux-gnu - X1 Thinkpad with Gentoo Linux
+    x86_64-portbld-freebsd12.0 - FreeBSD 12.0 on Intel XEON
     
   "os-libs" is taken from the book "The Linux Programming Interface" written by Michael Kerrisk.
 

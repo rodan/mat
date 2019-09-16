@@ -25,24 +25,24 @@ results:
 
 amd64-unknown-openbsd6.5
     scenario 1 works as expected
-    scenario 2 works as expected
-    scenario 3 works as expected
-    scenario 4 segfault
-    scenario 5 segfault
+    scenario 2 works
+    scenario 3 works
+    scenario 4 segfault - great
+    scenario 5 segfault - great
 
 armv7a-hardfloat-linux-gnueabihf
     scenario 1 works as expected
-    scenario 2 works as expected
-    scenario 3 works as expected
-    scenario 4 works as expected
-    scenario 5 segfault
+    scenario 2 works
+    scenario 3 works
+    scenario 4 works
+    scenario 5 segfault - great
 
 i686-pc-linux-gnu
     scenario 1 works as expected
-    scenario 2 [EACCES Permission denied] mprotect
-    scenario 3 [EACCES Permission denied] mprotect
-    scenario 4 segfault
-    scenario 5 process killed by kernel
+    scenario 2 [EACCES Permission denied] mprotect - great
+    scenario 3 [EACCES Permission denied] mprotect - great
+    scenario 4 segfault - great
+    scenario 5 process killed by kernel - great
  (this is a highly secure server setup and calls to mprotect are only allowed to given binaries)
 
 msp430fr5994
@@ -55,7 +55,7 @@ msp430fr5994
 ppc-apple-darwin9
     scenario 1 works as expected
     scenario 2 works
-    scenario 3 works
+    scenario 3 works 
     scenario 4 works
     scenario 5 works. wow.
 
