@@ -37,6 +37,13 @@ armv7a-hardfloat-linux-gnueabihf
     scenario 4 works
     scenario 5 segfault - great
 
+arm-renesas-s7g2
+    scenario 1 works as expected
+    scenario 2 mmap() not implemented
+    scenario 3 mmap() not implemented
+    scenario 4 mmap() not implemented
+    scenario 5 crashes by default, works if debugged into.
+
 i686-pc-linux-gnu
     scenario 1 works as expected
     scenario 2 [EACCES Permission denied] mprotect - great
@@ -73,5 +80,5 @@ x86_64-portbld-freebsd12.0
     scenario 4 works. NX not enforced. wonder why.
     scenario 5 segfault
 
-detailed results and dissasembly available in */results/*
+detailed results and disassembly available in */results/*
 

@@ -5,6 +5,7 @@ mat - Multi-architecture testing ground - small snippets of code that would help
 software and hardware platforms covered:
     amd64-unknown-openbsd6.5 - OpenBSD 6.5 on Intel XEON
     armv7a-hardfloat-linux-gnueabihf - beaglebone black with Gentoo Linux
+    arm-renesas_s7g2-eabi - Renesas S7G2 ecosystem
     i686-pc-linux-gnu - T42 Thinkpad with Hardened Gentoo Linux + grsec + selinux
     msp430fr5994 - Texas Instruments uC with no OS
     ppc-apple-darwin - PowerPC G5 with MacOSX 10.5.8 + ports

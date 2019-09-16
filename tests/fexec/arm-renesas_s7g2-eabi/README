@@ -1,0 +1,7 @@
+
+there is a serial console (115200 baud 8N1) on pmodA that provides a menu and accepts commands. 'r' starts the test.
+
+compiling the project with -Og optimization, setting a breakpoint in qa.c on line 236 and debugging step by step into that function provides a working solution. ha.
+
+
+
